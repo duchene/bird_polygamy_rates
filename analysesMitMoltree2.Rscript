@@ -1,0 +1,88 @@
+#################################################################################
+####Does polyandry lead to more speciation due to higher rates of molecular
+#evolution? Birds##########################################################
+
+
+#####analyses with Molecular tree  branch lengths for correction of variables and phylo non-independence
+
+#The following reads a data set in MIGs PC.
+#datpoly<-read.csv("C:/Documentos Maider/My research/2017 ANU/papers/polygamy vs mol evol/our data/analyses/dat_mig_66paired_molcut_081017.csv")
+
+#The following reads a data set in DADs mac.
+dat_mig_66paired_molcut_101017<-read.csv("dat_mig_66paired_molcut_101017.csv")
+
+
+str(dat_mig_66paired_molcut_101017)
+data<-dat_mig_66paired_molcut_101017
+attach(data)
+
+#variables
+
+spm<-data$sprich_mono
+spp<-data$sprich_poly
+dsm<-data$dsmito_mono
+dsp<-data$dsmito_poly
+dnm<-data$dnmito_mono
+dnp<-data$dnmito_poly
+dndsm<-data$dndsmito_mono
+dndsp<-data$dndsmito_poly
+overallm<-data$overallmol_mono
+overallp<-data$overallmol_poly
+massmalem<-data$M_mass_mono
+massmalep<-data$M_mass_poly
+massfemm<-data$F_mass_mono
+massfemp<-data$F_mass_poly
+
+meanweight<- rowMeans(cbind(data$weights_poly,data$weights_mono))
+
+
+######## 2. Wilcox test: checking if poly/mono is associated to number
+# of species, molecular evolution or mass####
+
+
+##non-corrected by branch legnths####
+
+w1<- wilcox.test(spm,spp,paired=T)
+w2<- wilcox.test(dnm,dnp,paired=T)
+w3<- wilcox.test(dsm,dsp,paired=T)
+w4<- wilcox.test(dndsm,dndsp,paired=T)
+w5<- wilcox.test(rowMeans(cbind(massfemm,massmalem)),rowMeans(cbind(massfemp,massmalep)),paired=T)
+w6<- wilcox.test(massmalem-massfemm, massmalep-massfemp,paired=T)
+
+w1
+w2
+w3
+w4
+w5
+w6
+#@@@@@@@@@@@@@@@@@the results are the same without and with branch length 
+#@@@@@@@@@@@@@@@@@correction. Below###################
+
+#corrected by branch lengths#########
+spmcor<-spm/(overallm+overallp)^0.1
+sppcor<-spp/(overallm+overallp)^0.1
+dnmcor<-dnm/(overallm+overallp)^0.1
+dnpcor<-dnp/(overallm+overallp)^0.1
+dsmcor<-dsm/(overallm+overallp)^0.1
+dspcor<-dsp/(overallm+overallp)^0.1
+dndsmcor<-dndsm/(overallm+overallp)^0.1
+dndspcor<-dndsp/(overallm+overallp)^0.1
+diffmcor<-(massmalem-massfemm)/(overallm+overallp)^0.1
+diffpcor<-(massmalep-massfemp)/(overallm+overallp)^0.1
+massmcor<-(rowMeans(cbind(massfemm,massmalem))/(overallm+overallp))^0.1
+masspcor<-(rowMeans(cbind(massfemp,massmalep))/(overallm+overallp))^0.1
+
+w1<- wilcox.test(spmcor,sppcor,paired=T)
+w2<- wilcox.test(dnmcor,dnpcor,paired=T)
+w3<- wilcox.test(dsmcor,dspcor,paired=T)
+w4<- wilcox.test(dndsmcor,dndspcor,paired=T)
+w5<- wilcox.test(massmcor,masspcor,paired=T)
+w6<- wilcox.test(diffmcor, diffpcor,paired=T)
+
+w1
+w2
+w3
+w4
+w5
+w6
+

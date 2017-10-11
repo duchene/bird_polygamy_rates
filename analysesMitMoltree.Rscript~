@@ -9,7 +9,7 @@
 #datpoly<-read.csv("C:/Documentos Maider/My research/2017 ANU/papers/polygamy vs mol evol/our data/analyses/dat_mig_66paired_molcut_081017.csv")
 
 #The following reads a data set in DADs mac.
-datpoly<-read.csv("")
+dat_mig_66paired_molcut_101017<-read.csv("dat_mig_66paired_molcut_101017.csv")
 
 
 str(dat_mig_66paired_molcut_101017)
