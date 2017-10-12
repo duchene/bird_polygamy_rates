@@ -1,0 +1,69 @@
+
+
+pdf("triple.interaction.pdf", width = 8, height = 12)
+par(mfrow = c(3, 2))
+yrPal <- colorRampPalette(c('yellow','red'))
+colmasspoly <- yrPal(10)[as.numeric(cut(massbxcx[1:32],breaks = 10))]
+colmassmono <- yrPal(10)[as.numeric(cut(massbxcx[33:64],breaks = 10))]
+
+# For ds poly and mono
+
+predds0<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 3))
+predds1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 2))
+preddsm1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 4))
+
+plot(ds[1:32], sprich[1:32], col = colmasspoly, pch = 19)
+lines(ds[1:32], predds0, col="orange", lwd = 2)
+lines(ds[1:32], predds1, col="yellow", lwd = 2)
+lines(ds[1:32], preddsm1, col="red", lwd = 2)
+
+predds0<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 3))
+predds1<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 2))
+preddsm1<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 4))
+
+plot(ds[33:64], sprich[33:64], col = colmassmono, pch = 19)
+lines(ds[33:64], predds0, col="orange", lwd = 2)
+lines(ds[33:64], predds1, col="yellow", lwd = 2)
+lines(ds[33:64], preddsm1, col="red", lwd = 2)
+
+# For dn poly and mono
+
+preddn0<-predict(m0.1.1,newdata=data.frame(dn=dn[1:32], massbxcx = 3))
+preddn1<-predict(m0.1.1,newdata=data.frame(dn=dn[1:32], massbxcx = 2))
+preddnm1<-predict(m0.1.1,newdata=data.frame(dn=dn[1:32], massbxcx = 4))
+
+plot(dn[1:32], sprich[1:32], col = colmasspoly, pch = 19)
+lines(dn[1:32], preddn0, col="orange", lwd = 2)
+lines(dn[1:32], preddn1, col="yellow", lwd = 2)
+lines(dn[1:32], preddnm1, col="red", lwd = 2)
+
+preddn0<-predict(m0.1.2,newdata=data.frame(dn=dn[33:64], massbxcx = 3))
+preddn1<-predict(m0.1.2,newdata=data.frame(dn=dn[33:64], massbxcx = 2))
+preddnm1<-predict(m0.1.2,newdata=data.frame(dn=dn[33:64], massbxcx = 4))
+
+plot(dn[33:64], sprich[33:64], col = colmassmono, pch = 19)
+lines(dn[33:64], preddn0, col="orange", lwd = 2)
+lines(dn[33:64], preddn1, col="yellow", lwd = 2)
+lines(dn[33:64], preddnm1, col="red", lwd = 2)
+
+# For dnds poly and mono
+
+preddnds0<-predict(m0.1.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 3))
+preddnds1<-predict(m0.1.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 2))
+preddndsm1<-predict(m0.1.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 4))
+
+plot(dnds[1:32], sprich[1:32], col = colmasspoly, pch = 19)
+lines(dnds[1:32], preddnds0, col="orange", lwd = 2)
+lines(dnds[1:32], preddnds1, col="yellow", lwd = 2)
+lines(dnds[1:32], preddndsm1, col="red", lwd = 2)
+
+preddnds0<-predict(m0.1.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 3))
+preddnds1<-predict(m0.1.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 2))
+preddndsm1<-predict(m0.1.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 4))
+
+plot(dnds[33:64], sprich[33:64], col = colmassmono, pch = 19)
+lines(dnds[33:64], preddnds0, col="orange", lwd = 2)
+lines(dnds[33:64], preddnds1, col="yellow", lwd = 2)
+lines(dnds[33:64], preddndsm1, col="red", lwd = 2)
+
+dev.new()
