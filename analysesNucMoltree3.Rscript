@@ -1,0 +1,144 @@
+#################################################################################
+####Does polyandry lead to more speciation due to higher rates of molecular
+#evolution? Birds##########################################################
+
+#####analyses with Molecular tree  branch lengths for correction of variables and phylo non-independence
+
+####### 3. GLM + tree (phylogenetic regression, PGLS): real analyses############
+
+library(ape)
+#trs<-read.tree("C:\\Documentos Maider\\My research\\2017 ANU\\papers\\polygamy vs mol evol\\our data\\analyses\\tr33pairs.tre")
+trs <- read.tree("tr15pairs.tre")
+
+data<-read.csv("dat_nuclear_30_121017.csv")
+
+####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
+trs.cut<-drop.tip(trs, trs$tip.label[which(!trs$tip.label %in% as.character(data$sp))])
+
+rownames(data) <- data[,1]
+data$sprich <- as.numeric(data$sprich)
+
+attach(data)
+
+# create poly and mono trees
+trs.mono <- drop.tip(trs.cut, as.character(sp[1:15]))
+trs.poly <-drop.tip(trs.cut, as.character(sp[16:30]))# create poly and mono trees
+
+#variables
+
+
+datpgls<- data.frame(sprich = log(data$sprich))
+datpgls$mating<-as.factor(data$mating.system)
+datpgls$ds<-log(data$dsnuc)
+datpgls$dn<-log(data$dnnuc)
+datpgls$dnds<-log(data$dndsnuc)
+datpgls$weights_poly<-data$weights_poly
+datpgls$massm<-log(data$M_mass)
+datpgls$massf<-log(data$F_mass)
+datpgls$diffmass<-datpgls$massm-datpgls$massf
+rownames(datpgls) <- as.character(data$sp)
+datpgls$massmean<-rowMeans(cbind(log(M_mass),log(F_mass)))
+powerTransform(rowMeans(cbind(M_mass, F_mass)))
+datpgls$massbxcx<-bcPower(rowMeans(cbind(M_mass, F_mass)),-0.184764  )
+
+
+attach(datpgls)
+shapiro.test(sprich)
+shapiro.test(ds)
+shapiro.test(dn)
+shapiro.test(dnds)
+shapiro.test(massm)
+shapiro.test(massf)
+shapiro.test(massmean)
+
+m0<-compar.gee(sprich~mating*dn*massbxcx, data = datpgls, phy=trs.cut)
+m0#the 3-way interaction is significant, so split by mating system
+shapiro.test(residuals(m0))
+
+#poly
+m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.1.1
+shapiro.test(residuals(m0.1.1))
+#mono
+m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.1.2
+shapiro.test(residuals(m0.1.2))
+
+
+m0.2<-compar.gee(dn~mating*sprich*massbxcx, data = datpgls, phy=trs.cut)
+m0.2
+shapiro.test(residuals(m0.2))
+
+m0.4<-compar.gee(sprich~mating*dnds*massbxcx, data = datpgls, phy=trs.cut)
+m0.4
+shapiro.test(residuals(m0.4))
+
+m0.5<-compar.gee(sprich~mating:dnds+massbxcx:mating+massbxcx:dnds+dnds+mating+massbxcx, data = datpgls, phy=trs.cut)
+m0.5
+shapiro.test(residuals(m0.5))
+
+m0.5<-compar.gee(dnds~mating*sprich*massbxcx, data = datpgls, phy=trs.cut)
+m0.5
+shapiro.test(residuals(m0.5))
+
+m0.8<-compar.gee(sprich~mating*ds*massbxcx, data = datpgls, phy=trs.cut)
+m0.8
+shapiro.test(residuals(m0.8))
+
+#poly
+m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.8.1
+shapiro.test(residuals(m0.8.1))
+#mono
+m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.8.2
+shapiro.test(residuals(m0.8.2))
+
+
+m1<-compar.gee(dn~mating, data = datpgls, phy=trs.cut)
+m1
+shapiro.test(residuals(m1))
+
+m2<-compar.gee(dnds~mating, data = datpgls, phy=trs.cut)
+m2
+shapiro.test(residuals(m2))
+
+m3<-compar.gee(ds~mating, data = datpgls, phy=trs.cut)
+m3
+shapiro.test(residuals(m3))
+
+m5<-compar.gee(sprich~mating, data = datpgls, phy=trs.cut)
+m5
+shapiro.test(residuals(m5))
+
+m6<-compar.gee(dn~massbxcx, data = datpgls, phy=trs.cut)
+m6
+shapiro.test(residuals(m6))
+
+m7<-compar.gee(ds~massbxcx, data = datpgls, phy=trs.cut)
+m7
+shapiro.test(residuals(m7))
+
+m8<-compar.gee(dnds~massbxcx, data = datpgls, phy=trs.cut)
+m8
+shapiro.test(residuals(m8))
+
+m10<-compar.gee(sprich~massbxcx, data = datpgls, phy=trs.cut)
+m10
+shapiro.test(residuals(m10))
+
+m11<-compar.gee(massbxcx~mating, data = datpgls, phy=trs.cut)
+m11
+shapiro.test(residuals(m11))
+
+m12<-compar.gee(sprich~dn, data = datpgls, phy=trs.cut)
+m12
+shapiro.test(residuals(m12))
+
+m13<-compar.gee(sprich~dnds, data = datpgls, phy=trs.cut)
+m13
+shapiro.test(residuals(m13))
+
+m14<-compar.gee(sprich~ds, data = datpgls, phy=trs.cut)
+m14
+shapiro.test(residuals(m14))
