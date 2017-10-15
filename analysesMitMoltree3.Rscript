@@ -74,7 +74,17 @@ m0.4<-compar.gee(sprich~mating*dnds*massbxcx, data = datpgls, phy=trs.cut)
 m0.4
 shapiro.test(residuals(m0.4))
 
-m0.5<-compar.gee(sprich~mating:dnds+massbxcx:mating+massbxcx:dnds+dnds+mating+massbxcx, data = datpgls, phy=trs.cut)
+#poly
+m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.4.1
+shapiro.test(residuals(m0.4.1))
+#mono
+m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.4.2
+shapiro.test(residuals(m0.4.2))
+
+
+m0.5<-compar.gee(sprich~mating:dnds+massbxcx:mating+massbxcx:dnds+mating+massbxcx, data = datpgls, phy=trs.cut)
 m0.5
 shapiro.test(residuals(m0.5))
 

@@ -1,27 +1,45 @@
 
 
-pdf("triple.interaction.pdf", width = 8, height = 12)
+pdf("triple.interaction.pdf", width = 6, height = 9)
 par(mfrow = c(3, 2))
+
+### Boxplots of Wicoxon signed-ranks test
+
+source("analysesMitMoltree2.Rscript")
+
+boxplot(log(spp),log(spm), range = 0, main = "Net diversification NS", names = c("Polygamy", "Monogamy"))
+boxplot(log(dsp),log(dsm), range = 0, main = "Synonymous subst rate NS", names = c("Polygamy", "Monogamy"))
+boxplot(log(dnp),log(dnm), range = 0, main = "Non-synonymous subst rate *", names = c("Polygamy", "Monogamy"))
+boxplot(log(dndsp),log(dndsm), range = 0, main = "dN/dS *\n(more = smaller pops)", names = c("Polygamy", "Monogamy"))
+boxplot(log(rowMeans(cbind(massfemp,massmalep))),log(rowMeans(cbind(massfemm,massmalem))), range = 0, main = "Mass NS", names = c("Polygamy", "Monogamy"))
+frame()
+
+
+### Scatterplots of PGLS regressions
+
+source("analysesMitMoltree3.Rscript")
+
 yrPal <- colorRampPalette(c('yellow','red'))
 colmasspoly <- yrPal(10)[as.numeric(cut(massbxcx[1:32],breaks = 10))]
 colmassmono <- yrPal(10)[as.numeric(cut(massbxcx[33:64],breaks = 10))]
 
 # For ds poly and mono
 
-predds0<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 3))
-predds1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 2))
-preddsm1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 4))
+predds0<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 2))
+predds1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 1))
+preddsm1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:32], massbxcx = 3))
 
-plot(ds[1:32], sprich[1:32], col = colmasspoly, pch = 19)
+plot(ds[1:32], sprich[1:32], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Net diversification", xlab = "Synonymous subst rate")
 lines(ds[1:32], predds0, col="orange", lwd = 2)
 lines(ds[1:32], predds1, col="yellow", lwd = 2)
 lines(ds[1:32], preddsm1, col="red", lwd = 2)
 
-predds0<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 3))
-predds1<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 2))
-preddsm1<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 4))
+predds0<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 2))
+predds1<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 1))
+preddsm1<-predict(m0.8.2,newdata=data.frame(ds=ds[33:64], massbxcx = 3))
 
-plot(ds[33:64], sprich[33:64], col = colmassmono, pch = 19)
+plot(ds[33:64], sprich[33:64], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Net diversification", xlab = "Synonymous subst rate")
+legend(-2.7, 6.2, legend = c("Low mass", "Mean mass", "High mass"), pch = 19, col = c("yellow", "orange", "red"), box.lty = 0)
 lines(ds[33:64], predds0, col="orange", lwd = 2)
 lines(ds[33:64], predds1, col="yellow", lwd = 2)
 lines(ds[33:64], preddsm1, col="red", lwd = 2)
@@ -32,7 +50,7 @@ preddn0<-predict(m0.1.1,newdata=data.frame(dn=dn[1:32], massbxcx = 3))
 preddn1<-predict(m0.1.1,newdata=data.frame(dn=dn[1:32], massbxcx = 2))
 preddnm1<-predict(m0.1.1,newdata=data.frame(dn=dn[1:32], massbxcx = 4))
 
-plot(dn[1:32], sprich[1:32], col = colmasspoly, pch = 19)
+plot(dn[1:32], sprich[1:32], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate")
 lines(dn[1:32], preddn0, col="orange", lwd = 2)
 lines(dn[1:32], preddn1, col="yellow", lwd = 2)
 lines(dn[1:32], preddnm1, col="red", lwd = 2)
@@ -41,29 +59,29 @@ preddn0<-predict(m0.1.2,newdata=data.frame(dn=dn[33:64], massbxcx = 3))
 preddn1<-predict(m0.1.2,newdata=data.frame(dn=dn[33:64], massbxcx = 2))
 preddnm1<-predict(m0.1.2,newdata=data.frame(dn=dn[33:64], massbxcx = 4))
 
-plot(dn[33:64], sprich[33:64], col = colmassmono, pch = 19)
+plot(dn[33:64], sprich[33:64], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate")
 lines(dn[33:64], preddn0, col="orange", lwd = 2)
 lines(dn[33:64], preddn1, col="yellow", lwd = 2)
 lines(dn[33:64], preddnm1, col="red", lwd = 2)
 
 # For dnds poly and mono
 
-preddnds0<-predict(m0.1.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 3))
-preddnds1<-predict(m0.1.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 2))
-preddndsm1<-predict(m0.1.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 4))
+preddnds0<-predict(m0.4.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 3))
+preddnds1<-predict(m0.4.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 2))
+preddndsm1<-predict(m0.4.1,newdata=data.frame(dnds=dnds[1:32], massbxcx = 4))
 
-plot(dnds[1:32], sprich[1:32], col = colmasspoly, pch = 19)
+plot(dnds[1:32], sprich[1:32], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)")
 lines(dnds[1:32], preddnds0, col="orange", lwd = 2)
 lines(dnds[1:32], preddnds1, col="yellow", lwd = 2)
 lines(dnds[1:32], preddndsm1, col="red", lwd = 2)
 
-preddnds0<-predict(m0.1.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 3))
-preddnds1<-predict(m0.1.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 2))
-preddndsm1<-predict(m0.1.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 4))
+preddnds0<-predict(m0.4.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 3))
+preddnds1<-predict(m0.4.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 2))
+preddndsm1<-predict(m0.4.2,newdata=data.frame(dnds=dnds[33:64], massbxcx = 4))
 
-plot(dnds[33:64], sprich[33:64], col = colmassmono, pch = 19)
+plot(dnds[33:64], sprich[33:64], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)")
 lines(dnds[33:64], preddnds0, col="orange", lwd = 2)
 lines(dnds[33:64], preddnds1, col="yellow", lwd = 2)
 lines(dnds[33:64], preddndsm1, col="red", lwd = 2)
 
-dev.new()
+dev.off()
