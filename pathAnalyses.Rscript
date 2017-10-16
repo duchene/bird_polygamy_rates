@@ -1,0 +1,27 @@
+library(phangorn)
+library(car)
+library(phylopath)
+
+#source("analysesMitMoltree3.Rscript")
+
+modelsdn1 <- list(
+one = DAG(dn ~ massbxcx, mating ~ massbxcx, sprich ~ dn + mating + massbxcx),
+two = DAG(dn ~ massbxcx + mating, sprich ~ dn + mating + massbxcx),
+three = DAG(dn ~ massbxcx + mating, mating ~ massbxcx, sprich ~ massbxcx + mating + dn),
+four = DAG(dn ~ massbxcx, mating ~ massbxcx + dn, sprich ~ massbxcx + mating + dn)
+)
+
+modelsds1 <- list(
+one = DAG(ds ~ massbxcx, mating ~ massbxcx, sprich ~ ds + mating),
+two = DAG(ds ~ mating + massbxcx, sprich ~ ds + mating + massbxcx),
+three = DAG(ds ~ massbxcx + mating, mating ~ massbxcx, sprich ~ massbxcx + mating + ds),
+four = DAG(ds ~ massbxcx, mating ~ massbxcx + ds, sprich ~ massbxcx + mating + ds)
+)
+
+modelsdnds1 <- list(
+one = DAG(dnds ~ massbxcx, mating ~ massbxcx, sprich ~ dnds + mating),
+two = DAG(dnds ~ mating + massbxcx, sprich ~ dnds + mating + massbxcx),
+three = DAG(dnds ~ massbxcx + mating, mating ~ massbxcx, sprich ~ massbxcx + mating + dnds),
+four = DAG(dnds ~ massbxcx, mating ~ massbxcx + dnds, sprich ~ massbxcx + mating + dnds)
+)
+

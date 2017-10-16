@@ -1,7 +1,7 @@
 library(phangorn)
 source("make.taxa.unique.R")
 tr33 <- read.tree("tr33pairs.tre")
-alltrstxt <- readLines("")
+alltrstxt <- readLines("~/Downloads/mnt 4/BirdzillaHackett4.tre")
 trscut <- list()
 for(i in 1:1000){
       tr <- read.tree(text = alltrstxt[i])
@@ -15,4 +15,4 @@ for(i in 1:1000){
       if(i %in% seq(1, 1000, 50)) print(i)
 }
 class(trscut) <- "multiPhylo"
-write.tree(trscut, file = "jetztrs33pairs.prelim2.tre")
+write.tree(trscut, file = "jetztrs33pairs.prelim3.tre")
