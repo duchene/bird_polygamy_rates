@@ -2,26 +2,91 @@ library(phangorn)
 library(car)
 library(phylopath)
 
-#source("analysesMitMoltree3.Rscript")
+source("analysesMitMoltree3.Rscript")
 
 modelsdn1 <- list(
-one = DAG(dn ~ massbxcx, mating ~ massbxcx, sprich ~ dn + mating + massbxcx),
-two = DAG(dn ~ massbxcx + mating, sprich ~ dn + mating + massbxcx),
-three = DAG(dn ~ massbxcx + mating, mating ~ massbxcx, sprich ~ massbxcx + mating + dn),
-four = DAG(dn ~ massbxcx, mating ~ massbxcx + dn, sprich ~ massbxcx + mating + dn)
+one = DAG(dn ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dn * mating * massbxcx),
+two = DAG(mating ~ massbxcx * dn, dn ~ massbxcx, sprich ~ dn * mating * massbxcx),
+three = DAG(dn ~ massbxcx * mating, mating ~ massbxcx, sprich ~ mating * massbxcx),
+four = DAG(mating ~ massbxcx * dn, dn ~ massbxcx, sprich ~ mating * massbxcx),
+five = DAG(dn ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dn * massbxcx),
+six = DAG(mating ~ massbxcx * dn, dn ~ massbxcx, sprich ~ dn * massbxcx),
+seven = DAG(dn ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dn * mating),
+eight = DAG(mating ~ massbxcx * dn, dn ~ massbxcx, sprich ~ dn * mating),
+nine = DAG(dn ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dn),
+ten = DAG(mating ~ massbxcx * dn, dn ~ massbxcx, sprich ~ dn),
+eleven = DAG(dn ~ massbxcx * mating, mating ~ massbxcx, sprich ~ massbxcx),
+twelve = DAG(mating ~ massbxcx * dn, dn ~ massbxcx, sprich ~ massbxcx),
+thirt = DAG(dn ~ massbxcx * mating, mating ~ massbxcx, sprich ~ mating),
+fourt = DAG(mating ~ massbxcx * dn, dn ~ massbxcx, sprich ~ mating)
 )
+
+resultdn1 <- phylo_path(modelsdn1, data = datpgls, tree = trs.cut)
 
 modelsds1 <- list(
-one = DAG(ds ~ massbxcx, mating ~ massbxcx, sprich ~ ds + mating),
-two = DAG(ds ~ mating + massbxcx, sprich ~ ds + mating + massbxcx),
-three = DAG(ds ~ massbxcx + mating, mating ~ massbxcx, sprich ~ massbxcx + mating + ds),
-four = DAG(ds ~ massbxcx, mating ~ massbxcx + ds, sprich ~ massbxcx + mating + ds)
+one = DAG(ds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ ds * mating * massbxcx),
+two = DAG(mating ~ massbxcx * ds, ds ~ massbxcx, sprich ~ ds * mating * massbxcx),
+three = DAG(ds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ mating * massbxcx),
+four = DAG(mating ~ massbxcx * ds, ds ~ massbxcx, sprich ~ mating * massbxcx),
+five = DAG(ds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ ds * massbxcx),
+six = DAG(mating ~ massbxcx * ds, ds ~ massbxcx, sprich ~ ds * massbxcx),
+seven = DAG(ds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ ds * mating),
+eight = DAG(mating ~ massbxcx * ds, ds ~ massbxcx, sprich ~ ds * mating),
+nine = DAG(ds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ ds),
+ten = DAG(mating ~ massbxcx * ds, ds ~ massbxcx, sprich ~ ds),
+eleven = DAG(ds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ massbxcx),
+twelve = DAG(mating ~ massbxcx * ds, ds ~ massbxcx, sprich ~ massbxcx),
+thirt = DAG(ds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ mating),
+fourt = DAG(mating ~ massbxcx * ds, ds ~ massbxcx, sprich ~ mating)
 )
+
+resultds1 <- phylo_path(modelsds1, data = datpgls, tree = trs.cut)
 
 modelsdnds1 <- list(
-one = DAG(dnds ~ massbxcx, mating ~ massbxcx, sprich ~ dnds + mating),
-two = DAG(dnds ~ mating + massbxcx, sprich ~ dnds + mating + massbxcx),
-three = DAG(dnds ~ massbxcx + mating, mating ~ massbxcx, sprich ~ massbxcx + mating + dnds),
-four = DAG(dnds ~ massbxcx, mating ~ massbxcx + dnds, sprich ~ massbxcx + mating + dnds)
+one = DAG(dnds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dnds * mating * massbxcx),
+two = DAG(mating ~ massbxcx * dnds, dnds ~ massbxcx, sprich ~ dnds * mating * massbxcx),
+three = DAG(dnds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ mating * massbxcx),
+four = DAG(mating ~ massbxcx * dnds, dnds ~ massbxcx, sprich ~ mating * massbxcx),
+five = DAG(dnds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dnds * massbxcx),
+six = DAG(mating ~ massbxcx * dnds, dnds ~ massbxcx, sprich ~ dnds * massbxcx),
+seven = DAG(dnds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dnds * mating),
+eight = DAG(mating ~ massbxcx * dnds, dnds ~ massbxcx, sprich ~ dnds * mating),
+nine = DAG(dnds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ dnds),
+ten = DAG(mating ~ massbxcx * dnds, dnds ~ massbxcx, sprich ~ dnds),
+eleven = DAG(dnds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ massbxcx),
+twelve = DAG(mating ~ massbxcx * dnds, dnds ~ massbxcx, sprich ~ massbxcx),
+thirt = DAG(dnds ~ massbxcx * mating, mating ~ massbxcx, sprich ~ mating),
+fourt = DAG(mating ~ massbxcx * dnds, dnds ~ massbxcx, sprich ~ mating)
 )
 
+resultdnds1 <- phylo_path(modelsdnds1, data = datpgls, tree = trs.cut)
+
+modelsmating1 <- list(
+one = DAG(dn ~ mating, ds ~ mating, sprich ~ dn + ds),
+two = DAG(mating ~  dn + ds, sprich ~ dn + ds),
+three = DAG(dn ~ mating, ds ~ mating, sprich ~ mating),
+four = DAG(mating ~  dn + ds, sprich ~ mating),
+five = DAG(dn ~ mating, ds ~ mating, sprich ~ dn + ds + mating),
+six = DAG(mating ~  dn + ds, sprich ~ dn + ds + mating)
+)
+
+resultmaitng1 <- phylo_path(modelsmating1, data = datpgls, tree = trs.cut)
+
+#pdf("pathsPrelim.pdf")
+
+#plot(best(resultdn1))
+#coef_plot(best(resultdn1))
+#plot(average(resultdn1, method = "full"), curvature = 0.1)
+#coef_plot(average(resultdn1, method = "full"))
+
+#plot(best(resultds1))
+#coef_plot(best(resultds1))
+#plot(average(resultds1, method = "full"), curvature = 0.1)
+#coef_plot(average(resultds1, method = "full"))
+
+#plot(best(resultdnds1))
+#coef_plot(best(resultdnds1))
+#plot(average(resultdnds1, method = "full"), curvature = 0.1)
+#coef_plot(average(resultdnds1, method = "full"))
+
+#dev.off()

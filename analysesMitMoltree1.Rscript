@@ -13,7 +13,7 @@ dat_mig_66paired_molcut_101017<-read.csv("dat_mig_66paired_molcut_101017.csv")
 
 
 str(dat_mig_66paired_molcut_101017)
-data<-dat_mig_66paired_molcut_101017
+data<-dat_mig_66paired_molcut_101017[-c(1, 22),]
 attach(data)
 
 #variables
@@ -60,7 +60,7 @@ colnames(resultsmat) <- c(paste0("paramsig", 0:17), paste0("modshapsig", 0:17),"
 
 for(j in 1:100){
   
-  subtdir<-sample(c(0,1), 33, replace = T)#va a muestrear 33 veces (numero de parejas) aleatoriamente los números 0 y 1
+  subtdir<-sample(c(0,1), 31, replace = T)#va a muestrear 33 veces (numero de parejas) aleatoriamente los números 0 y 1
   ###creamos variables de los constrastes#
   contdn<-vector()
   contds<-vector()
@@ -70,7 +70,7 @@ for(j in 1:100){
   contmasssexdiff<-vector()
   
   #### for each pair we do the subtraction and save the value##
-  for(i in 1:33){
+  for(i in 1:31){
     if(subtdir[i]){
       contdn[i]<-(log(dnm[i])-log(dnp[i]))/(overallm[i]+overallp[i])^0.1
       contds[i]<-(log(dsm[i])-log(dsp[i]))/(overallm[i]+overallp[i])^0.1

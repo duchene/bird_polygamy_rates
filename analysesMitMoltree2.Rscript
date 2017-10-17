@@ -13,7 +13,7 @@ dat_mig_66paired_molcut_101017<-read.csv("dat_mig_66paired_molcut_101017.csv")
 
 
 str(dat_mig_66paired_molcut_101017)
-data<-dat_mig_66paired_molcut_101017
+data<-dat_mig_66paired_molcut_101017[-c(1, 22),]
 attach(data)
 
 #variables

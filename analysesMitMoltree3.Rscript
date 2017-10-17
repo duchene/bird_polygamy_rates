@@ -13,17 +13,19 @@ trs <- read.tree("tr33pairs.tre")
 data<-read.csv("dat_mig_64_molcut_101017.csv")
 
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
-trs.cut<-drop.tip(trs,c("Mionectes", "Colonia"))
+trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Dromaius", "Zosterops"))
 
 rownames(data) <- data[,1]
-data <- data[-which(rownames(data) %in% c("Mionectes", "Colonia")),]
+data <- data[-which(rownames(data) %in% c("Mionectes", "Colonia", "Dromaius", "Zosterops")),]
 data$sprich <- as.numeric(data$sprich)
+
+#data <- data[-c(1, 53),]
 
 attach(data)
 
 # create poly and mono trees
-trs.mono <- drop.tip(trs.cut, as.character(sp[1:32]))
-trs.poly <-drop.tip(trs.cut, as.character(sp[33:64]))# create poly and mono trees
+trs.mono <- drop.tip(trs.cut, as.character(data$sp[which(data$mating.system == "poly")]))
+trs.poly <- drop.tip(trs.cut, as.character(data$sp[which(data$mating.system == "mono")]))# create poly and mono trees
 
 #variables
 
@@ -57,11 +59,11 @@ m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
 #poly
-m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.1.1
 shapiro.test(residuals(m0.1.1))
 #mono
-m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[32:62,], phy=trs.mono)
 m0.1.2
 shapiro.test(residuals(m0.1.2))
 
@@ -75,11 +77,11 @@ m0.4
 shapiro.test(residuals(m0.4))
 
 #poly
-m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.4.1
 shapiro.test(residuals(m0.4.1))
 #mono
-m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[32:62,], phy=trs.mono)
 m0.4.2
 shapiro.test(residuals(m0.4.2))
 
@@ -97,11 +99,11 @@ m0.8
 shapiro.test(residuals(m0.8))
 
 #poly
-m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.8.1
 shapiro.test(residuals(m0.8.1))
 #mono
-m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[32:62,], phy=trs.mono)
 m0.8.2
 shapiro.test(residuals(m0.8.2))
 
