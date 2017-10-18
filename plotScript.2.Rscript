@@ -1,6 +1,6 @@
 
 
-pdf("triple.interaction.pdf", width = 6, height = 9)
+pdf("triple.interaction.pdf", width = 6, height = 9, useDingbats = F)
 par(mfrow = c(3, 2))
 
 ### Boxplots of Wicoxon signed-ranks test
@@ -30,6 +30,7 @@ predds1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:31], massbxcx = 1.5))
 preddsm1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:31], massbxcx = 2.9))
 
 plot(ds[1:31], sprich[1:31], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Net diversification", xlab = "Synonymous subst rate")
+legend(-2.5, 1, legend = c("Mean mass", "Low mass"), lty = 1, lwd = 2, col = c("red", "yellow"), box.lwd = 0)
 lines(ds[1:31], predds0, col="orange", lwd = 2)
 lines(ds[1:31], predds1, col="yellow", lwd = 2)
 lines(ds[1:31], preddsm1, col="red", lwd = 2)

@@ -39,7 +39,24 @@ u = DAG(ds ~ massbxcx, dn ~ ds, sprich ~ mating * massbxcx * dn * ds),
 #aa = DAG(ds ~ mating, dn ~ massbxcx, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
 ab = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
 ac = DAG(ds ~ massbxcx, dn ~ ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-ad = DAG(ds ~ massbxcx, dn ~ massbxcx, mating ~ dn, sprich ~ mating * massbxcx * dn * ds)
+ad = DAG(ds ~ massbxcx, dn ~ massbxcx, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
+
+# The following adds the hypotheses for what affects speciation, once the best fitting model is assumed.
+
+pb = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx * dn),
+pc = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx * ds),
+pd = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * dn * ds),
+pe = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx * dn * ds),
+pf = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx * dn),
+pg = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx * ds),
+ph = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ dn * ds),
+pj = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx),
+pk = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * ds),
+pl = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * dn),
+pm = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating),
+pn = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx),
+po = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ ds),
+pp = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ dn)
 
 )
 
@@ -86,19 +103,9 @@ resultmaitng1 <- phylo_path(modelsmating1, data = datpgls, tree = trs.cut)
 
 #pdf("pathsPrelim.pdf")
 
-#plot(best(resultdn1))
-#coef_plot(best(resultdn1))
-#plot(average(resultdn1, method = "full"), curvature = 0.1)
-#coef_plot(average(resultdn1, method = "full"))
-
-#plot(best(resultds1))
-#coef_plot(best(resultds1))
-#plot(average(resultds1, method = "full"), curvature = 0.1)
-#coef_plot(average(resultds1, method = "full"))
-
-#plot(best(resultdnds1))
-#coef_plot(best(resultdnds1))
-#plot(average(resultdnds1, method = "full"), curvature = 0.1)
-#coef_plot(average(resultdnds1, method = "full"))
+#plot(best(result2))
+#coef_plot(best(result2))
+#plot(average(result2), curvature = 0.1)
+#coef_plot(average(result2))
 
 #dev.off()
