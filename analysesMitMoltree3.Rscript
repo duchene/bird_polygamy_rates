@@ -27,14 +27,21 @@ attach(data)
 trs.mono <- drop.tip(trs.cut, as.character(data$sp[which(data$mating.system == "poly")]))
 trs.poly <- drop.tip(trs.cut, as.character(data$sp[which(data$mating.system == "mono")]))# create poly and mono trees
 
+
+specage <- vector()
+for(i in 1:nrow(data)){
+	specage[i] <- trs.cut$edge.length[which(trs.cut$edge[,2] == which(trs.cut$tip.label == as.character(data$sp)[i]))]
+}
+
+
 #variables
 
 
 datpgls<- data.frame(sprich = log(data$sprich))
 datpgls$mating<-as.factor(data$mating.system)
-datpgls$ds<-log(data$dsmito)
-datpgls$dn<-log(data$dnmito)
-datpgls$dnds<-log(data$dndsmito)
+datpgls$ds<-log(data$dsmito)/specage
+datpgls$dn<-log(data$dnmito)/specage
+datpgls$dnds<-log(data$dndsmito)/specage
 datpgls$weights_poly<-data$weights_poly
 datpgls$massm<-log(data$M_mass)
 datpgls$massf<-log(data$F_mass)

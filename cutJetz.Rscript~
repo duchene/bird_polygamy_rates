@@ -1,19 +1,18 @@
 library(phangorn)
 source("make.taxa.unique.R")
 tr33 <- read.tree("tr33pairs.tre")
-tr15 <- read.tree("tr15pairs.tre")
 alltrstxt <- readLines("~/Downloads/mnt 4/BirdzillaHackett4.tre")
 trscut <- list()
 for(i in 1:1000){
       tr <- read.tree(text = alltrstxt[i])
       tr$tip.label <- sapply(tr$tip.label, function(x) strsplit(x, "_")[[1]][1])
       tr <- make.taxa.unique(tr)
-      tr <- drop.tip(tr, tr$tip.label[which(!tr$tip.label %in% tr15$tip.label)])
-      if(dist.topo(tr, tr15) == 0){
+      tr <- drop.tip(tr, tr$tip.label[which(!tr$tip.label %in% tr33$tip.label)])
+      if(dist.topo(tr, tr33) == 0){
       	    trscut[[length(trscut) + 1]] <- tr
 	    print(paste("tree", i, "agrees!"))
       }
       if(i %in% seq(1, 1000, 50)) print(i)
 }
 class(trscut) <- "multiPhylo"
-write.tree(trscut, file = "jetztrs15pairs.prelim0.tre")
+write.tree(trscut, file = "jetztrs33pairs.prelim3.tre")
