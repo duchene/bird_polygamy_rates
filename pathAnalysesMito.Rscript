@@ -15,12 +15,12 @@ e = DAG(ds ~ mating * massbxcx, dn ~ mating),
 f = DAG(ds ~ mating * massbxcx, dn ~ massbxcx),
 g = DAG(ds ~ mating * massbxcx, dn ~ ds),
 
-h = DAG(ds ~ mating, dn ~ mating * massbxcx * ds),
+#h = DAG(ds ~ mating, dn ~ mating * massbxcx * ds),
 #i = DAG(ds ~ mating, dn ~ mating * ds),
 j = DAG(ds ~ mating, dn ~ mating * massbxcx),
-k = DAG(ds ~ mating, dn ~ ds * massbxcx),
+#k = DAG(ds ~ mating, dn ~ ds * massbxcx),
 #l = DAG(ds ~ mating, dn ~ mating),
-m = DAG(ds ~ mating, dn ~ massbxcx),
+#m = DAG(ds ~ mating, dn ~ massbxcx),
 #n = DAG(ds ~ mating, dn ~ ds),
 
 o = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds),
@@ -41,6 +41,8 @@ ab = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn),
 ac = DAG(ds ~ massbxcx, dn ~ ds, mating ~ dn),
 ad = DAG(ds ~ massbxcx, dn ~ massbxcx, mating ~ dn)
 
+#ae = DAG(dn ~ mating * massbxcx * ds)
+
 )
 
 
@@ -49,21 +51,21 @@ result1 <- phylo_path(models1, data = datpgls, tree = trs.cut)
 # The following assess which part of the model is associated with speciation
 
 models2 <- list(
-oa = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx * dn * ds),
-ob = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx * dn),
-oc = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx * ds),
-od = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * dn * ds),
-oe = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ massbxcx * dn * ds),
-of = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ massbxcx * dn),
-og = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ massbxcx * ds),
-oh = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ dn * ds),
-oj = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx),
-ok = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * ds),
-ol = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * dn),
-om = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating),
-on = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ massbxcx),
-oo = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ ds),
-op = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ dn)
+pa = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx * dn * ds),
+pb = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx * dn),
+pc = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx * ds),
+pd = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * dn * ds),
+pe = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx * dn * ds),
+pf = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx * dn),
+pg = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx * ds),
+ph = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ dn * ds),
+pj = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx),
+pk = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * ds),
+pl = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * dn),
+pm = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating),
+pn = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ massbxcx),
+po = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ ds),
+pp = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ dn)
 )
 
 result2 <- phylo_path(models2, data = datpgls, tree = trs.cut)

@@ -39,9 +39,9 @@ for(i in 1:nrow(data)){
 
 datpgls<- data.frame(sprich = log(data$sprich))
 datpgls$mating<-as.factor(data$mating.system)
-datpgls$ds<-log(data$dsmito)/specage
-datpgls$dn<-log(data$dnmito)/specage
-datpgls$dnds<-log(data$dndsmito)/specage
+datpgls$ds<-log(data$dsmito/specage)
+datpgls$dn<-log(data$dnmito/specage)
+datpgls$dnds<-log(data$dndsmito/specage)
 datpgls$weights_poly<-data$weights_poly
 datpgls$massm<-log(data$M_mass)
 datpgls$massf<-log(data$F_mass)

@@ -7,44 +7,44 @@ source("analysesNucMoltree3.Rscript")
 ## The following assess the relationships between the explanatory variables
 
 models1 <- list(
-a = DAG(ds ~ mating * massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx * dn * ds),
-b = DAG(ds ~ mating * massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx * dn * ds),
-c = DAG(ds ~ mating * massbxcx, dn ~ mating * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-d = DAG(ds ~ mating * massbxcx, dn ~ ds * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-e = DAG(ds ~ mating * massbxcx, dn ~ mating, sprich ~ mating * massbxcx * dn * ds),
-f = DAG(ds ~ mating * massbxcx, dn ~ massbxcx, sprich ~ mating * massbxcx * dn * ds),
-g = DAG(ds ~ mating * massbxcx, dn ~ ds, sprich ~ mating * massbxcx * dn * ds),
+a = DAG(ds ~ mating * massbxcx, dn ~ mating * massbxcx * ds),
+b = DAG(ds ~ mating * massbxcx, dn ~ mating * ds),
+c = DAG(ds ~ mating * massbxcx, dn ~ mating * massbxcx),
+d = DAG(ds ~ mating * massbxcx, dn ~ ds * massbxcx),
+e = DAG(ds ~ mating * massbxcx, dn ~ mating),
+f = DAG(ds ~ mating * massbxcx, dn ~ massbxcx),
+g = DAG(ds ~ mating * massbxcx, dn ~ ds),
 
-h = DAG(ds ~ mating, dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx * dn * ds),
-i = DAG(ds ~ mating, dn ~ mating * ds, sprich ~ mating * massbxcx * dn * ds),
-j = DAG(ds ~ mating, dn ~ mating * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-k = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-l = DAG(ds ~ mating, dn ~ mating, sprich ~ mating * massbxcx * dn * ds),
-m = DAG(ds ~ mating, dn ~ massbxcx, sprich ~ mating * massbxcx * dn * ds),
-n = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * massbxcx * dn * ds),
+#h = DAG(ds ~ mating, dn ~ mating * massbxcx * ds),
+#i = DAG(ds ~ mating, dn ~ mating * ds),
+#j = DAG(ds ~ mating, dn ~ mating * massbxcx),
+#k = DAG(ds ~ mating, dn ~ ds * massbxcx),
+#l = DAG(ds ~ mating, dn ~ mating),
+#m = DAG(ds ~ mating, dn ~ massbxcx),
+#n = DAG(ds ~ mating, dn ~ ds),
 
-o = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx * dn * ds),
-p = DAG(ds ~ massbxcx, dn ~ mating * ds, sprich ~ mating * massbxcx * dn * ds),
-q = DAG(ds ~ massbxcx, dn ~ mating * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-r = DAG(ds ~ massbxcx, dn ~ ds * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-s = DAG(ds ~ massbxcx, dn ~ mating, sprich ~ mating * massbxcx * dn * ds),
-t = DAG(ds ~ massbxcx, dn ~ massbxcx, sprich ~ mating * massbxcx * dn * ds),
-u = DAG(ds ~ massbxcx, dn ~ ds, sprich ~ mating * massbxcx * dn * ds),
+o = DAG(ds ~ massbxcx, dn ~ mating * massbxcx * ds),
+p = DAG(ds ~ massbxcx, dn ~ mating * ds),
+q = DAG(ds ~ massbxcx, dn ~ mating * massbxcx),
+#r = DAG(ds ~ massbxcx, dn ~ ds * massbxcx),
+#s = DAG(ds ~ massbxcx, dn ~ mating),
+#t = DAG(ds ~ massbxcx, dn ~ massbxcx),
+#u = DAG(ds ~ massbxcx, dn ~ ds),
 
-#v = DAG(ds ~ mating * massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-#x = DAG(ds ~ mating * massbxcx, dn ~ ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-#w = DAG(ds ~ mating * massbxcx, dn ~ massbxcx, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-#y = DAG(ds ~ mating, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-#z = DAG(ds ~ mating, dn ~ ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-#aa = DAG(ds ~ mating, dn ~ massbxcx, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-ab = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-ac = DAG(ds ~ massbxcx, dn ~ ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
-ad = DAG(ds ~ massbxcx, dn ~ massbxcx, mating ~ dn, sprich ~ mating * massbxcx * dn * ds)
+#v = DAG(ds ~ mating * massbxcx, dn ~ massbxcx * ds, mating ~ dn),
+#x = DAG(ds ~ mating * massbxcx, dn ~ ds, mating ~ dn),
+#w = DAG(ds ~ mating * massbxcx, dn ~ massbxcx, mating ~ dn),
+#y = DAG(ds ~ mating, dn ~ massbxcx * ds, mating ~ dn),
+#z = DAG(ds ~ mating, dn ~ ds, mating ~ dn),
+#aa = DAG(ds ~ mating, dn ~ massbxcx, mating ~ dn),
+ab = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn),
+ac = DAG(ds ~ massbxcx, dn ~ ds, mating ~ dn),
+ad = DAG(ds ~ massbxcx, dn ~ massbxcx, mating ~ dn)
 
-#ae = DAG(dn ~ mating * massbxcx * ds, sprich ~ mating * massbxcx * dn * ds),
-#af = DAG(dn ~ mating * ds, sprich ~ mating * massbxcx * dn * ds),
-#ag = DAG(dn ~ mating * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-#ai = DAG(dn ~ mating, sprich ~ mating * massbxcx * dn * ds)
+#ae = DAG(dn ~ mating * massbxcx * ds),
+#af = DAG(dn ~ mating * ds),
+#ag = DAG(dn ~ mating * massbxcx),
+#ai = DAG(dn ~ mating)
 
 )
 
@@ -53,37 +53,22 @@ result1 <- phylo_path(models1, data = datpgls1, tree = trs.cut1)
 # The following assess which part of the model is associated with speciation
 
 models2 <- list(
-ka = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * massbxcx * dn * ds),
-kb = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * massbxcx * dn),
-kc = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * massbxcx * ds),
-kd = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * dn * ds),
-ke = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ massbxcx * dn * ds),
-kf = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ massbxcx * dn),
-kg = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ massbxcx * ds),
-kh = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ dn * ds),
-kj = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * massbxcx),
-kk = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * ds),
-kl = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating * dn),
-km = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ mating),
-kn = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ massbxcx),
-ko = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ ds),
-kp = DAG(ds ~ mating, dn ~ ds * massbxcx, sprich ~ dn),
+ka = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx * dn * ds),
+kb = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx * dn),
+kc = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx * ds),
+kd = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * dn * ds),
+ke = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ massbxcx * dn * ds),
+kf = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ massbxcx * dn),
+kg = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ massbxcx * ds),
+kh = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ dn * ds),
+kj = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * massbxcx),
+kk = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * ds),
+kl = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating * dn),
+km = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ mating),
+kn = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ massbxcx),
+ko = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ ds),
+kp = DAG(ds ~ massbxcx, dn ~ massbxcx * ds, mating ~ dn, sprich ~ dn)
 
-na = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * massbxcx * dn * ds),
-nb = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * massbxcx * dn),
-nc = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * massbxcx * ds),
-#nd = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * dn * ds),
-ne = DAG(ds ~ mating, dn ~ ds, sprich ~ massbxcx * dn * ds),
-nf = DAG(ds ~ mating, dn ~ ds, sprich ~ massbxcx * dn),
-ng = DAG(ds ~ mating, dn ~ ds, sprich ~ massbxcx * ds),
-#nh = DAG(ds ~ mating, dn ~ ds, sprich ~ dn * ds),
-nj = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * massbxcx),
-#nk = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * ds),
-#nl = DAG(ds ~ mating, dn ~ ds, sprich ~ mating * dn),
-#nm = DAG(ds ~ mating, dn ~ ds, sprich ~ mating),
-nn = DAG(ds ~ mating, dn ~ ds, sprich ~ massbxcx)
-#no = DAG(ds ~ mating, dn ~ ds, sprich ~ ds),
-#np = DAG(ds ~ mating, dn ~ ds, sprich ~ dn)
 )
 
 result2 <- phylo_path(models2, data = datpgls1, tree = trs.cut1)
