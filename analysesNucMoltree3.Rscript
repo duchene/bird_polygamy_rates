@@ -33,7 +33,7 @@ for(i in 1:nrow(data)){
 #variables
 
 
-datpgls<- data.frame(sprich = log(data$sprich))
+datpgls<- data.frame(sprich = log(data$sprich/specage))
 datpgls$mating<-as.factor(data$mating.system)
 datpgls$ds<-log(data$dsnuc/specage)
 datpgls$dn<-log(data$dnnuc/specage)
