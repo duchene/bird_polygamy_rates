@@ -9,14 +9,15 @@
 library(ape)
 #trs<-read.tree("C:\\Documentos Maider\\My research\\2017 ANU\\papers\\polygamy vs mol evol\\our data\\analyses\\tr33pairs.tre")
 trs <- read.tree("tr33pairs.tre")
+trs <- read.tree("jetztrs33pairs.41.tre")[[10]]
 
 data<-read.csv("dat_mig_64_molcut_101017.csv")
 
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
-trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Dromaius", "Zosterops"))
+trs.cut<-drop.tip(trs,c("Mionectes", "Colonia"  ))#  , "Zosterops", "Sylvia", "Dromaius", "Apterix", "Vanellus", "Polytelis", "Charadrius", "Alisterus"))
 
 rownames(data) <- data[,1]
-data <- data[-which(rownames(data) %in% c("Mionectes", "Colonia", "Dromaius", "Zosterops")),]
+data <- data[-which(rownames(data) %in% c("Mionectes", "Colonia"  )),]#  , "Zosterops", "Sylvia", "Dromaius", "Apterix", "Vanellus", "Polytelis", "Charadrius", "Alisterus")),]
 data$sprich <- as.numeric(data$sprich)
 
 #data <- data[-c(1, 53),]
@@ -30,18 +31,19 @@ trs.poly <- drop.tip(trs.cut, as.character(data$sp[which(data$mating.system == "
 
 specage <- vector()
 for(i in 1:nrow(data)){
-	specage[i] <- trs.cut$edge.length[which(trs.cut$edge[,2] == which(trs.cut$tip.label == as.character(data$sp)[i]))]
+	specage[i] <- trs$edge.length[which(trs$edge[,2] == which(trs$tip.label == as.character(data$sp)[i]))]
 }
 
 
 #variables
 
 
-datpgls<- data.frame(sprich = log(data$sprich))
+datpgls<- data.frame(sprich = log(data$sprich/specage))
 datpgls$mating<-as.factor(data$mating.system)
-datpgls$ds<-log(data$dsmito)/specage
-datpgls$dn<-log(data$dnmito)/specage
-datpgls$dnds<-log(data$dndsmito)/specage
+datpgls$ds<-log(data$dsmito/specage)
+datpgls$dn<-log(data$dnmito/specage)
+datpgls$dnds<-log(data$dndsmito/specage)
+datpgls$overall<-log(data$overallmol/specage)
 datpgls$weights_poly<-data$weights_poly
 datpgls$massm<-log(data$M_mass)
 datpgls$massf<-log(data$F_mass)
@@ -49,7 +51,7 @@ datpgls$diffmass<-datpgls$massm-datpgls$massf
 rownames(datpgls) <- as.character(data$sp)
 datpgls$massmean<-rowMeans(cbind(log(M_mass),log(F_mass)))
 powerTransform(rowMeans(cbind(M_mass, F_mass)))
-datpgls$massbxcx<-bcPower(rowMeans(cbind(M_mass, F_mass)),-0.184764  )
+datpgls$massbxcx<-bcPower(rowMeans(cbind(M_mass, F_mass)),-0.184764)
 
 
 attach(datpgls)
@@ -66,13 +68,13 @@ m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
 #poly
-m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls[1:31,], phy=trs.poly)
-m0.1.1
-shapiro.test(residuals(m0.1.1))
+#m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls[1:30,], phy=trs.poly)
+#m0.1.1
+#shapiro.test(residuals(m0.1.1))
 #mono
-m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[32:62,], phy=trs.mono)
-m0.1.2
-shapiro.test(residuals(m0.1.2))
+#m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[31:60,], phy=trs.mono)
+#m0.1.2
+#shapiro.test(residuals(m0.1.2))
 
 
 m0.2<-compar.gee(dn~mating*sprich*massbxcx, data = datpgls, phy=trs.cut)
@@ -84,13 +86,13 @@ m0.4
 shapiro.test(residuals(m0.4))
 
 #poly
-m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:31,], phy=trs.poly)
-m0.4.1
-shapiro.test(residuals(m0.4.1))
+#m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:30,], phy=trs.poly)
+#m0.4.1
+#shapiro.test(residuals(m0.4.1))
 #mono
-m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[32:62,], phy=trs.mono)
-m0.4.2
-shapiro.test(residuals(m0.4.2))
+#m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[31:60,], phy=trs.mono)
+#m0.4.2
+#shapiro.test(residuals(m0.4.2))
 
 
 m0.5<-compar.gee(sprich~mating:dnds+massbxcx:mating+massbxcx:dnds+mating+massbxcx, data = datpgls, phy=trs.cut)
@@ -106,13 +108,13 @@ m0.8
 shapiro.test(residuals(m0.8))
 
 #poly
-m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:31,], phy=trs.poly)
-m0.8.1
-shapiro.test(residuals(m0.8.1))
+#m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:30,], phy=trs.poly)
+#m0.8.1
+#shapiro.test(residuals(m0.8.1))
 #mono
-m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[32:62,], phy=trs.mono)
-m0.8.2
-shapiro.test(residuals(m0.8.2))
+#m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[31:60,], phy=trs.mono)
+#m0.8.2
+#shapiro.test(residuals(m0.8.2))
 
 
 m1<-compar.gee(dn~mating, data = datpgls, phy=trs.cut)

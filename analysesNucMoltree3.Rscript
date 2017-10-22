@@ -25,10 +25,13 @@ trs.mono <- drop.tip(trs.cut, as.character(sp[1:15]))
 trs.poly <-drop.tip(trs.cut, as.character(sp[16:30]))# create poly and mono trees
 
 
+
+
 specage <- vector()
 for(i in 1:nrow(data)){
-	specage[i] <- trs.cut$edge.length[which(trs.cut$edge[,2] == which(trs.cut$tip.label == as.character(data$sp)[i]))]
+	specage[i] <- trs$edge.length[which(trs$edge[,2] == which(trs$tip.label == as.character(data$sp)[i]))]
 }
+
 
 #variables
 

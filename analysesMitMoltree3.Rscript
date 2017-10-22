@@ -9,7 +9,8 @@
 library(ape)
 #trs<-read.tree("C:\\Documentos Maider\\My research\\2017 ANU\\papers\\polygamy vs mol evol\\our data\\analyses\\tr33pairs.tre")
 trs <- read.tree("tr33pairs.tre")
-trs <- read.tree("jetztrs33pairs.41.tre")[[10]]
+#trs <- read.tree("jetztrs33pairs.41.tre")[[1]]
+load("trees.samples.Rdata")
 
 data<-read.csv("dat_mig_64_molcut_101017.csv")
 
@@ -28,10 +29,29 @@ attach(data)
 trs.mono <- drop.tip(trs.cut, as.character(data$sp[which(data$mating.system == "poly")]))
 trs.poly <- drop.tip(trs.cut, as.character(data$sp[which(data$mating.system == "mono")]))# create poly and mono trees
 
-
 specage <- vector()
+ratemit12 <- vector()
+ratemit3 <- vector()
+ratenuc12 <- vector()
+ratenuc3 <- vector()
 for(i in 1:nrow(data)){
-	specage[i] <- trs$edge.length[which(trs$edge[,2] == which(trs$tip.label == as.character(data$sp)[i]))]
+	specage[i] <- trs.cut$edge.length[which(trs.cut$edge[,2] == which(trs.cut$tip.label == as.character(data$sp)[i]))]
+	specratemit12 <- vector()
+	specratemit3 <- vector()
+	specratenuc12 <- vector()
+	specratenuc3 <- vector()
+	for(j in 1:1000){
+		specratemit12[j] <- trsmit12[[length(trsmit12) - j]]$edge.length[which(trsmit12[[length(trsmit12) - j]]$edge[,2] == which(trsmit12[[length(trsmit12) - j]]$tip.label == as.character(data$sp)[i]))]
+		specratemit3[j] <- trsmit3[[length(trsmit3) - j]]$edge.length[which(trsmit3[[length(trsmit12) - j]]$edge[,2] == which(trsmit3[[length(trsmit3) - j]]$tip.label == as.character(data$sp)[i]))]
+		specratenuc12[j] <- trsnuc12[[length(trsnuc12) - j]]$edge.length[which(trsnuc12[[length(trsnuc12) - j]]$edge[,2] == which(trsnuc12[[length(trsnuc12) - j]]$tip.label == as.character(data$sp)[i]))]
+		specratenuc3[j] <- trsnuc3[[length(trsnuc3) - j]]$edge.length[which(trsnuc3[[length(trsnuc3) - j]]$edge[,2] == which(trsnuc3[[length(trsnuc3) - j]]$tip.label == as.character(data$sp)[i]))]
+		
+	}
+	ratemit12[i] <- median(specratemit12)
+	ratemit3[i] <- median(specratemit3)
+	ratenuc12[i] <- median(specratenuc12)
+	ratenuc3[i] <- median(specratenuc3)
+	
 }
 
 
