@@ -10,7 +10,8 @@ library(ape)
 #trs<-read.tree("C:\\Documentos Maider\\My research\\2017 ANU\\papers\\polygamy vs mol evol\\our data\\analyses\\tr33pairs.tre")
 trs <- read.tree("tr15pairs.tre")
 
-data<-read.csv("dat_nuclear_30_121017.csv")
+#data<-read.csv("dat_nuclear_30_121017.csv")
+data<-read.csv("dat_nuclear_30_241017.csv")
 
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
 trs.cut<-drop.tip(trs, trs$tip.label[which(!trs$tip.label %in% as.character(data$sp))])
@@ -24,9 +25,6 @@ attach(data)
 trs.mono <- drop.tip(trs.cut, as.character(sp[1:15]))
 trs.poly <-drop.tip(trs.cut, as.character(sp[16:30]))# create poly and mono trees
 
-
-
-
 specage <- vector()
 for(i in 1:nrow(data)){
 	specage[i] <- trs$edge.length[which(trs$edge[,2] == which(trs$tip.label == as.character(data$sp)[i]))]
@@ -38,17 +36,20 @@ for(i in 1:nrow(data)){
 
 datpgls<- data.frame(sprich = log(data$sprich/specage))
 datpgls$mating<-as.factor(data$mating.system)
-datpgls$ds<-log(data$dsnuc/specage)
-datpgls$dn<-log(data$dnnuc/specage)
-datpgls$dnds<-log(data$dndsnuc/specage)
+datpgls$ds<-log(data$dsnuc)
+datpgls$dn<-log(data$dnnuc)
+datpgls$dnds<-log(data$dndsnuc)
+datpgls$bea12 <- log(data$bea12)
+datpgls$bea3 <- log(data$bea3)
 datpgls$weights_poly<-data$weights_poly
 datpgls$massm<-log(data$M_mass)
 datpgls$massf<-log(data$F_mass)
 datpgls$diffmass<-datpgls$massm-datpgls$massf
 rownames(datpgls) <- as.character(data$sp)
 datpgls$massmean<-rowMeans(cbind(log(M_mass),log(F_mass)))
-powerTransform(rowMeans(cbind(M_mass, F_mass)))
-datpgls$massbxcx<-bcPower(rowMeans(cbind(M_mass, F_mass)),-0.184764  )
+lam <- powerTransform(rowMeans(cbind(M_mass, F_mass)))$lambda
+datpgls$massbxcx<-bcPower(rowMeans(cbind(M_mass, F_mass)),lam)
+datpgls$dndsb <- log(data$bea12 / data$bea3)
 
 attach(datpgls)
 
@@ -64,20 +65,46 @@ shapiro.test(massf)
 shapiro.test(massmean)
 
 m0<-compar.gee(sprich~mating*dn*massbxcx, data = datpgls1, phy=trs.cut1)
-m0
+m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
-m0.1<-compar.gee(dn~mating*sprich*massbxcx, data = datpgls1, phy=trs.cut1)
-m0.1
-shapiro.test(residuals(m0.1))
+#poly
+#m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls1[1:15,], phy=trs.poly1)
+#m0.1.1
+#shapiro.test(residuals(m0.1.1))
+#mono
+#m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[16:30,], phy=trs.mono)
+#m0.1.2
+#shapiro.test(residuals(m0.1.2))
 
-m0.2<-compar.gee(sprich~mating*dnds*massbxcx, data = datpgls1, phy=trs.cut1)
-m0.2
-shapiro.test(residuals(m0.2))
 
-m0.3<-compar.gee(sprich~mating*ds*massbxcx, data = datpgls1, phy=trs.cut1)
-m0.3
-shapiro.test(residuals(m0.3))
+
+m0.4<-compar.gee(sprich~mating*dnds*massbxcx, data = datpgls1, phy=trs.cut1)
+m0.4
+shapiro.test(residuals(m0.4))
+
+#poly
+#m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:15,], phy=trs.poly)
+#m0.4.1
+#shapiro.test(residuals(m0.4.1))
+#mono
+#m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[16:30,], phy=trs.mono)
+#m0.4.2
+#shapiro.test(residuals(m0.4.2))
+
+
+m0.8<-compar.gee(sprich~mating*ds*massbxcx, data = datpgls1, phy=trs.cut1)
+m0.8
+shapiro.test(residuals(m0.8))
+
+#poly
+#m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:15,], phy=trs.poly)
+#m0.8.1
+#shapiro.test(residuals(m0.8.1))
+#mono
+#m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[16:30,], phy=trs.mono)
+#m0.8.2
+#shapiro.test(residuals(m0.8.2))
 
 
 
@@ -128,3 +155,43 @@ shapiro.test(residuals(m13))
 m14<-compar.gee(sprich~ds, data = datpgls, phy=trs.cut)
 m14
 shapiro.test(residuals(m14))
+
+
+m0b<-compar.gee(sprich~mating*bea12*massbxcx, data = datpgls1, phy=trs.cut1)
+m0#the 3-way interaction is significant, so split by mating system
+shapiro.test(residuals(m0))
+
+#poly
+#m0.1.1b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[1:15,], phy=trs.poly)
+#m0.1.1b
+#shapiro.test(residuals(m0.1.1b))
+#mono
+#m0.1.2b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[16:30,], phy=trs.mono)
+#m0.1.2b
+#shapiro.test(residuals(m0.1.2b))
+
+m0.8b<-compar.gee(sprich~mating*bea3*massbxcx, data = datpgls1, phy=trs.cut1)
+m0.8b
+shapiro.test(residuals(m0.8b))
+
+#poly
+#m0.8.1b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[1:15,], phy=trs.poly)
+#m0.8.1b
+#shapiro.test(residuals(m0.8.1b))
+#mono
+#m0.8.2b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[16:30,], phy=trs.mono)
+#m0.8.2b
+#shapiro.test(residuals(m0.8.2b))
+
+m0.4b<-compar.gee(sprich~mating*dndsb*massbxcx, data = datpgls1, phy=trs.cut1)
+m0.4b
+shapiro.test(residuals(m0.4b))
+
+#poly
+#m0.4.1b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[1:15,], phy=trs.poly)
+#m0.4.1b
+#shapiro.test(residuals(m0.4.1b))
+#mono
+#m0.4.2b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[16:30,], phy=trs.mono)
+#m0.4.2b
+#shapiro.test(residuals(m0.4.2b))

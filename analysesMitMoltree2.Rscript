@@ -5,27 +5,38 @@
 
 #####analyses with Molecular tree  branch lengths for correction of variables and phylo non-independence
 
+
 #The following reads a data set in MIGs PC.
 #datpoly<-read.csv("C:/Documentos Maider/My research/2017 ANU/papers/polygamy vs mol evol/our data/analyses/dat_mig_66paired_molcut_081017.csv")
 
 #The following reads a data set in DADs mac.
-dat_mig_66paired_molcut_101017<-read.csv("dat_mig_66paired_molcut_101017.csv")
+data<-read.csv("dat_mig_66paired_molcut_241017.csv")
 
 
-str(dat_mig_66paired_molcut_101017)
-data<-dat_mig_66paired_molcut_101017[-c(1, 22),]
 attach(data)
+
+library(phangorn)
+trjetz <- read.tree("jetztrs33pairs.41.tre")
+k <- 10
+pairage <- vector()
+for(i in 1:nrow(data)){
+	pairage[i] <- trjetz[[k]]$edge.length[which(trjetz[[k]]$edge[,2] == which(trjetz[[k]]$tip.label == as.character(specs_poly)[i]))]
+}
 
 #variables
 
-spm<-data$sprich_mono
-spp<-data$sprich_poly
+spm<-data$sprich_mono/pairage
+spp<-data$sprich_poly/pairage
 dsm<-data$dsmito_mono
 dsp<-data$dsmito_poly
 dnm<-data$dnmito_mono
 dnp<-data$dnmito_poly
 dndsm<-data$dndsmito_mono
 dndsp<-data$dndsmito_poly
+bea12m <- data$bea12_mono
+bea12p <- data$bea12_poly
+bea3m <- data$bea3_mono
+bea3p <- data$bea3_poly
 overallm<-data$overallmol_mono
 overallp<-data$overallmol_poly
 massmalem<-data$M_mass_mono
@@ -48,6 +59,8 @@ w3<- wilcox.test(dsm,dsp,paired=T)
 w4<- wilcox.test(dndsm,dndsp,paired=T)
 w5<- wilcox.test(rowMeans(cbind(massfemm,massmalem)),rowMeans(cbind(massfemp,massmalep)),paired=T)
 w6<- wilcox.test(massmalem-massfemm, massmalep-massfemp,paired=T)
+w7<- wilcox.test(bea12m, bea12p, paired = T)
+w8<- wilcox.test(bea3m, bea3p, paired = T)
 
 w1
 w2
@@ -55,6 +68,9 @@ w3
 w4
 w5
 w6
+w7
+w8
+
 #@@@@@@@@@@@@@@@@@the results are the same without and with branch length 
 #@@@@@@@@@@@@@@@@@correction. Below###################
 

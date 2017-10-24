@@ -87,11 +87,86 @@ twelve = DAG(mating ~  dn + ds, dn ~ ds, sprich ~ dn + ds + mating)
 
 resultmaitng1 <- phylo_path(modelsmating1, data = datpgls, tree = trs.cut)
 
-#pdf("pathsPrelim.pdf")
 
-#plot(best(result2))
-#coef_plot(best(result2))
-#plot(average(result2), curvature = 0.1)
-#coef_plot(average(result2))
+models1b <- list(
+a = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * massbxcx * bea3),
+b = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3),
+c = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * massbxcx),
+d = DAG(bea3 ~ mating * massbxcx, bea12 ~ bea3 * massbxcx),
+e = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating),
+f = DAG(bea3 ~ mating * massbxcx, bea12 ~ massbxcx),
+g = DAG(bea3 ~ mating * massbxcx, bea12 ~ bea3),
 
-#dev.off()
+#h = DAG(bea3 ~ mating, bea12 ~ mating * massbxcx * bea3),
+#i = DAG(bea3 ~ mating, bea12 ~ mating * bea3),
+#j = DAG(bea3 ~ mating, bea12 ~ mating * massbxcx),
+#k = DAG(bea3 ~ mating, bea12 ~ bea3 * massbxcx),
+#l = DAG(bea3 ~ mating, bea12 ~ mating),
+#m = DAG(bea3 ~ mating, bea12 ~ massbxcx),
+#n = DAG(bea3 ~ mating, bea12 ~ bea3),
+
+o = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3),
+p = DAG(bea3 ~ massbxcx, bea12 ~ mating * bea3),
+q = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx)
+#r = DAG(bea3 ~ massbxcx, bea12 ~ bea3 * massbxcx),
+#s = DAG(bea3 ~ massbxcx, bea12 ~ mating),
+#t = DAG(bea3 ~ massbxcx, bea12 ~ massbxcx),
+#u = DAG(bea3 ~ massbxcx, bea12 ~ bea3),
+
+#v = DAG(bea3 ~ mating * massbxcx, bea12 ~ massbxcx * bea3, mating ~ bea12),
+#x = DAG(bea3 ~ mating * massbxcx, bea12 ~ bea3, mating ~ bea12),
+#w = DAG(bea3 ~ mating * massbxcx, bea12 ~ massbxcx, mating ~ bea12),
+#y = DAG(bea3 ~ mating, bea12 ~ massbxcx * bea3, mating ~ bea12),
+#z = DAG(bea3 ~ mating, bea12 ~ bea3, mating ~ bea12),
+#aa = DAG(bea3 ~ mating, bea12 ~ massbxcx, mating ~ bea12),
+#ab = DAG(bea3 ~ massbxcx, bea12 ~ massbxcx * bea3, mating ~ bea12)
+#ac = DAG(bea3 ~ massbxcx, bea12 ~ bea3, mating ~ bea12),
+#ad = DAG(bea3 ~ massbxcx, bea12 ~ massbxcx, mating ~ bea12)
+
+#ae = DAG(bea12 ~ mating * massbxcx * bea3)
+
+)
+
+
+result1b <- phylo_path(models1, data = datpgls, tree = trs.cut)
+
+# The following assess which part of the model is associated with speciation
+
+models2b <- list(
+oa = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx * bea12 * bea3),
+ob = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx * bea12),
+oc = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx * bea3),
+od = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * bea12 * bea3),
+oe = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx * bea12 * bea3),
+of = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx * bea12),
+og = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx * bea3),
+oh = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ bea12 * bea3),
+oj = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx),
+ok = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * bea3),
+ol = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * bea12),
+om = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating),
+on = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx),
+oo = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ bea3),
+op = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ bea12)
+)
+
+result2b <- phylo_path(models2, data = datpgls, tree = trs.cut)
+
+modelsmating1 <- list(
+one = DAG(bea12 ~ mating, bea3 ~ mating, sprich ~ bea12 + bea3),
+two = DAG(mating ~  bea12 + bea3, sprich ~ bea12 + bea3),
+three = DAG(bea12 ~ mating, bea3 ~ mating, sprich ~ mating),
+four = DAG(mating ~  bea12 + bea3, sprich ~ mating),
+five = DAG(bea12 ~ mating, bea3 ~ mating, sprich ~ bea12 + bea3 + mating),
+six = DAG(mating ~  bea12 + bea3, sprich ~ bea12 + bea3 + mating),
+seven = DAG(bea12 ~ mating + bea3, bea3 ~ mating, sprich ~ bea12 + bea3),
+eight = DAG(mating ~  bea12 + bea3, bea12 ~ bea3, sprich ~ bea12 + bea3),
+nine = DAG(bea12 ~ mating + bea3, bea3 ~ mating, sprich ~ mating),
+ten = DAG(mating ~  bea12 + bea3, bea12 ~ bea3, sprich ~ mating),
+eleven = DAG(bea12 ~ mating + bea3, bea3 ~ mating, sprich ~ bea12 + bea3 + mating),
+twelve = DAG(mating ~  bea12 + bea3, bea12 ~ bea3, sprich ~ bea12 + bea3 + mating)
+)
+
+resultmaitng1b <- phylo_path(modelsmating1, data = datpgls, tree = trs.cut)
+
+
