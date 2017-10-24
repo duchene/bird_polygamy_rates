@@ -128,31 +128,31 @@ q = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx)
 )
 
 
-result1b <- phylo_path(models1, data = datpgls, tree = trs.cut)
+result1b <- phylo_path(models1b, data = datpgls, tree = trs.cut)
 
 # The following assess which part of the model is associated with speciation
 
 models2b <- list(
-oa = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx * bea12 * bea3),
-ob = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx * bea12),
-oc = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx * bea3),
-od = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * bea12 * bea3),
-oe = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx * bea12 * bea3),
-of = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx * bea12),
-og = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx * bea3),
-oh = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ bea12 * bea3),
-oj = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * massbxcx),
-ok = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * bea3),
-ol = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating * bea12),
-om = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ mating),
-on = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ massbxcx),
-oo = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ bea3),
-op = DAG(bea3 ~ massbxcx, bea12 ~ mating * massbxcx * bea3, sprich ~ bea12)
+ba = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating * massbxcx * bea12 * bea3),
+bb = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating * massbxcx * bea12),
+bc = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating * massbxcx * bea3),
+bd = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating * bea12 * bea3),
+be = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ massbxcx * bea12 * bea3),
+bf = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ massbxcx * bea12),
+bg = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ massbxcx * bea3),
+bh = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ bea12 * bea3),
+bj = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating * massbxcx),
+bk = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating * bea3),
+bl = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating * bea12),
+bm = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ mating),
+bn = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ massbxcx),
+bo = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ bea3),
+bp = DAG(bea3 ~ mating * massbxcx, bea12 ~ mating * bea3, sprich ~ bea12)
 )
 
-result2b <- phylo_path(models2, data = datpgls, tree = trs.cut)
+result2b <- phylo_path(models2b, data = datpgls, tree = trs.cut)
 
-modelsmating1 <- list(
+modelsmating1b <- list(
 one = DAG(bea12 ~ mating, bea3 ~ mating, sprich ~ bea12 + bea3),
 two = DAG(mating ~  bea12 + bea3, sprich ~ bea12 + bea3),
 three = DAG(bea12 ~ mating, bea3 ~ mating, sprich ~ mating),
@@ -167,6 +167,6 @@ eleven = DAG(bea12 ~ mating + bea3, bea3 ~ mating, sprich ~ bea12 + bea3 + matin
 twelve = DAG(mating ~  bea12 + bea3, bea12 ~ bea3, sprich ~ bea12 + bea3 + mating)
 )
 
-resultmaitng1b <- phylo_path(modelsmating1, data = datpgls, tree = trs.cut)
+resultmaitng1b <- phylo_path(modelsmating1b, data = datpgls, tree = trs.cut)
 
 
