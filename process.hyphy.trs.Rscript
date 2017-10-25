@@ -1,0 +1,23 @@
+library(phangorn)
+load("namescode.hyphy.Rdata")
+load("hyphy.nuc.mit.trees.Rdata")
+data<-read.csv("dat_mig_64_molcut_241017.csv")
+rownames(data) <- data[,1]
+data <- data[-which(rownames(data) %in% c("Zosterops")),]
+
+hyphmitds <- drop.tip(hyphmit[[1]], hyphmit[[1]]$tip.label[which(!hyphmit[[1]]$tip.label %in% rownames(data))])
+
+hyphmitdn <- drop.tip(hyphmit[[2]], hyphmit[[2]]$tip.label[which(!hyphmit[[2]]$tip.label %in% rownames(data))])
+
+mitnprsdn <- chronos(hyphmitdn, model = "relaxed", lambda = 0, calibration = makeChronosCalib(hyphmitdn, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+
+mitnprsds <- chronos(hyphmitds, model = "relaxed", lambda = 0, calibration = makeChronosCalib(hyphmitds, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+
+ratenprmitdn <- vector()
+ratenprmitds <- vector()
+for(i in 1:nrow(datpgls)){
+      ratenprmitds[i] <- attr(mitnprsds, "rates")[which(mitnprsds$edge[,2] == which(mitnprsds$tip.label == rownames(datpgls)[i]))]
+      ratenprmitdn[i] <- attr(mitnprsdn, "rates")[which(mitnprsdn$edge[,2] == which(mitnprsdn$tip.label == rownames(datpgls)[i]))]
+}
+
+

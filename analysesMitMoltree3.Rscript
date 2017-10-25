@@ -16,10 +16,10 @@ load("trees.samples.241017.Rdata")
 data<-read.csv("dat_mig_64_molcut_241017.csv")
 
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
-trs.cut<-drop.tip(trs,c("Mionectes", "Colonia"  ))#  , "Zosterops", "Sylvia", "Dromaius", "Apterix", "Vanellus", "Polytelis", "Charadrius", "Alisterus"))
+trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Zosterops", "Spizella", "Amphispiza"))#  
 
 rownames(data) <- data[,1]
-#data <- data[-which(rownames(data) %in% c("Mionectes", "Colonia"  )),]#  , "Zosterops", "Sylvia", "Dromaius", "Apterix", "Vanellus", "Polytelis", "Charadrius", "Alisterus")),]
+data <- data[-which(rownames(data) %in% c("Zosterops", "Spizella", "Amphispiza")),]#  
 data$sprich <- as.numeric(data$sprich)
 
 attach(data)
@@ -71,11 +71,11 @@ m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
 #poly
-m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.1.1<-compar.gee(sprich~dn*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.1.1
 shapiro.test(residuals(m0.1.1))
 #mono
-m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.1.2<-compar.gee(sprich~dn*massbxcx, data = datpgls[32:61,], phy=trs.mono)
 m0.1.2
 shapiro.test(residuals(m0.1.2))
 
@@ -86,11 +86,11 @@ m0.4
 shapiro.test(residuals(m0.4))
 
 #poly
-m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.4.1<-compar.gee(sprich~dnds*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.4.1
 shapiro.test(residuals(m0.4.1))
 #mono
-m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.4.2<-compar.gee(sprich~dnds*massbxcx, data = datpgls[32:61,], phy=trs.mono)
 m0.4.2
 shapiro.test(residuals(m0.4.2))
 
@@ -100,11 +100,11 @@ m0.8
 shapiro.test(residuals(m0.8))
 
 #poly
-m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.8.1<-compar.gee(sprich~ds*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.8.1
 shapiro.test(residuals(m0.8.1))
 #mono
-m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.8.2<-compar.gee(sprich~ds*massbxcx, data = datpgls[32:61,], phy=trs.mono)
 m0.8.2
 shapiro.test(residuals(m0.8.2))
 
@@ -163,11 +163,11 @@ m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
 #poly
-m0.1.1b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.1.1b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.1.1b
 shapiro.test(residuals(m0.1.1b))
 #mono
-m0.1.2b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.1.2b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[32:61,], phy=trs.mono)
 m0.1.2b
 shapiro.test(residuals(m0.1.2b))
 
@@ -176,11 +176,11 @@ m0.8b
 shapiro.test(residuals(m0.8b))
 
 #poly
-m0.8.1b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.8.1b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.8.1b
 shapiro.test(residuals(m0.8.1b))
 #mono
-m0.8.2b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.8.2b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[32:61,], phy=trs.mono)
 m0.8.2b
 shapiro.test(residuals(m0.8.2b))
 
@@ -189,10 +189,10 @@ m0.4b
 shapiro.test(residuals(m0.4b))
 
 #poly
-m0.4.1b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[1:32,], phy=trs.poly)
+m0.4.1b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[1:31,], phy=trs.poly)
 m0.4.1b
 shapiro.test(residuals(m0.4.1b))
 #mono
-m0.4.2b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[33:64,], phy=trs.mono)
+m0.4.2b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[32:61,], phy=trs.mono)
 m0.4.2b
 shapiro.test(residuals(m0.4.2b))

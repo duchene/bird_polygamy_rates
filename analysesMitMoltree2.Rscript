@@ -11,7 +11,7 @@
 
 #The following reads a data set in DADs mac.
 data<-read.csv("dat_mig_66paired_molcut_241017.csv")
-
+data <- data[-which(data$specs_mono %in% c("Zosterops", "Amphispiza")),]
 
 attach(data)
 
