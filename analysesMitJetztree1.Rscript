@@ -65,7 +65,8 @@ trjetz <- read.tree("jetztrs33pairs.41.tre")
 resultmats <- list()
 #sigprops <- list()
 
-for(k in 1:length(trjetz)){
+#for(k in 1:length(trjetz)){
+k <- 10
 
 pairage <- vector()
 for(i in 1:nrow(data)){
@@ -89,7 +90,7 @@ j <- 1
   contmass<-vector()
   contmasssexdiff<-vector()
   
-  #### for each pair we do the subtraction and save the value##
+  #### for each pair we do the subtraction and save the value ##
   for(i in 1:nrow(data)){
     if(subtdir[i]){
       contdn[i]<-(log(dnm[i])-log(dnp[i]))/pairage[i]^0.1
@@ -225,8 +226,8 @@ j <- 1
 
 #sigprops[[k]] <- apply(resultsmat, 2, function(x) length(which(x < 0.05)))
 
-resultmats[[k]] <- resultsmat
+#resultmats[[k]] <- resultsmat
 
 
-}
+#}
 

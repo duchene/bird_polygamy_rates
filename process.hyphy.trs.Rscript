@@ -1,23 +1,99 @@
 library(phangorn)
 load("namescode.hyphy.Rdata")
 load("hyphy.nuc.mit.trees.Rdata")
+
+### Relative rates for mitochondrial data
+
 data<-read.csv("dat_mig_64_molcut_241017.csv")
 rownames(data) <- data[,1]
-data <- data[-which(rownames(data) %in% c("Zosterops")),]
 
 hyphmitds <- drop.tip(hyphmit[[1]], hyphmit[[1]]$tip.label[which(!hyphmit[[1]]$tip.label %in% rownames(data))])
-
 hyphmitdn <- drop.tip(hyphmit[[2]], hyphmit[[2]]$tip.label[which(!hyphmit[[2]]$tip.label %in% rownames(data))])
 
-mitnprsdn <- chronos(hyphmitdn, model = "relaxed", lambda = 0, calibration = makeChronosCalib(hyphmitdn, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+# Estimates from NPRS
 
-mitnprsds <- chronos(hyphmitds, model = "relaxed", lambda = 0, calibration = makeChronosCalib(hyphmitds, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+mitnprsdn <- chronos(hyphmitdn, model = "relaxed", lambda = 1, calibration = makeChronosCalib(hyphmitdn, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+mitnprsds <- chronos(hyphmitds, model = "relaxed", lambda = 1, calibration = makeChronosCalib(hyphmitds, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+
+mitnprsdn$edge.length <- hyphmitdn$edge.length / mitnprsdn$edge.length
+mitnprsds$edge.length <- hyphmitds$edge.length / mitnprsds$edge.length
 
 ratenprmitdn <- vector()
 ratenprmitds <- vector()
-for(i in 1:nrow(datpgls)){
-      ratenprmitds[i] <- attr(mitnprsds, "rates")[which(mitnprsds$edge[,2] == which(mitnprsds$tip.label == rownames(datpgls)[i]))]
-      ratenprmitdn[i] <- attr(mitnprsdn, "rates")[which(mitnprsdn$edge[,2] == which(mitnprsdn$tip.label == rownames(datpgls)[i]))]
+for(i in 1:nrow(data)){
+      ratenprmitds[i] <- mitnprsds$edge.length[which(mitnprsds$edge[,2] == which(mitnprsds$tip.label == rownames(data)[i]))]
+      ratenprmitdn[i] <- mitnprsdn$edge.length[which(mitnprsdn$edge[,2] == which(mitnprsdn$tip.label == rownames(data)[i]))]
 }
 
+data$nprsds <- log(ratenprmitds)
+data$nprsdn <- log(ratenprmitdn)
 
+# Estimates from MPL
+
+mitmpldn <- chronoMPL(hyphmitdn)
+mitmplds <- chronoMPL(hyphmitds)
+
+mitmpldn$edge.length <- hyphmitdn$edge.length / mitmpldn$edge.length
+mitmplds$edge.length <- hyphmitds$edge.length / mitmplds$edge.length
+
+ratemplmitdn <- vector()
+ratemplmitds <- vector()
+for(i in 1:nrow(data)){
+      ratemplmitds[i] <- mitmplds$edge.length[which(mitmplds$edge[,2] == which(mitmplds$tip.label == rownames(data)[i]))]
+      ratemplmitdn[i] <- mitmpldn$edge.length[which(mitmpldn$edge[,2] == which(mitmpldn$tip.label == rownames(data)[i]))]
+}
+
+data$mplds <- log(ratemplmitds)
+data$mpldn <- log(ratemplmitdn)
+
+datamit <- data
+
+### Relative rates for nuclear data
+
+data<-read.csv("dat_nuclear_30_241017.csv")
+rownames(data) <- data$sp
+data$sprich <- as.numeric(data$sprich)
+
+hyphnuc[[1]]$tip.label <- taxa[,1]
+hyphnuc[[2]]$tip.label <- taxa[,1]
+
+hyphnucds <- drop.tip(hyphnuc[[1]], hyphnuc[[1]]$tip.label[which(!hyphnuc[[1]]$tip.label %in% rownames(data))])
+hyphnucdn <- drop.tip(hyphnuc[[2]], hyphnuc[[2]]$tip.label[which(!hyphnuc[[2]]$tip.label %in% rownames(data))])
+
+# Estimates from NPRS
+
+nucnprsdn <- chronos(hyphnucdn, model = "relaxed", lambda = 1, calibration = makeChronosCalib(hyphnucdn, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+nucnprsds <- chronos(hyphnucds, model = "relaxed", lambda = 1, calibration = makeChronosCalib(hyphnucds, node = "root", age.min = 1, age.max = 1, interactive = FALSE, soft.bounds = FALSE))
+
+nucnprsdn$edge.length <- hyphnucdn$edge.length / nucnprsdn$edge.length
+nucnprsds$edge.length <- hyphnucds$edge.length / nucnprsds$edge.length
+
+ratenprnucdn <- vector()
+ratenprnucds <- vector()
+for(i in 1:nrow(data)){
+      ratenprnucds[i] <- nucnprsds$edge.length[which(nucnprsds$edge[,2] == which(nucnprsds$tip.label == rownames(data)[i]))]
+      ratenprnucdn[i] <- nucnprsdn$edge.length[which(nucnprsdn$edge[,2] == which(nucnprsdn$tip.label == rownames(data)[i]))]
+}
+
+data$nprsds <- log(ratenprnucds)
+data$nprsdn <- log(ratenprnucdn)
+
+# Estimates from MPL
+
+nucmpldn <- chronoMPL(hyphnucdn)
+nucmplds <- chronoMPL(hyphnucds)
+
+nucmpldn$edge.length <- hyphnucdn$edge.length / nucmpldn$edge.length
+nucmplds$edge.length <- hyphnucds$edge.length / nucmplds$edge.length
+
+ratemplnucdn <- vector()
+ratemplnucds <- vector()
+for(i in 1:nrow(data)){
+      ratemplnucds[i] <- nucmplds$edge.length[which(nucmplds$edge[,2] == which(nucmplds$tip.label == rownames(data)[i]))]
+      ratemplnucdn[i] <- nucmpldn$edge.length[which(nucmpldn$edge[,2] == which(nucmpldn$tip.label == rownames(data)[i]))]
+}
+
+data$mplds <- log(ratemplnucds)
+data$mpldn <- log(ratemplnucdn)
+
+datanuc <- data
