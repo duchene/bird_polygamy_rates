@@ -9,10 +9,8 @@
 #datpoly<-read.csv("C:/Documentos Maider/My research/2017 ANU/papers/polygamy vs mol evol/our data/analyses/dat_mig_66paired_molcut_081017.csv")
 
 #The following reads a data set in DADs mac.
-dat_nuclear_30paired_121017<-read.csv("dat_nuclear_30paired_121017.csv")
+data<-read.csv("dat_nuclear_30paired_121017.csv")
 
-str(dat_nuclear_30paired_121017)
-data<-dat_nuclear_30paired_121017
 attach(data)
 
 #variables

@@ -12,7 +12,7 @@
 #dat_mig_66paired_molcut_101017<-read.csv("dat_mig_66paired_molcut_101017.csv")
 #str(dat_mig_66paired_molcut_101017)
 #data<-dat_mig_66paired_molcut_101017[-c(1, 22),]
-data <- read.csv("dat_mig_66paired_molcut_241017.csv")
+data <- read.csv("dat_mig_66paired_molcut_271017.csv")
 
 attach(data)
 
@@ -30,6 +30,14 @@ bea12m <- data$bea12_mono
 bea12p <- data$bea12_poly
 bea3m <- data$bea3_mono
 bea3p <- data$bea3_poly
+nprdnm <- data$nprsdn_mono
+nprdnp <- data$nprsdn_poly
+nprdsm <- data$nprsds_mono
+nprdsp <- data$nprsds_poly
+mpldsm <- data$mplds_mono
+mpldsp <- data$mplds_poly
+mpldnm <- data$mpldn_mono
+mpldnp <- data$mpldn_poly
 overallm<-data$overallmol_mono
 overallp<-data$overallmol_poly
 massmalem<-data$M_mass_mono
@@ -86,6 +94,10 @@ j <- 1
   contdnds<-vector()
   contbea12 <- vector()
   contbea3 <- vector()
+  contnpr12 <- vector()
+  contnpr3 <- vector()
+  contmpl12 <- vector()
+  contmpl3 <- vector()
   contsp<-vector()
   contmass<-vector()
   contmasssexdiff<-vector()
@@ -98,7 +110,11 @@ j <- 1
       contdnds[i]<-(log(dndsm[i])-log(dndsp[i]))/pairage[i]^0.1
       contbea12[i]<-(log(bea12m[i])-log(bea12p[i]))
       contbea3[i]<-(log(bea3m[i])-log(bea3p[i]))
-      contsp[i]<-(log(spm[i])-log(spp[i]))/pairage[i]^0.1
+      contnpr12[i]<- nprdnm[i] - nprdnp[i]
+      contnpr3[i]<- nprdsm[i] - nprdsp[i]
+      contmpl12[i]<- mpldnm[i] - mpldnp[i]
+      contmpl3[i]<- mpldsm[i] - mpldsp[i]
+      contsp[i]<-(log(spm[i]/pairage[i])-log(spp[i]/pairage[i]))
       contmass[i]<-(log(massm[i])-log(massp[i]))/pairage[i]^0.1
       contmasssexdiff[i]<-((log(massmalem[i])-log(massfemm[i]))-(log(massmalep[i])-log(massfemp[i])))/pairage[i]^0.1
     }else{
@@ -107,6 +123,10 @@ j <- 1
       contdnds[i]<-(log(dndsp[i])-log(dndsm[i]))/pairage[i]^0.1
       contbea12[i]<-(log(bea12p[i])-log(bea12m[i]))
       contbea3[i]<-(log(bea3p[i])-log(bea3m[i]))
+      contnpr12[i]<- nprdnp[i] - nprdnm[i]
+      contnpr3[i]<- nprdsp[i] - nprdsm[i]
+      contmpl12[i]<- mpldnp[i] - mpldnm[i]
+      contmpl3[i]<- mpldsp[i] - mpldsm[i]
       contsp[i]<-(log(spp[i])-log(spm[i]))/pairage[i]^0.1
       contmass[i]<-(log(massp[i])-log(massm[i]))/pairage[i]^0.1
       contmasssexdiff[i]<-((log(massmalep[i])-log(massfemp[i]))-(log(massmalem[i])-log(massfemm[i])))/pairage[i]^0.1
