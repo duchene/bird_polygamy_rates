@@ -7,11 +7,11 @@ par(mfrow = c(3, 2))
 
 source("analysesMitMoltree2.Rscript")
 
-boxplot(log(spp),log(spm), range = 0, main = "Net diversification NS", names = c("Polygamy", "Monogamy"))
-boxplot(log(dsp),log(dsm), range = 0, main = "Synonymous subst rate NS", names = c("Polygamy", "Monogamy"))
-boxplot(log(dnp),log(dnm), range = 0, main = "Non-synonymous subst rate *", names = c("Polygamy", "Monogamy"))
-boxplot(log(dndsp),log(dndsm), range = 0, main = "dN/dS *\n(more = smaller pops)", names = c("Polygamy", "Monogamy"))
-boxplot(log(rowMeans(cbind(massfemp,massmalep))),log(rowMeans(cbind(massfemm,massmalem))), range = 0, main = "Mass NS", names = c("Polygamy", "Monogamy"))
+boxplot(log(sppcor),log(spmcor), range = 0, main = "Net diversification NS", names = c("Polygamy", "Monogamy"))
+boxplot(log(dspcor),log(dsmcor), range = 0, main = "Synonymous subst rate NS", names = c("Polygamy", "Monogamy"))
+boxplot(log(dnpcor),log(dnmcor), range = 0, main = "Non-synonymous subst rate *", names = c("Polygamy", "Monogamy"))
+boxplot(log(dndspcor),log(dndsmcor), range = 0, main = "dN/dS *\n(more = smaller pops)", names = c("Polygamy", "Monogamy"))
+boxplot(log(masspcor),log(massmcor), range = 0, main = "Mass NS", names = c("Polygamy", "Monogamy"))
 frame()
 
 
@@ -20,79 +20,79 @@ frame()
 source("analysesMitMoltree3.Rscript")
 
 yrPal <- colorRampPalette(c('yellow','red'))
-colmasspoly <- yrPal(10)[as.numeric(cut(massbxcx[1:31],breaks = 10))]
-colmassmono <- yrPal(10)[as.numeric(cut(massbxcx[32:61],breaks = 10))]
+colmasspoly <- yrPal(10)[as.numeric(cut(massbxcx[which(mating == "poly")],breaks = 10))]
+colmassmono <- yrPal(10)[as.numeric(cut(massbxcx[which(mating == "mono")],breaks = 10))]
 
 massmea <- mean(massbxcx)
-masssd <- 2 * sd(massbxcx)
+masssd <- sd(massbxcx)
 
 # For ds poly and mono
 
-predds0<-predict(m0.8.1,newdata=data.frame(ds=ds[1:31], massbxcx = massmea))
-predds1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:31], massbxcx = massmea - masssd))
-preddsm1<-predict(m0.8.1,newdata=data.frame(ds=ds[1:31], massbxcx = massmea + masssd))
+predds0<-predict(m0.8.1,newdata=data.frame(npds=npds[which(mating == "poly")], massbxcx = massmea))
+predds1<-predict(m0.8.1,newdata=data.frame(npds=npds[which(mating == "poly")], massbxcx = massmea - masssd))
+preddsm1<-predict(m0.8.1,newdata=data.frame(npds=npds[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(ds[1:31], sprich[1:31], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(-3.5, 3))
+plot(npds[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(0, 4.3))
 legend(-2.5, 1, legend = c("Mean mass", "Low mass"), lty = 1, lwd = 2, col = c("red", "yellow"), box.lwd = 0)
-lines(ds[1:31], predds0, col="orange", lwd = 2)
-lines(ds[1:31], predds1, col="yellow", lwd = 2)
-lines(ds[1:31], preddsm1, col="red", lwd = 2)
+lines(npds[which(mating == "poly")], predds0, col="orange", lwd = 2)
+lines(npds[which(mating == "poly")], predds1, col="yellow", lwd = 2)
+lines(npds[which(mating == "poly")], preddsm1, col="red", lwd = 2)
 
-predds0<-predict(m0.8.2,newdata=data.frame(ds=ds[32:61], massbxcx = massmea))
-predds1<-predict(m0.8.2,newdata=data.frame(ds=ds[32:61], massbxcx = massmea - masssd))
-preddsm1<-predict(m0.8.2,newdata=data.frame(ds=ds[32:61], massbxcx = massmea + masssd))
+predds0<-predict(m0.8.2,newdata=data.frame(npds=npds[which(mating == "mono")], massbxcx = massmea))
+predds1<-predict(m0.8.2,newdata=data.frame(npds=npds[which(mating == "mono")], massbxcx = massmea - masssd))
+preddsm1<-predict(m0.8.2,newdata=data.frame(npds=npds[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(ds[32:61], sprich[32:61], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(-3.5, 3))
+plot(npds[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(0, 4.3))
 legend(-2.7, 6.2, legend = c("Low mass", "Mean mass", "High mass"), pch = 19, col = c("yellow", "orange", "red"), box.lty = 0)
-lines(ds[32:61], predds0, col="orange", lwd = 2)
-lines(ds[32:61], predds1, col="yellow", lwd = 2)
-lines(ds[32:61], preddsm1, col="red", lwd = 2)
+lines(npds[which(mating == "mono")], predds0, col="orange", lwd = 2)
+lines(npds[which(mating == "mono")], predds1, col="yellow", lwd = 2)
+lines(npds[which(mating == "mono")], preddsm1, col="red", lwd = 2)
 
 # For dn poly and mono
 
-preddn0<-predict(m0.1.1,newdata=data.frame(dn=dn[1:31], massbxcx = massmea))
-preddn1<-predict(m0.1.1,newdata=data.frame(dn=dn[1:31], massbxcx = massmea - masssd))
-preddnm1<-predict(m0.1.1,newdata=data.frame(dn=dn[1:31], massbxcx = massmea + masssd))
+preddn0<-predict(m0.1.1,newdata=data.frame(npdn=npdn[which(mating == "poly")], massbxcx = massmea))
+preddn1<-predict(m0.1.1,newdata=data.frame(npdn=npdn[which(mating == "poly")], massbxcx = massmea - masssd))
+preddnm1<-predict(m0.1.1,newdata=data.frame(npdn=npdn[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(dn[1:31], sprich[1:31], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(-3.5, 3))
-lines(dn[1:31], preddn0, col="orange", lwd = 2)
-lines(dn[1:31], preddn1, col="yellow", lwd = 2)
-lines(dn[1:31], preddnm1, col="red", lwd = 2)
+plot(npdn[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(0, 4.3))
+lines(npdn[which(mating == "poly")], preddn0, col="orange", lwd = 2)
+lines(npdn[which(mating == "poly")], preddn1, col="yellow", lwd = 2)
+lines(npdn[which(mating == "poly")], preddnm1, col="red", lwd = 2)
 
-preddn0<-predict(m0.1.2,newdata=data.frame(dn=dn[32:61], massbxcx = massmea))
-preddn1<-predict(m0.1.2,newdata=data.frame(dn=dn[32:61], massbxcx = massmea - masssd))
-preddnm1<-predict(m0.1.2,newdata=data.frame(dn=dn[32:61], massbxcx = massmea + masssd))
+preddn0<-predict(m0.1.2,newdata=data.frame(npdn=npdn[which(mating == "mono")], massbxcx = massmea))
+preddn1<-predict(m0.1.2,newdata=data.frame(npdn=npdn[which(mating == "mono")], massbxcx = massmea - masssd))
+preddnm1<-predict(m0.1.2,newdata=data.frame(npdn=npdn[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(dn[32:61], sprich[32:61], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(-3.5, 3))
-lines(dn[32:61], preddn0, col="orange", lwd = 2)
-lines(dn[32:61], preddn1, col="yellow", lwd = 2)
-lines(dn[32:61], preddnm1, col="red", lwd = 2)
+plot(npdn[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(0, 4.3))
+lines(npdn[which(mating == "mono")], preddn0, col="orange", lwd = 2)
+lines(npdn[which(mating == "mono")], preddn1, col="yellow", lwd = 2)
+lines(npdn[which(mating == "mono")], preddnm1, col="red", lwd = 2)
 
 # For dnds poly and mono
 
-preddnds0<-predict(m0.4.1,newdata=data.frame(dnds=dnds[1:31], massbxcx = massmea))
-preddnds1<-predict(m0.4.1,newdata=data.frame(dnds=dnds[1:31], massbxcx = massmea - masssd))
-preddndsm1<-predict(m0.4.1,newdata=data.frame(dnds=dnds[1:31], massbxcx = massmea + masssd))
+preddnds0<-predict(m0.4.1,newdata=data.frame(dndsn=dndsn[which(mating == "poly")], massbxcx = massmea))
+preddnds1<-predict(m0.4.1,newdata=data.frame(dndsn=dndsn[which(mating == "poly")], massbxcx = massmea - masssd))
+preddndsm1<-predict(m0.4.1,newdata=data.frame(dndsn=dndsn[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(dnds[1:31], sprich[1:31], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(-3.5, 3))
-lines(dnds[1:31], preddnds0, col="orange", lwd = 2)
-lines(dnds[1:31], preddnds1, col="yellow", lwd = 2)
-lines(dnds[1:31], preddndsm1, col="red", lwd = 2)
+plot(dndsn[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(0, 4.3))
+lines(dndsn[which(mating == "poly")], preddnds0, col="orange", lwd = 2)
+lines(dndsn[which(mating == "poly")], preddnds1, col="yellow", lwd = 2)
+lines(dndsn[which(mating == "poly")], preddndsm1, col="red", lwd = 2)
 
-preddnds0<-predict(m0.4.2,newdata=data.frame(dnds=dnds[32:61], massbxcx = massmea))
-preddnds1<-predict(m0.4.2,newdata=data.frame(dnds=dnds[32:61], massbxcx = massmea - masssd))
-preddndsm1<-predict(m0.4.2,newdata=data.frame(dnds=dnds[32:61], massbxcx = massmea + masssd))
+preddnds0<-predict(m0.4.2,newdata=data.frame(dndsn=dndsn[which(mating == "mono")], massbxcx = massmea))
+preddnds1<-predict(m0.4.2,newdata=data.frame(dndsn=dndsn[which(mating == "mono")], massbxcx = massmea - masssd))
+preddndsm1<-predict(m0.4.2,newdata=data.frame(dndsn=dndsn[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(dnds[32:61], sprich[32:61], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(-3.5, 3))
-lines(dnds[32:61], preddnds0, col="orange", lwd = 2)
-lines(dnds[32:61], preddnds1, col="yellow", lwd = 2)
-lines(dnds[32:61], preddndsm1, col="red", lwd = 2)
+plot(dndsn[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(0, 4.3))
+lines(dndsn[which(mating == "mono")], preddnds0, col="orange", lwd = 2)
+lines(dndsn[which(mating == "mono")], preddnds1, col="yellow", lwd = 2)
+lines(dndsn[which(mating == "mono")], preddndsm1, col="red", lwd = 2)
 
 ### Boxplots of Wicoxon signed-ranks test *****BEAST*****
 
 source("analysesMitMoltree2.Rscript")
 
-boxplot(log(spp),log(spm), range = 0, main = "Net diversification NS", names = c("Polygamy", "Monogamy"))
+boxplot(log(sppcor),log(spmcor), range = 0, main = "Net diversification NS", names = c("Polygamy", "Monogamy"))
 boxplot(log(bea3p),log(bea3m), range = 0, main = "Synonymous subst rate NS", names = c("Polygamy", "Monogamy"))
 boxplot(log(bea12p),log(bea12m), range = 0, main = "Non-synonymous subst rate *", names = c("Polygamy", "Monogamy"))
 frame()
@@ -102,64 +102,64 @@ frame()
 
 # For ds poly and mono *****BEAST*****
 
-predbea30<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[1:31], massbxcx = massmea))
-predbea31<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[1:31], massbxcx = massmea - masssd))
-predbea3m1<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[1:31], massbxcx = massmea + masssd))
+predbea30<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")], massbxcx = massmea))
+predbea31<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")], massbxcx = massmea - masssd))
+predbea3m1<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(bea3[1:31], sprich[1:31], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(-3.5, 3))
+plot(bea3[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(0, 4.3))
 legend(-2.5, 1, legend = c("Mean mass", "Low mass"), lty = 1, lwd = 2, col = c("red", "yellow"), box.lwd = 0)
-lines(bea3[1:31], predbea30, col="orange", lwd = 2)
-lines(bea3[1:31], predbea31, col="yellow", lwd = 2)
-lines(bea3[1:31], predbea3m1, col="red", lwd = 2)
+lines(bea3[which(mating == "poly")], predbea30, col="orange", lwd = 2)
+lines(bea3[which(mating == "poly")], predbea31, col="yellow", lwd = 2)
+lines(bea3[which(mating == "poly")], predbea3m1, col="red", lwd = 2)
 
-predbea30<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[32:61], massbxcx = massmea))
-predbea31<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[32:61], massbxcx = massmea - masssd))
-predbea3m1<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[32:61], massbxcx = massmea + masssd))
+predbea30<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")], massbxcx = massmea))
+predbea31<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")], massbxcx = massmea - masssd))
+predbea3m1<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(bea3[32:61], sprich[32:61], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(-3.5, 3))
+plot(bea3[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Net diversification", xlab = "Synonymous subst rate", ylim = c(0, 4.3))
 legend(-2.7, 6.2, legend = c("Low mass", "Mean mass", "High mass"), pch = 19, col = c("yellow", "orange", "red"), box.lty = 0)
-lines(bea3[32:61], predbea30, col="orange", lwd = 2)
-lines(bea3[32:61], predbea31, col="yellow", lwd = 2)
-lines(bea3[32:61], predbea3m1, col="red", lwd = 2)
+lines(bea3[which(mating == "mono")], predbea30, col="orange", lwd = 2)
+lines(bea3[which(mating == "mono")], predbea31, col="yellow", lwd = 2)
+lines(bea3[which(mating == "mono")], predbea3m1, col="red", lwd = 2)
 
 # For dn poly and mono *****BEAST*****
 
-predbea120<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[1:31], massbxcx = massmea))
-predbea121<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[1:31], massbxcx = massmea - masssd))
-predbea12m1<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[1:31], massbxcx = massmea + masssd))
+predbea120<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly")], massbxcx = massmea))
+predbea121<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly")], massbxcx = massmea - masssd))
+predbea12m1<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(bea12[1:31], sprich[1:31], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(-3.5, 3))
-lines(bea12[1:31], predbea120, col="orange", lwd = 2)
-lines(bea12[1:31], predbea121, col="yellow", lwd = 2)
-lines(bea12[1:31], predbea12m1, col="red", lwd = 2)
+plot(bea12[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(0, 4.3))
+lines(bea12[which(mating == "poly")], predbea120, col="orange", lwd = 2)
+lines(bea12[which(mating == "poly")], predbea121, col="yellow", lwd = 2)
+lines(bea12[which(mating == "poly")], predbea12m1, col="red", lwd = 2)
 
-predbea120<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[32:61], massbxcx = massmea))
-predbea121<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[32:61], massbxcx = massmea - masssd))
-predbea12m1<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[32:61], massbxcx = massmea + masssd))
+predbea120<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono")], massbxcx = massmea))
+predbea121<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono")], massbxcx = massmea - masssd))
+predbea12m1<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(bea12[32:61], sprich[32:61], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(-3.5, 3))
-lines(bea12[32:61], predbea120, col="orange", lwd = 2)
-lines(bea12[32:61], predbea121, col="yellow", lwd = 2)
-lines(bea12[32:61], predbea12m1, col="red", lwd = 2)
+plot(bea12[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "Non-synonymous subst rate", ylim = c(0, 4.3))
+lines(bea12[which(mating == "mono")], predbea120, col="orange", lwd = 2)
+lines(bea12[which(mating == "mono")], predbea121, col="yellow", lwd = 2)
+lines(bea12[which(mating == "mono")], predbea12m1, col="red", lwd = 2)
 
 # For dnds poly and mono *****BEAST*****
 
-preddndsb0<-predict(m0.4.1b,newdata=data.frame(dndsb=dndsb[1:31], massbxcx = massmea))
-preddndsb1<-predict(m0.4.1b,newdata=data.frame(dndsb=dndsb[1:31], massbxcx = massmea - masssd))
-preddndsbm1<-predict(m0.4.1b,newdata=data.frame(dndsb=dndsb[1:31], massbxcx = massmea + masssd))
+preddndsb0<-predict(m0.4.1b,newdata=data.frame(dndsb=dndsb[which(mating == "poly")], massbxcx = massmea))
+preddndsb1<-predict(m0.4.1b,newdata=data.frame(dndsb=dndsb[which(mating == "poly")], massbxcx = massmea - masssd))
+preddndsbm1<-predict(m0.4.1b,newdata=data.frame(dndsb=dndsb[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(dndsb[1:31], sprich[1:31], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(-3.5, 3))
-lines(dndsb[1:31], preddndsb0, col="orange", lwd = 2)
-lines(dndsb[1:31], preddndsb1, col="yellow", lwd = 2)
-lines(dndsb[1:31], preddndsbm1, col="red", lwd = 2)
+plot(dndsb[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(0, 4.3))
+lines(dndsb[which(mating == "poly")], preddndsb0, col="orange", lwd = 2)
+lines(dndsb[which(mating == "poly")], preddndsb1, col="yellow", lwd = 2)
+lines(dndsb[which(mating == "poly")], preddndsbm1, col="red", lwd = 2)
 
-preddndsb0<-predict(m0.4.2b,newdata=data.frame(dndsb=dndsb[32:61], massbxcx = massmea))
-preddndsb1<-predict(m0.4.2b,newdata=data.frame(dndsb=dndsb[32:61], massbxcx = massmea - masssd))
-preddndsbm1<-predict(m0.4.2b,newdata=data.frame(dndsb=dndsb[32:61], massbxcx = massmea + masssd))
+preddndsb0<-predict(m0.4.2b,newdata=data.frame(dndsb=dndsb[which(mating == "mono")], massbxcx = massmea))
+preddndsb1<-predict(m0.4.2b,newdata=data.frame(dndsb=dndsb[which(mating == "mono")], massbxcx = massmea - masssd))
+preddndsbm1<-predict(m0.4.2b,newdata=data.frame(dndsb=dndsb[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(dndsb[32:61], sprich[32:61], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(-3.5, 3))
-lines(dndsb[32:61], preddndsb0, col="orange", lwd = 2)
-lines(dndsb[32:61], preddndsb1, col="yellow", lwd = 2)
-lines(dndsb[32:61], preddndsbm1, col="red", lwd = 2)
+plot(dndsb[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Net diversification", xlab = "dN/dS\n(more = smaller pops)", ylim = c(0, 4.3))
+lines(dndsb[which(mating == "mono")], preddndsb0, col="orange", lwd = 2)
+lines(dndsb[which(mating == "mono")], preddndsb1, col="yellow", lwd = 2)
+lines(dndsb[which(mating == "mono")], preddndsbm1, col="red", lwd = 2)
 
 dev.off()

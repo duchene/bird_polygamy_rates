@@ -10,8 +10,8 @@
 #datpoly<-read.csv("C:/Documentos Maider/My research/2017 ANU/papers/polygamy vs mol evol/our data/analyses/dat_mig_66paired_molcut_081017.csv")
 
 #The following reads a data set in DADs mac.
-data<-read.csv("dat_mig_66paired_molcut_241017.csv")
-#data <- data[-which(data$specs_mono %in% c("Zosterops", "Amphispiza")),]
+data<-read.csv("dat_mig_66paired_molcut_021117.csv")
+#data <- data[-which(data$specs_poly %in% c("Sylvia", "Larus")),]
 
 attach(data)
 
@@ -25,8 +25,8 @@ for(i in 1:nrow(data)){
 
 #variables
 
-spm<-data$sprich_mono/pairage
-spp<-data$sprich_poly/pairage
+spm<-data$sprich_mono
+spp<-data$sprich_poly
 dsm<-data$dsmito_mono
 dsp<-data$dsmito_poly
 dnm<-data$dnmito_mono
@@ -75,18 +75,18 @@ w8
 #@@@@@@@@@@@@@@@@@correction. Below###################
 
 #corrected by branch lengths#########
-spmcor<-spm/(overallm+overallp)^0.1
-sppcor<-spp/(overallm+overallp)^0.1
-dnmcor<-dnm/(overallm+overallp)^0.1
-dnpcor<-dnp/(overallm+overallp)^0.1
-dsmcor<-dsm/(overallm+overallp)^0.1
-dspcor<-dsp/(overallm+overallp)^0.1
-dndsmcor<-dndsm/(overallm+overallp)^0.1
-dndspcor<-dndsp/(overallm+overallp)^0.1
-diffmcor<-(massmalem-massfemm)/(overallm+overallp)^0.1
-diffpcor<-(massmalep-massfemp)/(overallm+overallp)^0.1
-massmcor<-(rowMeans(cbind(massfemm,massmalem))/(overallm+overallp))^0.1
-masspcor<-(rowMeans(cbind(massfemp,massmalep))/(overallm+overallp))^0.1
+spmcor<-log(spm)/(overallm+overallp)^0.5
+sppcor<-log(spp)/(overallm+overallp)^0.5
+dnmcor<-(dnm)/(overallm+overallp)^0.5
+dnpcor<-(dnp)/(overallm+overallp)^0.5
+dsmcor<-(dsm)/(overallm+overallp)^0.5
+dspcor<-(dsp)/(overallm+overallp)^0.5
+dndsmcor<-(dndsm)/(overallm+overallp)^0.5
+dndspcor<-(dndsp)/(overallm+overallp)^0.5
+diffmcor<-(massmalem-massfemm)/(overallm+overallp)^0.5
+diffpcor<-(massmalep-massfemp)/(overallm+overallp)^0.5
+massmcor<-(rowMeans(cbind(massfemm,massmalem))/(overallm+overallp))^0.5
+masspcor<-(rowMeans(cbind(massfemp,massmalep))/(overallm+overallp))^0.5
 
 w1<- wilcox.test(spmcor,sppcor,paired=T)
 w2<- wilcox.test(dnmcor,dnpcor,paired=T)
