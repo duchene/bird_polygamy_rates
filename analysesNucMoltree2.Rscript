@@ -9,11 +9,8 @@
 #datpoly<-read.csv("C:/Documentos Maider/My research/2017 ANU/papers/polygamy vs mol evol/our data/analyses/dat_mig_66paired_molcut_081017.csv")
 
 #The following reads a data set in DADs mac.
-dat_nuclear_30paired_101017<-read.csv("dat_nuclear_30paired_121017.csv")
+data <- read.csv("dat_nuclear_30paired_061117.csv")
 
-
-str(dat_nuclear_30paired_101017)
-data<-dat_nuclear_30paired_101017
 attach(data)
 
 #variables
@@ -59,18 +56,18 @@ w6
 #@@@@@@@@@@@@@@@@@correction. Below###################
 
 #corrected by branch lengths#########
-spmcor<-spm/(overallm+overallp)^0.1
-sppcor<-spp/(overallm+overallp)^0.1
-dnmcor<-dnm/(overallm+overallp)^0.1
-dnpcor<-dnp/(overallm+overallp)^0.1
-dsmcor<-dsm/(overallm+overallp)^0.1
-dspcor<-dsp/(overallm+overallp)^0.1
-dndsmcor<-dndsm/(overallm+overallp)^0.1
-dndspcor<-dndsp/(overallm+overallp)^0.1
-diffmcor<-(massmalem-massfemm)/(overallm+overallp)^0.1
-diffpcor<-(massmalep-massfemp)/(overallm+overallp)^0.1
-massmcor<-(rowMeans(cbind(massfemm,massmalem))/(overallm+overallp))^0.1
-masspcor<-(rowMeans(cbind(massfemp,massmalep))/(overallm+overallp))^0.1
+spmcor<-log(spm)/(overallm+overallp)^0.1
+sppcor<-log(spp)/(overallm+overallp)^0.1
+dnmcor<-log(dnm)/(overallm+overallp)^0.1
+dnpcor<-log(dnp)/(overallm+overallp)^0.1
+dsmcor<-log(dsm)/(overallm+overallp)^0.1
+dspcor<-log(dsp)/(overallm+overallp)^0.1
+dndsmcor<-log(dndsm)/(overallm+overallp)^0.1
+dndspcor<-log(dndsp)/(overallm+overallp)^0.1
+diffmcor<-log(massmalem-massfemm)/(overallm+overallp)^0.1
+diffpcor<-log(massmalep-massfemp)/(overallm+overallp)^0.1
+massmcor<-log(rowMeans(cbind(massfemm,massmalem))/(overallm+overallp))^0.1
+masspcor<-log(rowMeans(cbind(massfemp,massmalep))/(overallm+overallp))^0.1
 
 w1<- wilcox.test(spmcor,sppcor,paired=T)
 w2<- wilcox.test(dnmcor,dnpcor,paired=T)
