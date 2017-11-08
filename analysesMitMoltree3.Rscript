@@ -7,6 +7,7 @@
 ####### 3. GLM + tree (phylogenetic regression, PGLS): real analyses############
 
 library(ape)
+library(nlme)
 #trs<-read.tree("C:\\Documentos Maider\\My research\\2017 ANU\\papers\\polygamy vs mol evol\\our data\\analyses\\tr33pairs.tre")
 trs <- read.tree("tr33pairs.tre")
 trs <- read.tree("jetztrs33pairs.41.tre")[[10]]
@@ -16,10 +17,10 @@ load("trees.samples.241017.Rdata")
 data<-read.csv("dat_mig_64_molcut_021117.csv")
 
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
-trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Zosterops", "Sylvia"))#  , "Larus", "Rissa", "Spizella", "Amphispiza"
+trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Zosterops", "Spizella", "Amphispiza"))#  , "Sylvia", "Larus", "Rissa"
 
 rownames(data) <- data[,1]
-data <- data[-which(rownames(data) %in% c("Zosterops", "Sylvia")),]#   , "Larus", "Rissa", "Spizella", "Amphispiza"
+data <- data[-which(rownames(data) %in% c("Zosterops", "Spizella", "Amphispiza")),]#   , "Sylvia", "Larus", "Rissa"
 data$sprich <- as.numeric(data$sprich)
 
 attach(data)
@@ -72,133 +73,133 @@ shapiro.test(massm)
 shapiro.test(massf)
 shapiro.test(massmean)
 
-m0<-compar.gee(sprich~mating*npdn*massbxcx, data = datpgls, phy=trs.cut)
+m0<-gls(sprich~mating*npdn*massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
 #poly
-m0.1.1<-compar.gee(sprich~npdn*massbxcx, data = datpgls[which(mating == "poly"),], phy=trs.poly)
+m0.1.1<-gls(sprich~npdn*massbxcx, data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
 m0.1.1
 shapiro.test(residuals(m0.1.1))
 #mono
-m0.1.2<-compar.gee(sprich~npdn*massbxcx, data = datpgls[which(mating == "mono"),], phy=trs.mono)
+m0.1.2<-gls(sprich~npdn*massbxcx, data = datpgls[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
 m0.1.2
 shapiro.test(residuals(m0.1.2))
 
 
 
-m0.4<-compar.gee(sprich~mating*dndsn*massbxcx, data = datpgls, phy=trs.cut)
+m0.4<-gls(sprich~mating*dndsn*massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m0.4
 shapiro.test(residuals(m0.4))
 
 #poly
-m0.4.1<-compar.gee(sprich~dndsn*massbxcx, data = datpgls[which(mating == "poly"),], phy=trs.poly)
+m0.4.1<-gls(sprich~dndsn*massbxcx, data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
 m0.4.1
 shapiro.test(residuals(m0.4.1))
 #mono
-m0.4.2<-compar.gee(sprich~dndsn*massbxcx, data = datpgls[which(mating == "mono"),], phy=trs.mono)
+m0.4.2<-gls(sprich~dndsn*massbxcx, data = datpgls[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
 m0.4.2
 shapiro.test(residuals(m0.4.2))
 
 
-m0.8<-compar.gee(sprich~mating*npds*massbxcx, data = datpgls, phy=trs.cut)
+m0.8<-gls(sprich~mating*npds*massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m0.8
 shapiro.test(residuals(m0.8))
 
 #poly
-m0.8.1<-compar.gee(sprich~npds*massbxcx, data = datpgls[which(mating == "poly"),], phy=trs.poly)
+m0.8.1<-gls(sprich~npds*massbxcx, data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
 m0.8.1
 shapiro.test(residuals(m0.8.1))
 #mono
-m0.8.2<-compar.gee(sprich~npds*massbxcx, data = datpgls[which(mating == "mono"),], phy=trs.mono)
+m0.8.2<-gls(sprich~npds*massbxcx, data = datpgls[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
 m0.8.2
 shapiro.test(residuals(m0.8.2))
 
 
-m1<-compar.gee(dn~mating, data = datpgls, phy=trs.cut)
+m1<-gls(dn~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m1
 shapiro.test(residuals(m1))
 
-m2<-compar.gee(dnds~mating, data = datpgls, phy=trs.cut)
+m2<-gls(dnds~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m2
 shapiro.test(residuals(m2))
 
-m3<-compar.gee(ds~mating, data = datpgls, phy=trs.cut)
+m3<-gls(ds~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m3
 shapiro.test(residuals(m3))
 
-m5<-compar.gee(sprich~mating, data = datpgls, phy=trs.cut)
+m5<-gls(sprich~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m5
 shapiro.test(residuals(m5))
 
-m6<-compar.gee(dn~massbxcx, data = datpgls, phy=trs.cut)
+m6<-gls(dn~massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m6
 shapiro.test(residuals(m6))
 
-m7<-compar.gee(ds~massbxcx, data = datpgls, phy=trs.cut)
+m7<-gls(ds~massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m7
 shapiro.test(residuals(m7))
 
-m8<-compar.gee(dnds~massbxcx, data = datpgls, phy=trs.cut)
+m8<-gls(dnds~massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m8
 shapiro.test(residuals(m8))
 
-m10<-compar.gee(sprich~massbxcx, data = datpgls, phy=trs.cut)
+m10<-gls(sprich~massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m10
 shapiro.test(residuals(m10))
 
-m11<-compar.gee(massbxcx~mating, data = datpgls, phy=trs.cut)
+m11<-gls(massbxcx~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m11
 shapiro.test(residuals(m11))
 
-m12<-compar.gee(sprich~dn, data = datpgls, phy=trs.cut)
+m12<-gls(sprich~dn, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m12
 shapiro.test(residuals(m12))
 
-m13<-compar.gee(sprich~dnds, data = datpgls, phy=trs.cut)
+m13<-gls(sprich~dnds, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m13
 shapiro.test(residuals(m13))
 
-m14<-compar.gee(sprich~ds, data = datpgls, phy=trs.cut)
+m14<-gls(sprich~ds, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m14
 shapiro.test(residuals(m14))
 
 
-m0b<-compar.gee(sprich~mating*bea12*massbxcx, data = datpgls, phy=trs.cut)
+m0b<-gls(sprich~mating*bea12*massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
 #poly
-m0.1.1b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[which(mating == "poly"),], phy=trs.poly)
+m0.1.1b<-gls(sprich~bea12*massbxcx, data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
 m0.1.1b
 shapiro.test(residuals(m0.1.1b))
 #mono
-m0.1.2b<-compar.gee(sprich~bea12*massbxcx, data = datpgls[which(mating == "mono"),], phy=trs.mono)
+m0.1.2b<-gls(sprich~bea12*massbxcx, data = datpgls[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
 m0.1.2b
 shapiro.test(residuals(m0.1.2b))
 
-m0.8b<-compar.gee(sprich~mating*bea3*massbxcx, data = datpgls, phy=trs.cut)
+m0.8b<-gls(sprich~mating*bea3*massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m0.8b
 shapiro.test(residuals(m0.8b))
 
 #poly
-m0.8.1b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[which(mating == "poly"),], phy=trs.poly)
+m0.8.1b<-gls(sprich~bea3*massbxcx, data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
 m0.8.1b
 shapiro.test(residuals(m0.8.1b))
 #mono
-m0.8.2b<-compar.gee(sprich~bea3*massbxcx, data = datpgls[which(mating == "mono"),], phy=trs.mono)
+m0.8.2b<-gls(sprich~bea3*massbxcx, data = datpgls[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
 m0.8.2b
 shapiro.test(residuals(m0.8.2b))
 
-m0.4b<-compar.gee(sprich~mating*dndsb*massbxcx, data = datpgls, phy=trs.cut)
+m0.4b<-gls(sprich~mating*dndsb*massbxcx, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
 m0.4b
 shapiro.test(residuals(m0.4b))
 
 #poly
-m0.4.1b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[which(mating == "poly"),], phy=trs.poly)
+m0.4.1b<-gls(sprich~dndsb*massbxcx, data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
 m0.4.1b
 shapiro.test(residuals(m0.4.1b))
 #mono
-m0.4.2b<-compar.gee(sprich~dndsb*massbxcx, data = datpgls[which(mating == "mono"),], phy=trs.mono)
+m0.4.2b<-gls(sprich~dndsb*massbxcx, data = datpgls[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
 m0.4.2b
 shapiro.test(residuals(m0.4.2b))
