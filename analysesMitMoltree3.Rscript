@@ -49,7 +49,7 @@ datpgls$bea3 <- log(data$bea3)
 datpgls$npdn <- log(data$mprsdn)
 datpgls$npds <- log(data$mprsds)
 datpgls$mpdn <- log(data$mpldn)
-datpgls$mpdn <- log(data$mplds)
+datpgls$mpds <- log(data$mplds)
 datpgls$weights_poly<-data$weights_poly
 datpgls$massm<-log(data$M_mass)
 datpgls$massf<-log(data$F_mass)

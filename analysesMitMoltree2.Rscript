@@ -75,18 +75,18 @@ w8
 #@@@@@@@@@@@@@@@@@correction. Below###################
 
 #corrected by branch lengths#########
-spmcor<-log(spm)/(overallm+overallp)^0.5
-sppcor<-log(spp)/(overallm+overallp)^0.5
+spmcor<-log(spm)/(pairage)^0.5
+sppcor<-log(spp)/(pairage)^0.5
 dnmcor<-(dnm)/(overallm+overallp)^0.5
 dnpcor<-(dnp)/(overallm+overallp)^0.5
 dsmcor<-(dsm)/(overallm+overallp)^0.5
 dspcor<-(dsp)/(overallm+overallp)^0.5
 dndsmcor<-(dndsm)/(overallm+overallp)^0.5
 dndspcor<-(dndsp)/(overallm+overallp)^0.5
-diffmcor<-(massmalem-massfemm)/(overallm+overallp)^0.5
-diffpcor<-(massmalep-massfemp)/(overallm+overallp)^0.5
-massmcor<-(rowMeans(cbind(massfemm,massmalem))/(overallm+overallp))^0.5
-masspcor<-(rowMeans(cbind(massfemp,massmalep))/(overallm+overallp))^0.5
+diffmcor<-(massmalem-massfemm)/(pairage)^0.5
+diffpcor<-(massmalep-massfemp)/(pairage)^0.5
+massmcor<-(rowMeans(cbind(massfemm,massmalem))/(pairage))^0.5
+masspcor<-(rowMeans(cbind(massfemp,massmalep))/(pairage))^0.5
 
 w1<- wilcox.test(spmcor,sppcor,paired=T)
 w2<- wilcox.test(dnmcor,dnpcor,paired=T)
