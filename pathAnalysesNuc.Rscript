@@ -156,6 +156,8 @@ d = DAG(bea3 ~ mating * massbxcx, bea12 ~ bea3 * mating, sprich ~ mating * massb
 
 result2b <- phylo_path(models2b, data = datpgls1, tree = trs.cut1)
 
+
+
 modelsmating1b <- list(
 one = DAG(bea12 ~ mating, bea3 ~ mating, sprich ~ bea12 + bea3),
 two = DAG(mating ~  bea12 + bea3, sprich ~ bea12 + bea3),

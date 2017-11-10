@@ -2,7 +2,7 @@ library(phangorn)
 library(car)
 library(phylopath)
 
-source("analysesMitMoltree3.Rscript")
+#source("analysesMitMoltree3.Rscript")
 
 ## The following assess the relationships between the explanatory variables
 
@@ -155,6 +155,15 @@ d = DAG(bea3 ~ mating * massbxcx, bea12 ~ bea3 * mating, sprich ~ mating * massb
 )
 
 result2b <- phylo_path(models2b, data = datpgls, tree = trs.cut)
+
+
+pdf("pathsPrelim.pdf")
+plot(best(result1b))
+coef_plot(best(result1b))
+plot(best(result2b))
+coef_plot(best(result2b))
+dev.off()
+
 
 modelsmating1b <- list(
 one = DAG(bea12 ~ mating, bea3 ~ mating, sprich ~ bea12 + bea3),
