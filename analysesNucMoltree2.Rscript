@@ -9,9 +9,18 @@
 #datpoly<-read.csv("C:/Documentos Maider/My research/2017 ANU/papers/polygamy vs mol evol/our data/analyses/dat_mig_66paired_molcut_081017.csv")
 
 #The following reads a data set in DADs mac.
-data <- read.csv("dat_nuclear_30paired_061117.csv")
+data <- read.csv("dat_nuclear_30paired_111117.csv")
+data <- data[-which(data$specs_poly %in% c("Phaethornis", "Mionectes")),]
 
 attach(data)
+
+library(phangorn)
+trjetz <- read.tree("jetztrs15pairs.100.tre")
+k <- 10
+pairage <- vector()
+for(i in 1:nrow(data)){
+	pairage[i] <- trjetz[[k]]$edge.length[which(trjetz[[k]]$edge[,2] == which(trjetz[[k]]$tip.label == as.character(specs_poly)[i]))]
+}
 
 #variables
 
@@ -25,6 +34,10 @@ dndsm<-data$dndsnuc_mono
 dndsp<-data$dndsnuc_poly
 overallm<-data$overallmol_mono
 overallp<-data$overallmol_poly
+bea12m <- data$bea12_mono
+bea12p <- data$bea12_poly
+bea3m <- data$bea3_mono
+bea3p <- data$bea3_poly
 massmalem<-data$M_mass_mono
 massmalep<-data$M_mass_poly
 massfemm<-data$F_mass_mono
@@ -39,47 +52,40 @@ meanweight<- rowMeans(cbind(data$weights_poly,data$weights_mono))
 
 ##non-corrected by branch legnths####
 
-w1<- wilcox.test(spm,spp,paired=T)
-w2<- wilcox.test(dnm,dnp,paired=T)
-w3<- wilcox.test(dsm,dsp,paired=T)
-w4<- wilcox.test(dndsm,dndsp,paired=T)
-w5<- wilcox.test(rowMeans(cbind(massfemm,massmalem)),rowMeans(cbind(massfemp,massmalep)),paired=T)
-w6<- wilcox.test(massmalem-massfemm, massmalep-massfemp,paired=T)
+#w1<- wilcox.test(spm,spp,paired=T)
+#w2<- wilcox.test(dnm,dnp,paired=T)
+#w3<- wilcox.test(dsm,dsp,paired=T)
+#w4<- wilcox.test(dndsm,dndsp,paired=T)
+#w5<- wilcox.test(rowMeans(cbind(massfemm,massmalem)),rowMeans(cbind(massfemp,massmalep)),paired=T)
+#w6<- wilcox.test(massmalem-massfemm, massmalep-massfemp,paired=T)
 
-w1
-w2
-w3
-w4
-w5
-w6
 #@@@@@@@@@@@@@@@@@the results are the same without and with branch length 
 #@@@@@@@@@@@@@@@@@correction. Below###################
 
 #corrected by branch lengths#########
-spmcor<-log(spm)/(overallm+overallp)^0.1
-sppcor<-log(spp)/(overallm+overallp)^0.1
-dnmcor<-log(dnm)/(overallm+overallp)^0.1
-dnpcor<-log(dnp)/(overallm+overallp)^0.1
-dsmcor<-log(dsm)/(overallm+overallp)^0.1
-dspcor<-log(dsp)/(overallm+overallp)^0.1
-dndsmcor<-log(dndsm)/(overallm+overallp)^0.1
-dndspcor<-log(dndsp)/(overallm+overallp)^0.1
-diffmcor<-log(massmalem-massfemm)/(overallm+overallp)^0.1
-diffpcor<-log(massmalep-massfemp)/(overallm+overallp)^0.1
-massmcor<-log(rowMeans(cbind(massfemm,massmalem))/(overallm+overallp))^0.1
-masspcor<-log(rowMeans(cbind(massfemp,massmalep))/(overallm+overallp))^0.1
+spmcor<-log(spm)/(pairage)^0.5
+sppcor<-log(spp)/(pairage)^0.5
+dnmcor<-log(dnm)/(pairage)^0.5
+dnpcor<-log(dnp)/(pairage)^0.5
+dsmcor<-log(dsm)/(pairage)^0.5
+dspcor<-log(dsp)/(pairage)^0.5
+dndsmcor<-log(dndsm)/(pairage)^0.5
+dndspcor<-log(dndsp)/(pairage)^0.5
+diffmcor<-log(massmalem-massfemm)/(pairage)^0.5
+diffpcor<-log(massmalep-massfemp)/(pairage)^0.5
+massmcor<-log(rowMeans(cbind(massfemm,massmalem))/(pairage))^0.5
+masspcor<-log(rowMeans(cbind(massfemp,massmalep))/(pairage))^0.5
 
 w1<- wilcox.test(spmcor,sppcor,paired=T)
-w2<- wilcox.test(dnmcor,dnpcor,paired=T)
-w3<- wilcox.test(dsmcor,dspcor,paired=T)
-w4<- wilcox.test(dndsmcor,dndspcor,paired=T)
-w5<- wilcox.test(massmcor,masspcor,paired=T)
-w6<- wilcox.test(diffmcor, diffpcor,paired=T)
 
-w1
-w2
-w3
-w4
-w5
-w6
+#w2<- wilcox.test(dnmcor,dnpcor,paired=T)
+#w3<- wilcox.test(dsmcor,dspcor,paired=T)
+#w4<- wilcox.test(dndsmcor,dndspcor,paired=T)
+
+w5<- wilcox.test(massmcor,masspcor,paired=T)
+
+#w6<- wilcox.test(diffmcor, diffpcor,paired=T)
+
+w7<- wilcox.test(bea12m, bea12p, paired = T)
+w8<- wilcox.test(bea3m, bea3p, paired = T)
 

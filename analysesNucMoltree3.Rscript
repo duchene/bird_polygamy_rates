@@ -13,17 +13,19 @@ trs <- read.tree("tr15pairs.tre")
 #data<-read.csv("dat_nuclear_30_121017.csv")
 data<-read.csv("dat_nuclear_30_061117.csv")
 
+rownames(data) <- data[,1]
+data <- data[-which(rownames(data) %in% c("Phaethornis", "Apus", "Mionectes", "Colonia")),]
+data$sprich <- as.numeric(data$sprich)
+
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
 trs.cut<-drop.tip(trs, trs$tip.label[which(!trs$tip.label %in% as.character(data$sp))])
 
-rownames(data) <- data[,1]
-data$sprich <- as.numeric(data$sprich)
 
 attach(data)
 
 # create poly and mono trees
-trs.mono) <- drop.tip(trs.cut, as.character(sp[1:15]))
-trs.poly) <-drop.tip(trs.cut, as.character(sp[16:30]))# create poly and mono trees
+trs.mono <- drop.tip(trs.cut, as.character(sp[1:15]))
+trs.poly <-drop.tip(trs.cut, as.character(sp[16:30]))# create poly and mono trees
 
 specage <- vector()
 for(i in 1:nrow(data)){
@@ -57,10 +59,11 @@ datpgls$dndsb <- log(data$bea12 / data$bea3)
 datpgls$dndsn <- log(data$nprsdn / data$nprsds)
 datpgls$dndsm <- log(data$mpldn / data$mplds)
 
-attach(datpgls)
-
-datpgls1 <- datpgls[which(!is.na(massbxcx)),]
-trs.cut1) <- drop.tip(trs.cut, trs.cut$tip.label[which(!trs.cut$tip.label %in% rownames(datpgls1))])
+datpgls1 <- datpgls[which(!is.na(datpgls$massbxcx)),]
+attach(datpgls1)
+trs.cut1 <- drop.tip(trs.cut, trs.cut$tip.label[which(!trs.cut$tip.label %in% rownames(datpgls1))])
+trs.mono1 <- drop.tip(trs.cut1, rownames(datpgls1)[which(mating == "poly")])
+trs.poly1 <-drop.tip(trs.cut1, rownames(datpgls1)[which(mating == "mono")])
 
 shapiro.test(sprich)
 shapiro.test(ds)
@@ -70,9 +73,9 @@ shapiro.test(massm)
 shapiro.test(massf)
 shapiro.test(massmean)
 
-m0<-gls(sprich~mating*nprsdn*massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m0#the 3-way interaction is significant, so split by mating system
-shapiro.test(residuals(m0))
+#m0<-gls(sprich~mating*nprsdn*massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m0#the 3-way interaction is significant, so split by mating system
+#shapiro.test(residuals(m0))
 
 #poly
 #m0.1.1<-gls(sprich~nprsdn*massbxcx, data = datpgls1[1:15,], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
@@ -83,11 +86,9 @@ shapiro.test(residuals(m0))
 #m0.1.2
 #shapiro.test(residuals(m0.1.2))
 
-
-
-m0.4<-gls(sprich~mating*dndsn*massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m0.4
-shapiro.test(residuals(m0.4))
+#m0.4<-gls(sprich~mating*dndsn*massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m0.4
+#shapiro.test(residuals(m0.4))
 
 #poly
 #m0.4.1<-gls(sprich~dndsn*massbxcx, data = datpgls[1:15,], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
@@ -99,9 +100,9 @@ shapiro.test(residuals(m0.4))
 #shapiro.test(residuals(m0.4.2))
 
 
-m0.8<-gls(sprich~mating*nprsds*massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m0.8
-shapiro.test(residuals(m0.8))
+#m0.8<-gls(sprich~mating*nprsds*massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m0.8
+#shapiro.test(residuals(m0.8))
 
 #poly
 #m0.8.1<-gls(sprich~nprsds*massbxcx, data = datpgls[1:15,], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
@@ -114,53 +115,53 @@ shapiro.test(residuals(m0.8))
 
 
 
-m1<-gls(dn~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
-m1
-shapiro.test(residuals(m1))
+#m1<-gls(dn~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
+#m1
+#shapiro.test(residuals(m1))
 
-m2<-gls(dnds~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
-m2
-shapiro.test(residuals(m2))
+#m2<-gls(dnds~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
+#m2
+#shapiro.test(residuals(m2))
 
-m3<-gls(ds~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
-m3
-shapiro.test(residuals(m3))
+#m3<-gls(ds~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
+#m3
+#shapiro.test(residuals(m3))
 
-m5<-gls(sprich~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
-m5
-shapiro.test(residuals(m5))
+#m5<-gls(sprich~mating, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
+#m5
+#shapiro.test(residuals(m5))
 
-m6<-gls(dn~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m6
-shapiro.test(residuals(m6))
+#m6<-gls(dn~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m6
+#shapiro.test(residuals(m6))
 
-m7<-gls(ds~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m7
-shapiro.test(residuals(m7))
+#m7<-gls(ds~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m7
+#shapiro.test(residuals(m7))
 
-m8<-gls(dnds~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m8
-shapiro.test(residuals(m8))
+#m8<-gls(dnds~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m8
+#shapiro.test(residuals(m8))
 
-m10<-gls(sprich~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m10
-shapiro.test(residuals(m10))
+#m10<-gls(sprich~massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m10
+#shapiro.test(residuals(m10))
 
-m11<-gls(massbxcx~mating, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
-m11
-shapiro.test(residuals(m11))
+#m11<-gls(massbxcx~mating, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
+#m11
+#shapiro.test(residuals(m11))
 
-m12<-gls(sprich~dn, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
-m12
-shapiro.test(residuals(m12))
+#m12<-gls(sprich~dn, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
+#m12
+#shapiro.test(residuals(m12))
 
-m13<-gls(sprich~dnds, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
-m13
-shapiro.test(residuals(m13))
+#m13<-gls(sprich~dnds, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
+#m13
+#shapiro.test(residuals(m13))
 
-m14<-gls(sprich~ds, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
-m14
-shapiro.test(residuals(m14))
+#m14<-gls(sprich~ds, data = datpgls, correlation=corPagel(value = 1, fixed = F, phy = trs.cut))
+#m14
+#shapiro.test(residuals(m14))
 
 
 m0b<-gls(sprich~mating*bea12*massbxcx, data = datpgls1, correlation=corPagel(value = 1, fixed = F, phy = trs.cut1))
@@ -168,11 +169,11 @@ m0#the 3-way interaction is significant, so split by mating system
 shapiro.test(residuals(m0))
 
 #poly
-#m0.1.1b<-gls(sprich~bea12*massbxcx, data = datpgls[1:15,], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
+m0.1.1b<-gls(sprich~massbxcx*bea12, data = datpgls1[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly1))
 #m0.1.1b
 #shapiro.test(residuals(m0.1.1b))
 #mono
-#m0.1.2b<-gls(sprich~bea12*massbxcx, data = datpgls[16:30,], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
+m0.1.2b<-gls(sprich~bea12*massbxcx, data = datpgls1[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono1))
 #m0.1.2b
 #shapiro.test(residuals(m0.1.2b))
 
@@ -181,11 +182,11 @@ m0.8b
 shapiro.test(residuals(m0.8b))
 
 #poly
-#m0.8.1b<-gls(sprich~bea3*massbxcx, data = datpgls[1:15,], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
+m0.8.1b<-gls(sprich~bea3*massbxcx, data = datpgls1[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly1))
 #m0.8.1b
 #shapiro.test(residuals(m0.8.1b))
 #mono
-#m0.8.2b<-gls(sprich~bea3*massbxcx, data = datpgls[16:30,], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
+m0.8.2b<-gls(sprich~bea3*massbxcx, data = datpgls1[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono1))
 #m0.8.2b
 #shapiro.test(residuals(m0.8.2b))
 

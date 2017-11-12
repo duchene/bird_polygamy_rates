@@ -2,7 +2,7 @@ library(phangorn)
 library(car)
 library(phylopath)
 
-#source("analysesMitMoltree3.Rscript")
+source("analysesMitMoltree3.Rscript")
 
 ## The following assess the relationships between the explanatory variables
 

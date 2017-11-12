@@ -17,10 +17,10 @@ load("trees.samples.241017.Rdata")
 data<-read.csv("dat_mig_64_molcut_021117.csv")
 
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
-trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Zosterops", "Sylvia"))#  , "Larus", "Rissa", "Spizella", "Amphispiza"
+trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Zosterops", "Sylvia", "Penelopina", "Crax", "Oenanthe", "Saxicola", "Thryothorus", "Troglodytes", "Pedionomus", "Attagis", "Dromaius", "Apterix"))# , "Larus", "Rissa", "Spizella", "Amphispiza"
 
 rownames(data) <- data[,1]
-data <- data[-which(rownames(data) %in% c("Zosterops", "Sylvia")),]#   , "Larus", "Rissa", "Spizella", "Amphispiza"
+data <- data[-which(rownames(data) %in% c("Zosterops", "Sylvia", "Penelopina", "Crax", "Oenanthe", "Saxicola", "Thryothorus", "Troglodytes", "Pedionomus", "Attagis", "Dromaius", "Apterix")),]# , "Larus", "Rissa", "Spizella", "Amphispiza"
 data$sprich <- as.numeric(data$sprich)
 
 attach(data)
@@ -183,7 +183,7 @@ m0.8b
 shapiro.test(residuals(m0.8b))
 
 #poly
-m0.8.1b<-gls(sprich~bea3*massbxcx, data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
+m0.8.1b<-gls(sprich~bea3*massbxcx, method = "ML", data = datpgls[which(mating == "poly"),], correlation=corPagel(value = 1, fixed = F, phy = trs.poly))
 m0.8.1b
 shapiro.test(residuals(m0.8.1b))
 #mono

@@ -11,7 +11,7 @@
 
 #The following reads a data set in DADs mac.
 data<-read.csv("dat_mig_66paired_molcut_021117.csv")
-#data <- data[-which(data$specs_poly %in% c("Sylvia", "Larus")),]
+data <- data[-which(data$specs_poly %in% c("Sylvia", "Penelopina", "Oenanthe", "Troglodytes", "Pedionomus", "Attagis")),]
 
 attach(data)
 
@@ -53,23 +53,12 @@ meanweight<- rowMeans(cbind(data$weights_poly,data$weights_mono))
 
 ##non-corrected by branch legnths####
 
-w1<- wilcox.test(spm,spp,paired=T)
-w2<- wilcox.test(dnm,dnp,paired=T)
-w3<- wilcox.test(dsm,dsp,paired=T)
-w4<- wilcox.test(dndsm,dndsp,paired=T)
-w5<- wilcox.test(rowMeans(cbind(massfemm,massmalem)),rowMeans(cbind(massfemp,massmalep)),paired=T)
-w6<- wilcox.test(massmalem-massfemm, massmalep-massfemp,paired=T)
-w7<- wilcox.test(bea12m, bea12p, paired = T)
-w8<- wilcox.test(bea3m, bea3p, paired = T)
-
-w1
-w2
-w3
-w4
-w5
-w6
-w7
-w8
+#w1<- wilcox.test(spm,spp,paired=T)
+#w2<- wilcox.test(dnm,dnp,paired=T)
+#w3<- wilcox.test(dsm,dsp,paired=T)
+#w4<- wilcox.test(dndsm,dndsp,paired=T)
+#w5<- wilcox.test(rowMeans(cbind(massfemm,massmalem)),rowMeans(cbind(massfemp,massmalep)),paired=T)
+#w6<- wilcox.test(massmalem-massfemm, massmalep-massfemp,paired=T)
 
 #@@@@@@@@@@@@@@@@@the results are the same without and with branch length 
 #@@@@@@@@@@@@@@@@@correction. Below###################
@@ -89,16 +78,15 @@ massmcor<-(rowMeans(cbind(massfemm,massmalem))/(pairage))^0.5
 masspcor<-(rowMeans(cbind(massfemp,massmalep))/(pairage))^0.5
 
 w1<- wilcox.test(spmcor,sppcor,paired=T)
-w2<- wilcox.test(dnmcor,dnpcor,paired=T)
-w3<- wilcox.test(dsmcor,dspcor,paired=T)
-w4<- wilcox.test(dndsmcor,dndspcor,paired=T)
-w5<- wilcox.test(massmcor,masspcor,paired=T)
-w6<- wilcox.test(diffmcor, diffpcor,paired=T)
 
-w1
-w2
-w3
-w4
-w5
-w6
+#w2<- wilcox.test(dnmcor,dnpcor,paired=T)
+#w3<- wilcox.test(dsmcor,dspcor,paired=T)
+#w4<- wilcox.test(dndsmcor,dndspcor,paired=T)
+
+w5<- wilcox.test(massmcor,masspcor,paired=T)
+
+#w6<- wilcox.test(diffmcor, diffpcor,paired=T)
+
+w7<- wilcox.test(bea12m, bea12p, paired = T)
+w8<- wilcox.test(bea3m, bea3p, paired = T)
 
