@@ -8,6 +8,7 @@
 
 library(ape)
 library(nlme)
+library(phylolm)
 #trs<-read.tree("C:\\Documentos Maider\\My research\\2017 ANU\\papers\\polygamy vs mol evol\\our data\\analyses\\tr33pairs.tre")
 trs <- read.tree("tr33pairs.tre")
 trs <- read.tree("jetztrs33pairs.41.tre")[[10]]
@@ -17,10 +18,10 @@ load("trees.samples.241017.Rdata")
 data<-read.csv("dat_mig_64_molcut_021117.csv")
 
 ####as we had to remove a new pair due to lack in mass, we are going to cut the tree to remove that pair
-trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Zosterops", "Sylvia", "Penelopina", "Crax", "Oenanthe", "Saxicola", "Thryothorus", "Troglodytes", "Pedionomus", "Attagis", "Dromaius", "Apterix"))# , "Larus", "Rissa", "Spizella", "Amphispiza"
+trs.cut<-drop.tip(trs,c("Mionectes", "Colonia", "Zosterops", "Sylvia", "Penelopina", "Crax", "Oenanthe", "Saxicola", "Thryothorus", "Troglodytes", "Pedionomus", "Attagis", "Dromaius", "Apteryx"))# , "Larus", "Rissa", "Spizella", "Amphispiza"
 
 rownames(data) <- data[,1]
-data <- data[-which(rownames(data) %in% c("Zosterops", "Sylvia", "Penelopina", "Crax", "Oenanthe", "Saxicola", "Thryothorus", "Troglodytes", "Pedionomus", "Attagis", "Dromaius", "Apterix")),]# , "Larus", "Rissa", "Spizella", "Amphispiza"
+data <- data[-which(rownames(data) %in% c("Zosterops", "Sylvia", "Penelopina", "Crax", "Oenanthe", "Saxicola", "Thryothorus", "Troglodytes", "Pedionomus", "Attagis", "Dromaius", "Apteryx")),]# , "Larus", "Rissa", "Spizella", "Amphispiza"
 data$sprich <- as.numeric(data$sprich)
 
 attach(data)
@@ -203,3 +204,7 @@ shapiro.test(residuals(m0.4.1b))
 m0.4.2b<-gls(sprich~dndsb*massbxcx, data = datpgls[which(mating == "mono"),], correlation=corPagel(value = 1, fixed = F, phy = trs.mono))
 m0.4.2b
 shapiro.test(residuals(m0.4.2b))
+
+
+l0 <- phyloglm((as.numeric(mating) - 1)~bea12, data = datpgls, phy = trs.cut, method = "poisson_GEE")
+l1 <- phyloglm((as.numeric(mating) - 1)~bea3, data = datpgls, phy = trs.cut, method = "poisson_GEE")

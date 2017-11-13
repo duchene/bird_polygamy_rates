@@ -1,0 +1,242 @@
+####### RESULTS AS OF 131117
+
+###  WILCOXON SIGNED RANKS TEST COMPARING VARIABLES FOR POLYGAMOUS AND MONOGAMOUS TAXA
+
+# SPECIES RICHNESS
+
+data:  spmcor and sppcor
+V = 87, p-value = 0.02542
+alternative hypothesis: true location shift is not equal to 0
+
+# MASS
+
+data:  massmcor and masspcor
+V = 209, p-value = 0.9019
+alternative hypothesis: true location shift is not equal to 0
+
+# NON-SYNONYMOUS SUBSTITUTION RATE
+
+data:  bea12m and bea12p
+V = 286, p-value = 0.05953
+alternative hypothesis: true location shift is not equal to 0
+
+# SYNONYMOUS SUBSTITUTION RATE
+
+data:  bea3m and bea3p
+V = 111, p-value = 0.03575
+alternative hypothesis: true location shift is not equal to 0
+
+
+####### FULL MODEL WITH NON-SYNONYMOUS SUBSTITUTION RATE
+
+  Model: sprich ~ mating * bea12 * massbxcx
+  Data: datpgls
+       AIC      BIC   logLik
+  144.0128 161.8547 -62.0064
+
+Correlation Structure: corPagel
+ Formula: ~1
+ Parameter estimate(s):
+   lambda
+0.7406521
+
+Coefficients:
+                              Value Std.Error    t-value p-value
+(Intercept)                 1.78055 16.109397  0.1105286  0.9125
+matingpoly                 60.42535 25.852646  2.3372985  0.0240
+bea12                      -0.05502  2.872343 -0.0191548  0.9848
+massbxcx                   -3.36390  4.509366 -0.7459797  0.4596
+matingpoly:bea12           10.50105  4.590821  2.2874013  0.0270
+matingpoly:massbxcx       -16.91410  7.713915 -2.1926738  0.0337
+bea12:massbxcx             -0.59476  0.806895 -0.7370997  0.4650
+matingpoly:bea12:massbxcx  -2.95868  1.370719 -2.1584838  0.0364
+
+ Correlation:
+                          (Intr) mtngpl bea12  mssbxc mtn:12 mtngp: b12:ms
+matingpoly                -0.562
+bea12                      0.998 -0.558
+massbxcx                  -0.971  0.530 -0.972
+matingpoly:bea12          -0.564  1.000 -0.561  0.533
+matingpoly:massbxcx        0.509 -0.974  0.507 -0.503 -0.974
+bea12:massbxcx            -0.967  0.525 -0.971  0.999  0.529 -0.501
+matingpoly:bea12:massbxcx  0.511 -0.974  0.510 -0.506 -0.974  1.000 -0.504
+
+Standardized residuals:
+        Min          Q1         Med          Q3         Max
+-1.54959250 -0.80040882  0.04727591  0.64223608  1.76841804
+
+Residual standard error: 1.092543
+Degrees of freedom: 52 total; 44 residual
+
+####### MODEL WITH NON-SYNONYMOUS SUBSTITUTION RATE AND POLYGAMOUS TAXA
+
+  Model: sprich ~ bea12 * massbxcx
+  Data: datpgls[which(mating == "poly"), ]
+       AIC      BIC    logLik
+  71.31047 77.85673 -29.65524
+
+Correlation Structure: corPagel
+ Formula: ~1
+ Parameter estimate(s):
+  lambda
+1.179612
+
+Coefficients:
+                   Value Std.Error   t-value p-value
+(Intercept)     55.94673 17.433596  3.209133  0.0040
+bea12            9.24181  3.150992  2.932984  0.0077
+massbxcx       -16.85343  5.552948 -3.035042  0.0061
+bea12:massbxcx  -2.91520  0.993017 -2.935701  0.0077
+
+ Correlation:
+               (Intr) bea12  mssbxc
+bea12           0.999
+massbxcx       -0.977 -0.968
+bea12:massbxcx -0.983 -0.976  0.999
+
+Standardized residuals:
+       Min         Q1        Med         Q3        Max
+-1.3639643 -0.5955316  0.1376401  0.5633236  1.0950090
+
+Residual standard error: 1.379486
+Degrees of freedom: 26 total; 22 residual
+
+####### MODEL WITH NON-SYNONYMOUS SUBSTITUTION RATE AND MONOGAMOUS TAXA
+
+  Model: sprich ~ bea12 * massbxcx
+  Data: datpgls[which(mating == "mono"), ]
+       AIC      BIC    logLik
+  76.99907 83.54533 -32.49954
+
+Correlation Structure: corPagel
+ Formula: ~1
+ Parameter estimate(s):
+   lambda
+0.9020925
+
+Coefficients:
+                   Value Std.Error    t-value p-value
+(Intercept)    -6.388104 16.546466 -0.3860706  0.7032
+bea12          -1.512721  2.944049 -0.5138234  0.6125
+massbxcx       -1.550739  4.720010 -0.3285456  0.7456
+bea12:massbxcx -0.274659  0.843743 -0.3255246  0.7479
+
+ Correlation:
+               (Intr) bea12  mssbxc
+bea12           0.998
+massbxcx       -0.968 -0.970
+bea12:massbxcx -0.963 -0.968  0.999
+
+Standardized residuals:
+       Min         Q1        Med         Q3        Max
+-1.2101298 -0.7755543 -0.1228037  0.6290284  1.5884171
+
+Residual standard error: 1.163293
+Degrees of freedom: 26 total; 22 residual
+
+####### FULL MODEL WITH SYNONYMOUS SUBSTITUTION RATE
+
+  Model: sprich ~ mating * bea3 * massbxcx
+  Data: datpgls
+       AIC      BIC    logLik
+  136.8305 154.6724 -58.41524
+
+Correlation Structure: corPagel
+ Formula: ~1
+ Parameter estimate(s):
+  lambda
+0.842938
+
+Coefficients:
+                             Value Std.Error    t-value p-value
+(Intercept)               -0.15537  2.009712 -0.0773081  0.9387
+matingpoly                 7.26365  2.696187  2.6940459  0.0100
+bea3                     -19.00127 11.548724 -1.6453136  0.1070
+massbxcx                   0.71809  0.633431  1.1336576  0.2631
+matingpoly:bea3           45.24625 20.898916  2.1650044  0.0359
+matingpoly:massbxcx       -2.61923  0.890733 -2.9405321  0.0052
+bea3:massbxcx              6.42079  3.950144  1.6254579  0.1112
+matingpoly:bea3:massbxcx -17.96063  6.638366 -2.7055794  0.0097
+
+ Correlation:
+                         (Intr) mtngpl bea3   mssbxc mtng:3 mtngp: b3:mss
+matingpoly               -0.608
+bea3                      0.853 -0.627
+massbxcx                 -0.943  0.619 -0.880
+matingpoly:bea3          -0.516  0.956 -0.579  0.540
+matingpoly:massbxcx       0.620 -0.957  0.645 -0.675 -0.905
+bea3:massbxcx            -0.836  0.610 -0.965  0.922  0.574 -0.674
+matingpoly:bea3:massbxcx  0.557 -0.935  0.619 -0.616 -0.960  0.965 -0.653
+
+Standardized residuals:
+       Min         Q1        Med         Q3        Max
+-2.0258672 -0.5960889 -0.1351010  0.5645560  2.2445034
+
+Residual standard error: 1.237929
+Degrees of freedom: 52 total; 44 residual
+
+####### MODEL WITH SYNONYMOUS SUBSTITUTION RATE AND POLYGAMOUS TAXA
+
+  Model: sprich ~ bea3 * massbxcx
+  Data: datpgls[which(mating == "poly"), ]
+      AIC      BIC    logLik
+  47.6449 55.19348 -17.82245
+
+Correlation Structure: corPagel
+ Formula: ~1
+ Parameter estimate(s):
+  lambda
+1.179612
+
+Coefficients:
+                  Value Std.Error   t-value p-value
+(Intercept)    5.913505  0.753989  7.842964  0.0000
+bea3          14.577002 10.813781  1.348002  0.1914
+massbxcx      -1.635659  0.327415 -4.995670  0.0001
+bea3:massbxcx -8.494847  3.644849 -2.330645  0.0293
+
+ Correlation:
+              (Intr) bea3   mssbxc
+bea3           0.590
+massbxcx      -0.609 -0.638
+bea3:massbxcx -0.659 -0.929  0.878
+
+Standardized residuals:
+        Min          Q1         Med          Q3         Max
+-1.63954297 -0.44615427  0.02695746  0.72101916  1.44691652
+
+Residual standard error: 1.237185
+Degrees of freedom: 26 total; 22 residual
+
+####### MODEL WITH SYNONYMOUS SUBSTITUTION RATE AND MONOGAMOUS TAXA
+
+  Model: sprich ~ bea3 * massbxcx
+  Data: datpgls[which(mating == "mono"), ]
+       AIC     BIC    logLik
+  78.28435 84.8306 -33.14217
+
+Correlation Structure: corPagel
+ Formula: ~1
+ Parameter estimate(s):
+   lambda
+0.7617896
+
+Coefficients:
+                   Value Std.Error    t-value p-value
+(Intercept)     1.085628  2.461817  0.4409863  0.6635
+bea3          -10.924979 14.519817 -0.7524185  0.4598
+massbxcx        0.178691  0.793078  0.2253128  0.8238
+bea3:massbxcx   2.630822  5.021420  0.5239199  0.6056
+
+ Correlation:
+              (Intr) bea3   mssbxc
+bea3           0.873
+massbxcx      -0.952 -0.895
+bea3:massbxcx -0.857 -0.968  0.933
+
+Standardized residuals:
+       Min         Q1        Med         Q3        Max
+-1.3764976 -0.6212434 -0.3290089  0.5427013  1.8237439
+
+Residual standard error: 1.291684
+Degrees of freedom: 26 total; 22 residual

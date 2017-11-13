@@ -11,7 +11,7 @@
 
 #The following reads a data set in DADs mac.
 data<-read.csv("dat_mig_66paired_molcut_021117.csv")
-data <- data[-which(data$specs_poly %in% c("Sylvia", "Penelopina", "Oenanthe", "Troglodytes", "Pedionomus", "Attagis")),]
+data <- data[-which(data$specs_poly %in% c("Sylvia", "Penelopina", "Oenanthe", "Troglodytes")),] # , "Pedionomus", "Dromaius"
 
 attach(data)
 

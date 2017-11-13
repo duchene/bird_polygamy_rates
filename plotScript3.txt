@@ -1,19 +1,21 @@
-pdf("plots.1117.pdf", width = 12, height = 6, useDingbats = F)
-par(mfrow = c(2, 4))
+pdf("plots.1117.pdf", width = 6, height = 12, useDingbats = F)
+par(mfrow = c(4, 2))
 
 source("analysesMitMoltree2.Rscript")
 
 boxplot(log(sppcor),log(spmcor), range = 0, main = "Log species richness", names = c("Polygamy", "Monogamy"))
 boxplot(log(masspcor),log(massmcor), range = 0, main = "Mass", names = c("Polygamy", "Monogamy"))
-boxplot(log(bea12p),log(bea12m), range = 0, main = "Rate at 1+2 codon positions ", names = c("Polygamy", "Monogamy"))
-boxplot(log(bea3p),log(bea3m), range = 0, main = "Rate at 3rd codon positions ", names = c("Polygamy", "Monogamy"))
+boxplot(log(bea12p),log(bea12m), range = 0, main = "Rate at 1+2 codon positions\n(mitochondrial)", names = c("Polygamy", "Monogamy"))
+boxplot(log(bea3p),log(bea3m), range = 0, main = "Rate at 3rd codon positions\n(mitochondrial)", names = c("Polygamy", "Monogamy"))
 
 source("analysesNucMoltree2.Rscript")
 
-boxplot(log(sppcor),log(spmcor), range = 0, main = "Log species richness", names = c("Polygamy", "Monogamy"))
-boxplot(log(masspcor),log(massmcor), range = 0, main = "Mass", names = c("Polygamy", "Monogamy"))
-boxplot(log(bea12p),log(bea12m), range = 0, main = "Rate at 1+2 codon positions ", names = c("Polygamy", "Monogamy"))
-boxplot(log(bea3p),log(bea3m), range = 0, main = "Rate at 3rd codon positions ", names = c("Polygamy", "Monogamy"))
+#boxplot(log(sppcor),log(spmcor), range = 0, main = "Log species richness", names = c("Polygamy", "Monogamy"))
+#boxplot(log(masspcor),log(massmcor), range = 0, main = "Mass", names = c("Polygamy", "Monogamy"))
+boxplot(log(bea12p),log(bea12m), range = 0, main = "Rate at 1+2 codon positions\n(nuclear)", names = c("Polygamy", "Monogamy"))
+boxplot(log(bea3p),log(bea3m), range = 0, main = "Rate at 3rd codon positions\n(nuclear)", names = c("Polygamy", "Monogamy"))
+frame()
+frame()
 
 source("analysesMitMoltree3.Rscript")
 
@@ -30,7 +32,7 @@ predbea30<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")
 predbea31<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")], massbxcx = massmea - masssd))
 predbea3m1<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(bea3[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Log species richness", xlab = "Rate at 3rd codon positions ", ylim = c(0, 4.3))
+plot(bea3[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Log species richness", xlab = "Rate at 3rd codon positions\n(mitochondrial)", ylim = c(0, 4.3))
 legend(-2.5, 1, legend = c("Mean mass", "Low mass"), lty = 1, lwd = 2, col = c("red", "yellow"), box.lwd = 0)
 lines(bea3[which(mating == "poly")], predbea30, col="orange", lwd = 2)
 lines(bea3[which(mating == "poly")], predbea31, col="yellow", lwd = 2)
@@ -40,7 +42,7 @@ predbea30<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")]
 predbea31<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")], massbxcx = massmea - masssd))
 predbea3m1<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(bea3[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Log species richness", xlab = "Rate at 3rd codon positions ", ylim = c(0, 4.3))
+plot(bea3[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Log species richness", xlab = "Rate at 3rd codon positions\n(mitochondrial)", ylim = c(0, 4.3))
 legend(-2.7, 6.2, legend = c("Low mass", "Mean mass", "High mass"), pch = 19, col = c("yellow", "orange", "red"), box.lty = 0)
 lines(bea3[which(mating == "mono")], predbea30, col="orange", lwd = 2)
 lines(bea3[which(mating == "mono")], predbea31, col="yellow", lwd = 2)
@@ -52,7 +54,7 @@ predbea120<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly
 predbea121<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly")], massbxcx = massmea - masssd))
 predbea12m1<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(bea12[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions ", ylim = c(0, 4.3))
+plot(bea12[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions\n(mitochondrial)", ylim = c(0, 4.3))
 lines(bea12[which(mating == "poly")], predbea120, col="orange", lwd = 2)
 lines(bea12[which(mating == "poly")], predbea121, col="yellow", lwd = 2)
 lines(bea12[which(mating == "poly")], predbea12m1, col="red", lwd = 2)
@@ -61,7 +63,7 @@ predbea120<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono
 predbea121<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono")], massbxcx = massmea - masssd))
 predbea12m1<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(bea12[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions ", ylim = c(0, 4.3))
+plot(bea12[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions\n(mitochondrial)", ylim = c(0, 4.3))
 lines(bea12[which(mating == "mono")], predbea120, col="orange", lwd = 2)
 lines(bea12[which(mating == "mono")], predbea121, col="yellow", lwd = 2)
 lines(bea12[which(mating == "mono")], predbea12m1, col="red", lwd = 2)
@@ -81,7 +83,7 @@ predbea30<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")
 predbea31<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")], massbxcx = massmea - masssd))
 predbea3m1<-predict(m0.8.1b, newdata=data.frame(bea3=bea3[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(bea3[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, main = "Polygamy", ylab = "Log species richness", xlab = "Rate at 3rd codon positions ", ylim = c(0, 4.3))
+plot(bea3[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Log species richness", xlab = "Rate at 3rd codon positions\n(nuclear)", ylim = c(0, 4.3))
 legend(-2.5, 1, legend = c("Mean mass", "Low mass"), lty = 1, lwd = 2, col = c("red", "yellow"), box.lwd = 0)
 lines(bea3[which(mating == "poly")], predbea30, col="orange", lwd = 2)
 lines(bea3[which(mating == "poly")], predbea31, col="yellow", lwd = 2)
@@ -91,7 +93,7 @@ predbea30<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")]
 predbea31<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")], massbxcx = massmea - masssd))
 predbea3m1<-predict(m0.8.2b,newdata=data.frame(bea3=bea3[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(bea3[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, main = "Monogamy", ylab = "Log species richness", xlab = "Rate at 3rd codon positions ", ylim = c(0, 4.3))
+plot(bea3[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Log species richness", xlab = "Rate at 3rd codon positions\n(nuclear)", ylim = c(0, 4.3))
 legend(-2.7, 6.2, legend = c("Low mass", "Mean mass", "High mass"), pch = 19, col = c("yellow", "orange", "red"), box.lty = 0)
 lines(bea3[which(mating == "mono")], predbea30, col="orange", lwd = 2)
 lines(bea3[which(mating == "mono")], predbea31, col="yellow", lwd = 2)
@@ -103,7 +105,7 @@ predbea120<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly
 predbea121<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly")], massbxcx = massmea - masssd))
 predbea12m1<-predict(m0.1.1b,newdata=data.frame(bea12=bea12[which(mating == "poly")], massbxcx = massmea + masssd))
 
-plot(bea12[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions ", ylim = c(0, 4.3))
+plot(bea12[which(mating == "poly")], sprich[which(mating == "poly")], col = colmasspoly, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions\n(nuclear)", ylim = c(0, 4.3))
 lines(bea12[which(mating == "poly")], predbea120, col="orange", lwd = 2)
 lines(bea12[which(mating == "poly")], predbea121, col="yellow", lwd = 2)
 lines(bea12[which(mating == "poly")], predbea12m1, col="red", lwd = 2)
@@ -112,7 +114,7 @@ predbea120<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono
 predbea121<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono")], massbxcx = massmea - masssd))
 predbea12m1<-predict(m0.1.2b,newdata=data.frame(bea12=bea12[which(mating == "mono")], massbxcx = massmea + masssd))
 
-plot(bea12[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions ", ylim = c(0, 4.3))
+plot(bea12[which(mating == "mono")], sprich[which(mating == "mono")], col = colmassmono, pch = 19, ylab = "Log species richness", xlab = "Rate at 1+2 codon positions\n(nuclear)", ylim = c(0, 4.3))
 lines(bea12[which(mating == "mono")], predbea120, col="orange", lwd = 2)
 lines(bea12[which(mating == "mono")], predbea121, col="yellow", lwd = 2)
 lines(bea12[which(mating == "mono")], predbea12m1, col="red", lwd = 2)
