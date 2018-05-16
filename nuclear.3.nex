@@ -1,7 +1,7 @@
 #NEXUS
-[Data written by write.nexus.data.R, Fri Feb 16 14:33:00 2018]
+[Data written by write.nexus.data.R, Wed May 16 16:17:34 2018]
 BEGIN DATA;
-  DIMENSIONS NTAX=221 NCHAR=1124;
+  DIMENSIONS NTAX=204 NCHAR=1124;
   FORMAT DATATYPE=DNA MISSING=? GAP=- INTERLEAVE=YES;
   MATRIX
     Acanthagenys          --------------------------------------------------------------------------------
@@ -11,13 +11,10 @@ BEGIN DATA;
     Actophilornis         --------------------------------------------------------------------------------
     Aegolius              --------------------------------------------------------------------------------
     Alauda                taaattattcgatacgggctca----gtactg-ctt----tcgg-atacc-c------ca--a--ctagatttc-atctc
-    Alca                  --------------------------------------------------------------------------------
     Alectoris             taaattattcgacacaagatct----ttat-gtccc----ctg--aggc-----atggtaaga--gtagagtat-agccc
     Alectura              -----------acacagggtcc----gtat-c--cc----cgga-aggc-gcccatggtaagc--gtagagtgt------
     Alisterus             --------------------------------------------------------------------------------
-    Alle                  --------------------------------------------------------------------------------
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           --------------------------------------------------------------------------------
     Anas                  taaattattcgacccggggcct----ttct---tttg---cgga-gaact-ctcatggtaatag-ctagagtac-agccc
     Anous                 -----------ataccgggtca----atac-g-tttc---cgga-ggaat-ccctaggtaaaaacctaaatttt-agctc
     Anser                 --------------------------------------------------------------------------------
@@ -45,7 +42,6 @@ BEGIN DATA;
     Catharus              --------------------------------------------------------------------------------
     Cepphus               --------------------------------------------------------------------------------
     Cercomacra            --------------------------------------------------------------------------------
-    Ceryle                --------------------------------------------------------------------------------
     Charadrius            --------------------------------------------------------------------------------
     Chionis               --------------------------------------------------------------------------------
     Chiroxiphia           -----------atacggg-tca----gtag-g-ttt----agga-agacc-cgtaaggtat-a-tctagatttg-aactt
@@ -82,15 +78,12 @@ BEGIN DATA;
     Elaenia               -----------atacggg-tca----gtag-g-ttt----agga-agacc-cccaaggta--a-tctagatttg-aaacc
     Elseyornis            --------------------------------------------------------------------------------
     Empidonax             -----------atgcggt-tca----gtag-g-ttt----agga-agacc-cccaaggta--a-tctagatttg-aacct
-    Entomyzon             taaattattcgatacgtggtca----gtac-g-ttt----aggg-agacc-ctttagata--tctctagatctc-atctc
     Eopsaltria            ----------gatacggggtct----gtac-g-ttt----aggg-atacc-c------ta--a--ctagatttc-acctc
     Epimachus             ----------gatactgggtca----ggat-g-ttt----aggg-ata---ctttaggta--a--ctagatttc-atctc
-    Erythrogonys          --------------------------------------------------------------------------------
     Eudyptes              --------------------------------------------------------------------------------
     Eudyptula             --------------------------------------------------------------------------------
     Euplectes             --------------cgaagtcattacttac---tttgctcaagc---atc-ctggggata-ta--aaaacctag-g-cgg
     Falco                 --------------------------------------------------------------------------------
-    Falcunculus           --------------------------------------------------------------------------------
     Ficedula              ------------------ttcgtta-ttac---tttgctcaagc---atc-ccgaggata-tg--gaaacctag-g-cgg
     Formicarius           ----------gatacggggtca----gtac-g-ttt----agaa-g----------------------------------
     Fratercula            --------------------------------------------------------------------------------
@@ -113,9 +106,7 @@ BEGIN DATA;
     Jacana                --------------------------------------------------------------------------------
     Lanius                taaattattcgatacgggatta----gtat-g-ttt----agag-atatc-c-------------ctagctttc-atctc
     Larus                 -----------atacggggtca----atac-g-tttc---cgga-ggagt-ccctaggtagaaatctagatttt-agctc
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               -----------atacggg-tca----gtag-g-ttt----agga-agacc-cccaaggta--a-tctagatttg-agccc
-    Leipoa                -----------acacagggtcc----gtat-c--cc----cgga-agcc-gcccatggtaggc--gtagagtgt------
     Lichenostomus         --------------------------------------------------------------------------------
     Limnodromus           --------------------------------------------------------------------------------
     Limosa                --------------------------------------------------------------------------------
@@ -128,7 +119,6 @@ BEGIN DATA;
     Manucodia             ----------gatacggggtca----gtat-g-ttt----aggg-atacc-ctttaggta--a--ctagatttc-atctc
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            --------------------------------------------------------------------------------
-    Megadyptes            --------------------------------------------------------------------------------
     Megapodius            --------------------------------------------------------------------------------
     Melanodryas           --------------------------------------------------------------------------------
     Meliphaga             --------------------------------------------------------------------------------
@@ -142,7 +132,6 @@ BEGIN DATA;
     Myiodynastes          -----------atacggg-tca----gtag-g-ttt----agga-agacc-cccaaggta--a-tctagatttg-aaccc
     Myiopagis             -----------atacggg-tca----gtag-g-ttt----agga-acacc-cctaaggta--a-tctagatttg-aaccc
     Neophema              --------------------------------------------------------------------------------
-    Neopsephotus          --------------------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numida                -----------acacaggatct----ttat-gaccc----ctgg-agac--ttcatggtaaga--gtagagtat-agccc
     Nycticorax            taaattattcgacacggggt-g----atac-g-tttc---cgga-agacc-cccaaggtaaga-tccagatttc-agcac
@@ -153,13 +142,11 @@ BEGIN DATA;
     Orthonyx              ----------gatacggggtca----atat-g-ttt----aggg-atccc-gcttaggta--a--ctaggtttc-atctc
     Oxyura                taaattattcgacacggggtct----tctt---tttg---agga-ggact-cttatggtaagag-cgggagtat-agccc
     Pachycephala          -----------------ggtca----gtgc-g-ttt----aggg-atacc-ccttagata--a--ccagattta-atttc
-    Pandion               --------------------------------------------------------------------------------
     Paradisaea            ----------gatacggggtc-----ggat-g-ttt----aggg-ata---ctttaggta--a--ctagatttc-atctc
     Pardalotus            --------------------------------------------------------------------------------
     Parus                 -----------atacagggtca----gtac-g-ttt----aagg-atacc-c------ta--a--ctagatttc-atttc
     Passer                -----------ata---gatya----gtac-gtttt----aagg-atacc-g------ta--a--ctagatttc-atgtc
     Passerina             ----ttattcgataccgggtca----gtac-gtttt----aagg-atacc-c------ta--a--ctagatttc-atctc
-    Pedionomus            --------------------------------------------------------------------------------
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         --------------------------------------------------------------------------------
     Petroica              --------------------------------------------------------------------------------
@@ -183,9 +170,7 @@ BEGIN DATA;
     Prunella              ----------gatacggggtca----atac-atttt----aagg-atacc-c------ta--a--ctagatttg-atctc
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      --------------------------------------------------------------------------------
     Pycnonotus            --------------------------------------------------------------------------------
-    Pycnoptilus           --------------------------------------------------------------------------------
     Pygoscelis            taaattattcgacacggggt-a----atac-g-tttc---cgga-agatt-cccacggtcagaatctagatttt-agctc
     Pyrocephalus          -----------atacggg-tca----gtag-g-ttt----agga-ayacc--ctaaggta--a-tctagatttg------
     Pyrrholaemus          --------------------------------------------------------------------------------
@@ -201,12 +186,10 @@ BEGIN DATA;
     Setophaga             --------------------------------------------------------------------------------
     Sialia                -----------atatggg-t-a----gtac-ctttt----aagg-atacc-c------ta-----ctaggtttc------
     Sitta                 --------------------------------------------------------------------------------
-    Smicrornis            --------------------------------------------------------------------------------
     Stercorarius          -----------gtacggggtca----ataa-g-tttc---cgga-agact-ccctaggtaagaat-tagatttt-agctc
     Sterna                --------------------------------------------------------------------------------
     Stiltia               --------------------------------------------------------------------------------
     Strix                 --------------------------------------------------------------------------------
-    Struthio              --------------------------------------------------------------------------------
     Sturnus               ----------gatacgggatca----atac-gtttt----aagg-atacc-c------ta--a--ctagatttc-atctc
     Surnia                --------------------------------------------------------------------------------
     Sylvia                ----------gatacggggtca----gtac-g--tt----aggg-atacc-c------ta--a--ctagatttc-atctc
@@ -233,13 +216,10 @@ BEGIN DATA;
     Actophilornis         -----------------------------------------------------------------------------aga
     Aegolius              --------------------------------------------------------------------------------
     Alauda                cctcc--ag--g---------------tatgg-gt----gca--a-ggtaaagcgc-aactcgcg-ttccgcttataaga
-    Alca                  -----------------------------------------------------------------------------aga
     Alectoris             ctta--gga-tgggttacagtagactctgta--gt----gcg--a-tcctg-acga-gagtcgcc-tctcgtccata---
     Alectura              ---------------------ag---gtatg--gt----c-g--g-tat-----tg-gactggcc-ttcc----------
     Alisterus             --------------------------------------------------------------------------------
-    Alle                  --------------------------------------------------------------------------------
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           --------------------------------------------------------------------------------
     Anas                  tgca--ggg-ggggtta--atagactggatg--gt----gta--a------aacg---gctcgtc--tccgtccgta---
     Anous                 tctcttggg-tattttcttatagatagtatg--gt----gca--a-gatgggacga-gactcgcc-ttcc----------
     Anser                 --------------------------------------------------------------------------------
@@ -267,7 +247,6 @@ BEGIN DATA;
     Catharus              -----------------------------------------------------------------------------aga
     Cepphus               --------------------------------------------------------------------------------
     Cercomacra            -----------------------------------------------------------------------------aga
-    Ceryle                -----------------------------------------------------------------------------aga
     Charadrius            -----------------------------------------------------------------------------aga
     Chionis               -----------------------------------------------------------------------------aga
     Chiroxiphia           tctcttatg-tggcctcttatagatcgtatg--gt----gcg--a-ggtaagacga-gactcgc--ttcc----------
@@ -304,15 +283,12 @@ BEGIN DATA;
     Elaenia               tctcttagg-yggtctcttatagatcgtatg--gt----gcg--a-cgtaagatga-gactcgca-ttcc----------
     Elseyornis            --------------------------------------------------------------------------------
     Empidonax             tctctcagg-tggtttcttataaatcgtatg--gg----gcg--a-cgtaagatga-gactcgca-ttcc----------
-    Entomyzon             tctct-g----g---------------tatg--gt----gta--a-ggtaaggaga-gacttgcg-ttcc----------
     Eopsaltria            cctct-gaa-tg---------------tatt--gt----gca--a-gataaggcga-gactcgcg-ttcc----------
     Epimachus             ccttccggg-tg---------------tatt--gt----gca--aaggtaaggc----actcgcg-ttcc----------
-    Erythrogonys          --------------------------------------------------------------------------------
     Eudyptes              --------------------------------------------------------------------------------
     Eudyptula             --------------------------------------------------------------------------------
     Euplectes             tgtacaagaccga----------actacgtg--aca-ccgccccg-cgtcaggcta------------------------
     Falco                 -----------------------------------------------------------------------------aga
-    Falcunculus           -----------------------------------------------------------------------------aga
     Ficedula              tgt--aagacgga----------actacgtg--accgcctccccg-cgtcaggcta----tcgcgt------ta---aga
     Formicarius           -------gg-tggtttcttatagatcgtatg-ggt----gca--a-ggtaagacga-gactcgca-ttccgttcgta---
     Fratercula            -----------------------------------------------------------------------------agg
@@ -335,9 +311,7 @@ BEGIN DATA;
     Jacana                -----------------------------------------------------------------------------aga
     Lanius                cct-c-agg-tg---------------tatg--gt----gca--a-ggtaagtcga-gactcgcg-ttccgtttataaga
     Larus                 tcttttggg-tattttcttatcgatagtgtg--gt----gca--a-gatgggacgaggactcgcc-ttcc----------
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               tctcttagg-tggtctcttatagatcgtatg--gt----gcg--a-cgtaagatga-gactcgca-ttcc-------aga
-    Leipoa                ---------------------ag---gtatg--gt----a-g--g-tat-----tg-gactggcc-ttcc----------
     Lichenostomus         --------------------------------------------------------------------------------
     Limnodromus           -----------------------------------------------------------------------------aga
     Limosa                -----------------------------------------------------------------------------aga
@@ -350,7 +324,6 @@ BEGIN DATA;
     Manucodia             ccttccagg-tg---------------tatg--gt----gca--a-ggtaaggcga-gactcgcg-ttcc----------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            -----------------------------------------------------------------------------aga
-    Megadyptes            --------------------------------------------------------------------------------
     Megapodius            -----------------------------------------------------------------------------aga
     Melanodryas           -----------------------------------------------------------------------------aga
     Meliphaga             -----------------------------------------------------------------------------aga
@@ -364,7 +337,6 @@ BEGIN DATA;
     Myiodynastes          tctcttagg-tggtctcttatagatcgtatg--gt----gcg--a-cgtaagatga-gactcgca-ttcc-------aga
     Myiopagis             tctcttagg-tggtctcttatagatcgtatg--gt----gcg--a-cgtaagatga-gactcgya-ttcc-------aga
     Neophema              --------------------------------------------------------------------------------
-    Neopsephotus          --------------------------------------------------------------------------------
     Notiomystis           -----------------------------------------------------------------------------aga
     Numida                ctca--gga-tggg--ctagtagactctata--gt----g-g--a-tcgag-acga-gagtcgcc-tccc----------
     Nycticorax            tctcttgcg-tggtctcttatagatcgtatg--gt----gca--a-gctgggacga-aactcgcc-ttccgctcgta---
@@ -375,13 +347,11 @@ BEGIN DATA;
     Orthonyx              ccttc-ggg-tg---------------tatg--gt----gca--a-ggtaa-gcga-ggctcgcg-ttcc-------aga
     Oxyura                ttca--gg--tgggtta--attgaccggatg--gt----gta--a------aacgc-gactcgtc--tccgtctgc----
     Pachycephala          cctcccggg-tg---------------tatg--gt----gca--a-ggcaaggcga-gactcgcg-ttcc----------
-    Pandion               -----------------------------------------------------------------------------aga
     Paradisaea            ccttccggg-tg---------------tatt--gt----gca--aaggtaaggc----actcgcg-ttcc-------aga
     Pardalotus            -----------------------------------------------------------------------------aga
     Parus                 cctct-gga-tg---------------tatgg-at----gc-----gaaaaagcga-gactcgcg-ttcc-------aga
     Passer                cctcc-gga-tg---------------tatg--gt----gca--a-ggtaaggcka-gactcccg-ntcc-------aga
     Passerina             cctcc-gga-tg---------------tatg--ga----gca--a-ggtaaagcga-gactc-cg-ttccgtt-------
-    Pedionomus            -----------------------------------------------------------------------------aga
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         -----------------------------------------------------------------------------aaa
     Petroica              --------------------------------------------------------------------------------
@@ -405,9 +375,7 @@ BEGIN DATA;
     Prunella              cctcc-gga-tg---------------tatg--gt----gca--a-gg-------a-gactc-cg-ttcc----------
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      --------------------------------------------------------------------------------
     Pycnonotus            -----------------------------------------------------------------------------aga
-    Pycnoptilus           --------------------------------------------------------------------------------
     Pygoscelis            tctcttgaa-tggtttcttatagatcgtatg--gt----gca--a-gtcgggacga-gactcgcc-ttccgtttgta---
     Pyrocephalus          tctctcagg-tggtctcttatagatcatatg--gt----gcg--a-cgtaagatga-gactcgcg-ttcc-------aga
     Pyrrholaemus          --------------------------------------------------------------------------------
@@ -423,12 +391,10 @@ BEGIN DATA;
     Setophaga             -----------------------------------------------------------------------------aga
     Sialia                -cttt-gga-tg---------------tgtg--gt----gcaaga-ggtaaggcga-gactcgca-ttcc-------aga
     Sitta                 -----------------------------------------------------------------------------aga
-    Smicrornis            --------------------------------------------------------------------------------
     Stercorarius          tcttttggg-tatttt-ttatagattgtatg--gt----gca--a-gatgggacga-gactcgcc-tccc----------
     Sterna                --------------------------------------------------------------------------------
     Stiltia               --------------------------------------------------------------------------------
     Strix                 -----------------------------------------------------------------------------aga
-    Struthio              -----------------------------------------------------------------------------aga
     Sturnus               cctcc-gga-tg---------------tatg--gt----gca--a-ggtaaggcga-gactcttg-ttcc-------aga
     Surnia                --------------------------------------------------------------------------------
     Sylvia                cctct-gga-tg---------------tatg--gt----gca--a-aataaggcga-gactcgcg-ttct----------
@@ -455,13 +421,10 @@ BEGIN DATA;
     Actophilornis         ataaatttccagacatcgagcttacaatggkataagaaaa-----ggcagmtg-gatgatctcgaaactattgttggatc
     Aegolius              --------------------------------------------------------------------------------
     Alauda                ttmaacttccgcacaygaagtttacaaccgtataagaaaa-----gggagctg-gatgatctcgaaactattgctcgacc
-    Alca                  ataaatttccggacacgaaacttacgacagtataaagaaa-----ggcagctg-gatgatctcgaaactattgctagatc
     Alectoris             --------------------------------------------------------------------------------
     Alectura              --------------------------------------------------------------------------------
     Alisterus             --------------------------------------------------------------------------------
-    Alle                  ---------------------------------------------ggcagctg-gatgatctcgaaactattgctagatc
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           ---------------------------------------------ggcagttg-gatgatctcgaaactattgctggatc
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 -----------------------------------------------cagctg-gatgatctcgaaaccattgccggatc
@@ -489,7 +452,6 @@ BEGIN DATA;
     Catharus              ataaacttccgcacatgaagtttacaactgtataaaataa-----gngaactg-gatgatctcgaaactattgctggacc
     Cepphus               ---------------------------------------------ggcagctg-gatgatctcgaaactattgctagatt
     Cercomacra            ataaatttcggcacatgaagtttacaacagcataataaaa-----gggagctg-gctgagct-----ctattgctgaatc
-    Ceryle                ataaatttccgcacatgacgtttgcaccagtataaaaaaa-----ggcagtcc-gatcatctcgaaactattgctggatc
     Charadrius            ataaatttccgcacatgaagtttacaacagtataagaaaa-----ggcagctg-gatgatctcgaaactattgctggatc
     Chionis               atacatttccgcacacgaagtttacaacagtataagaaaa-----ggcagctg-gatgatctcgaaactattgctggatc
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -526,15 +488,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            ---------------------------------------------ggcagctg-gatgatctcgaaactattgctggatc
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          ---------------------------------------------ggcatctg-gatgatctcgaaactattgctggatc
     Eudyptes              -----------------------------------------------cagctg-aatgatctcgaaactattgctggatc
     Eudyptula             -----------------------------------------------cagctg-aatgatctcgaaactattgctggatc
     Euplectes             --------------------------------------------------------------------------------
     Falco                 ataaatttccgcacacgaagcttacaacagtataaggaaa-----gggaactg-gatgatcccgaaactattgctggatc
-    Falcunculus           ataaacttccgcatatgaagtttacaatcgtataagaaaa-----gggagctg-gatgatctcgaaactattgctggacc
     Ficedula              ataaactaccgcacatgaagtttacaactgtataagaaaa-----gggagctg-gatgatctcgaaactattgctggtcc
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            ataaatttccggacatgaaacttacaacagtataaaaaaa-----ggcagctg-gatgatctcgaaactattgctggatc
@@ -557,9 +516,7 @@ BEGIN DATA;
     Jacana                ataaattttcgaacatgaagcttacaatggtataagaaaa-----ggcagctg-gatgatctcgaaactattgctggatc
     Lanius                atgaacttccgcacatgaagtttacaaccgtataagaaaa-----gggagctg-catgatctggaaactattgctggacc
     Larus                 --------------------------------------------------------------------------------
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               ataaa-ttcggcacatgaagtttacaacagtataagaaaa-----gggagctg-gatgagctcgaaactattgctggact
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         ---------------------ttacgaccgtataaaaaaa-----gggagtcg-gatgatctcgaaactattgctggacc
     Limnodromus           ataaatttctagacgtgaagcttaccacagtctaagaaaa-----ggcagctg-gatgatctcgaaactattgccggatc
     Limosa                wtaaatttccagacgtgaagcttaccacagtataagaaaa-----ggcagctg-ggtgatctcgaaactaktgccggatc
@@ -572,7 +529,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            ataaatttccgcacatgacgtttacaacagtataaaaaaa-----ggcaatcc-gatgatctcgaaactattgctggttc
-    Megadyptes            -----------------------------------------------cagctg-aatgatctcgaaactattgctggatc
     Megapodius            ataaatttccgcacgtgaagtttacaccagtataatgaaagatgaggcaactg-gatgaccccgaaaccattgccggctc
     Melanodryas           ataaacttccgctcatgaagtttacaaccgtatgagaaaa-----gggagctg-gatgttctcgaaactattgttggacc
     Meliphaga             ataaacttctgcacatgaagtttacgaccgtataagaaaa-----gggagtcg-gatgatctcgaaactattgctggacc
@@ -586,7 +542,6 @@ BEGIN DATA;
     Myiodynastes          attaa-ttcggcacatgaagtttacaacagtataagaaaa-----gggagctg-gatgagctcgaaactattgctggatt
     Myiopagis             ataaa-ttcggcacatgaagtttacaacagtataagaaaa-----gggagctg-gatgagctcgcaactattgctggatt
     Neophema              --------------------------------------------------------------------------------
-    Neopsephotus          --------------------------------------------------------------------------------
     Notiomystis           ataaacttccgcgcatgaagtttacaaccgtataagaaaa-----gggagctg-gatgatctcgaaactattgctgggcc
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -597,13 +552,11 @@ BEGIN DATA;
     Orthonyx              ataaacttccgcacatgaagtttacaaccgtataagaaaa-----gggagctg-gatgatctccaaactattgctggacc
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               ataaatttccgcacacgaagcttacaacagtacgggaaaa-----ggcagctg-gatgatctcgaaactattgctggatc
     Paradisaea            ataaacttccgcacatgaagtttacaaccgtataagaaaa-----gggagctg-gatgatctcgaaactattactggacc
     Pardalotus            ataaacttctgcacatgaagtctacaaccgtgtaagaaaa-----gggagttg-gatgatc--gaaactattgctggacc
     Parus                 ataaacttccgcacatgaagtttacaaccgtataagaaaa-----gggaactg-gatgatctcgaaactagtgctggacc
     Passer                ataaacttccgcacatgaagtttataaccstataagaaaa-----gggaactg-gatgatctcgaagctattgctggacc
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            ttaaatttccaaacatgaagcttacaacggtataagaaaa-----ggcagctc-gatgatctcgaaactattgccggacc
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         ataaacatccgcacatgaagtttacaagcgtataagaaaa-----gggagctg-tatgatctcgaaactattgttggacc
     Petroica              --------------------------------------------------------------------------------
@@ -627,9 +580,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      --------------------------------------------------------------------------------
     Pycnonotus            ataaacttccgcacacgaagtttacaaccgtatagaaaaa-----gggaactg-gatgacctcgaaaccattgctggact
-    Pycnoptilus           ---------------------ttacaaccgtataagaaaa-----gggacttg-gataatcccgaaactattgctggacc
     Pygoscelis            -----------------------------------------------cagctg-aatgatctcgaaactattgctggatc
     Pyrocephalus          ataaa-ttcggcacatgaagtttacaacagtataagaaaa-----gggagctg-gatgagttcgaaactattgctggatt
     Pyrrholaemus          ---------------------ttacaaccgtataagaaaa-----gggacttg-gttaatcccgaaactatcgctggacc
@@ -645,12 +596,10 @@ BEGIN DATA;
     Setophaga             ataaacttccgcacatgaagtttataaccgtataagaata-----gggaactg-gatgatctcgaaactattgctggacc
     Sialia                ataaacttccgcacatgaagtttacaactgtataagataa-----gggaactg-gatgatctcgaaactattgctggacc
     Sitta                 ataaacgtccgcacatgaagtttacgaccgcataagaaaa-----gggaagtg-gatgatctcgaaaccattgctggacc
-    Smicrornis            ---------------------ttacaaccgtataagaaaa-----gggacttg-gataatccygaaactattgctggacc
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                ---------------------------------------------ggcagctg-gatgatctcgaaactattgctggatc
     Stiltia               ---------------------------------------------ggcagctg-gatgatctcgaaactattgctggatc
     Strix                 ataaatttccgcacatgaagcttacgacagtatgagaaaa-----ggcagccg-gatgatctcgaaactattgctggatc
-    Struthio              ataaatttccacatgcaaagattacactagtgtaagaaaagatgaggcagctg-gatgatctcgaaactattgttggatc
     Sturnus               ataaacttccgcacatgaagtttacaactgtataagaaaa-----gggaactg-gatgatcttgaaactattgctggacc
     Surnia                --------------------------------------------------------------------------------
     Sylvia                --------------------------------------------------------------------------------
@@ -677,13 +626,10 @@ BEGIN DATA;
     Actophilornis         cctatatattccgattagcgagttatggtgaaggaaactgataccgttgttgagtttcctctattcccgttccaactttc
     Aegolius              --------------------------------------------------------------------------------
     Alauda                cccatatatttcgaccagtgagttatggtgagaagaactgattttgtcgctgagtcttctctattcctgttacaactttg
-    Alca                  cctatatatctcgattagtgagttatggtgagagaaactgattctgttgttgagttttctctattcctgttctaacttta
     Alectoris             --------------------------------------------------------------------------------
     Alectura              --------------------------------------------------------------------------------
     Alisterus             --------------tcagtgagttatggtgggagaaactgattctgttgttgagttttctctatttttgctctaacttta
-    Alle                  cctatatatttcgattagtgagttatggtgagagaaactgattctgttgttgagttttctctattcccgttctaacttta
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           cctatatatttcgatcagcgggttatggtgagagaaactgattctgttgttgagttttctctattcccgttctaacttta
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 cctatatgtttcgattaatgagctatgttgagagaaactgattctgttgttgagttctctctattcccgttccgactcta
@@ -711,7 +657,6 @@ BEGIN DATA;
     Catharus              cctatatatttcgatcagtgagttatggtcagaaaaactgactttgtcgttgagtcttctcccttcctgttatcactttg
     Cepphus               cctatatatttcgattagtgagttatggtgagagaaactgattctgttgttgagttttctctattcccgttctaacttta
     Cercomacra            cctatatatttcgatttgtgagttatggtgagaaaaactgattctgtcgttgagttttctctattcctgttctaacttta
-    Ceryle                cctatatatttcgattagtgagttatggtgagagaaactgattctgttgctgagttttctctattcccgttcgaacttta
     Charadrius            cctatatatttcgatcagtgggttatggtgagagaaactgattctgttgttgagttttctctattcccgttctaacttta
     Chionis               cctatatatttcgattagtgagttatggtgagagaaactgattttgttgttgagttttctctatccccgttctaactcta
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -748,15 +693,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            cctatatattttgatcagtgtgttatggtgagagaaactgattctgttgttgagttttctctattcccgttctaacttta
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          cctatatatttcgatcagtgggttatggtgagagaaactgattctgttgctgagttttttctattcccgttgtaacttta
     Eudyptes              cctatatatttcgattagtgagttatggtgagagaaactgattttgttgttgagctttctctattcccgttctaacttta
     Eudyptula             cctatatatttcgattagtgagttatggtgagagaaactgattttgttgttgagctttctctattcccgttctaacttta
     Euplectes             --------------------------------------------------------------------------------
     Falco                 cctatatatttcggttagcaagttatggtgagagaaactgattctgtcattgaattttctctattctcgttctaacttta
-    Falcunculus           cctatatatttcgatcagtgagttatggtgagaaaaactgactttaccgttgagtcttctctactcctgttataacttta
     Ficedula              cctatatatttcgatcagtgagttatggtgagaaaaacagattttgtcgttgagtcttctctgttcttgttatcactcta
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            cctatatatttcgattagtgagttatggtgagagaaactgattccgttgttgagttttctctattcccgttctaacttta
@@ -779,9 +721,7 @@ BEGIN DATA;
     Jacana                cctatatattccgattagcgacttatggtgagagaaactgatatcgttgttgagtttcctctattcccgttccaactttc
     Lanius                cctatatatttcggtcagtgagttatggtgagaaaaactgactttgtcgtcgagttttctctattcctgttataactcta
     Larus                 --------------------------------------------------------------------------------
-    Lathamus              ---atatatttcggtcagtgggtcatggtgggagaaactgattctgttgttgagttttctctatttttgctctaacttta
     Legatus               cctatatattccgattagtgggttatgttgagaaaaactgatcatggcgttgagttttctctgttcctgttctaacttta
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         cctatatatttcactcagtgagttatggtgagaaaaattgattttgtcgttgagtcttctctactcctgttataacttta
     Limnodromus           cctatatatttcgattagcgagttatggtgagggaaactgattctgttgttgagttccctctattcccgttctaacttta
     Limosa                cctatatatttcgactagcgagttatggtgagagaaactgattctgttgttgagtttcctctattcccgttctaacttta
@@ -794,7 +734,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            cctatatatttcgattagtgagttatggtgagagaaactgattctgttgctgagtttcctctattcccgttctaacttta
-    Megadyptes            cctatatatttcgattagtgagttatggtgagagaaactgattttgttgttgagctttctctattcccgttctaacttta
     Megapodius            cctatatattccggttaataagttatggtgagagaaactgattttgttgttcaattctctttgttcccgttccgactttg
     Melanodryas           cctatacatttcgatcagtgagttacggtgagaaaaactgattttatcgctgagtcttctctgttcctgttatagcttta
     Meliphaga             cctatatacttcactcagtgagttatggtgagaaaaactgattttgtcgttgagtyttctctactcctgttataacttta
@@ -808,7 +747,6 @@ BEGIN DATA;
     Myiodynastes          cctatatattccgattagtgtgttatgttgagaaaaactgattatggcgttgagttttctctgttcctgttctaacttta
     Myiopagis             cctatatattccgattagtgggttatgttgagaaaatctgattatggcgttgagttytctctgttcctgttctagcttta
     Neophema              ---------------------gttatggtgggagaaactgattctgttgttgagttttctctacttctgctctaacttta
-    Neopsephotus          -------------atcagtgggttatggtgggagaaactgattctgttgttgagttttctctacttctgctctaacttta
     Notiomystis           cctatatatttcgattagtgagttatggtgagaaaaactgatctcgtcgttgagttttctctattcccgttagaacttta
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -819,13 +757,11 @@ BEGIN DATA;
     Orthonyx              cctatatatttcgatcagtgagttatggcgagaaaaactgatcttgtcgttgagtcttctctattcctgttataacttta
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               cctatatatttcgattagtgggttatggtgagagaaactgattctgttgttaggttcgctctattcctgttctaacttta
     Paradisaea            cctatatatttcggtcagtgagttatggtgagaaaaactgactttgtcgttgagttttctctactcctgttataacttta
     Pardalotus            cctatatagttcactcagtgagttatggtgagaaaaactgattttgtcgttgagttttctctactcctgttataacttta
     Parus                 cctatatattccgaccagtgagttatgctgagaaaaactgattttatcgttgagtcttttctattcctgttataacttta
     Passer                cctgtataattcgaccagtgagttattgtgaggaaaactgattttgtcgttgagttctctctattcccgttataacttta
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            cctatatattccgattagtgagttatggtgagagaaattgattctgttgttgagtttcctctattcctgttttaactttc
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         cctatatatttcgatcagcgagtcatggtgagaaaaactgactttgtcgttgagtcttctctattcctgttacaactttc
     Petroica              --------------------------------------------------------------------------------
@@ -849,9 +785,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             ----------------cgtnggtcatggtgggagaaactgnttntgtngttgagttttctctatttttgctctaacttta
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      ---------------------gtcatggtgggagaaactgattctgttgttgagttttctctatttttgctctaacttta
     Pycnonotus            cctatatatttcgatcactaaattatgatgagaaaaactgattttgtcgttgagtcttctctattcccgttacaacttta
-    Pycnoptilus           cctatatatttcactcagtgagttatggtgagaaaaactgattttgccgttgagtcttccctacccctgttataacttta
     Pygoscelis            cctatatatttcgattagtgagttatggtgagagaaactgattttgttgttgagctttctctattcccgtcgtaacttta
     Pyrocephalus          cctatatattcccattagtgygttatgttgagaaaaactgattatggcgttgagttttctctgttcctgttctaacttta
     Pyrrholaemus          cctatatatttcactcagtgagttatggtgagaaaaactgattttgtcgttgagtcttctctacccctgttataacttta
@@ -867,12 +801,10 @@ BEGIN DATA;
     Setophaga             cctgtatatttcgatcagtgagttattgtgagaaaaactgattttatcgttgagttctctctattcctgttataacttta
     Sialia                cctatatatttcgatcagtgagttatggtgagaaaaactgattttgtcgttgagtcttctctattcctgttaccactttg
     Sitta                 cctatatattccgatcagtgagttacggtgagaaaagctgattttgtcgttgagtcccctccgctcctgttagaactttc
-    Smicrornis            cctatatatttcactcagtcagttatggtgagaaaaactgattttgtcgttgagtcttctctacccctgttataacttta
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                cctatatatttcgattagtgagttagggtgagagaaactgattctgttgttgagttttctctattcccgttccaacttta
     Stiltia               cctatatatttcgattagtggcttatggtgagagaaactgattctgttgttgagttttctctattcccgttccaacttta
     Strix                 cctatatatttcgattagtgggttatggcgagagaaactgactttgttgttgagttttctctattcccgttctaacttta
-    Struthio              cctatataatccgattaatgagctatggtgagagaaactgatcttgttgtcgagttcactctatttccgctctaacttca
     Sturnus               cctatatatttcgatcagtgagttatggtgagaaaaactgactttgtcgttgagtttactctactcctgttatcacttta
     Surnia                --------------------------------------------------------------------------------
     Sylvia                --------------------------------------------------------------------------------
@@ -899,13 +831,10 @@ BEGIN DATA;
     Actophilornis         taatttgccagggacccgcttgcctctaacgaacgactaatcatggctaattaagacagc----gagaccatagagtctc
     Aegolius              --------------------------------------------------------------------------------
     Alauda                taatttgccagggactcacttgcttcaaacgaacgcataatcatcactgattgacatagc----aagaccatagagtctc
-    Alca                  taatttgccggggacccacttgcctctgacgaacgactaatcatggctaattaacatagc----aagaccatagagtctc
     Alectoris             --------------------------------------------------------------------------------
     Alectura              --------------------------------------------------------------------------------
     Alisterus             taatttgccaaggacctacttgcctctaacggacgactaatcatggctaattaacatagc----aaga-catagagtctc
-    Alle                  taatttgccggggacccacttgcctctgacgaacgactaatcatggctaattaacatagc----aagaccatagagtctc
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           taatttgccggggacccacttgcctttgacgaacgactaatcatcaccaattaacatagc----aagaccatagagtctc
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 taatttgccggggacctacttgcttctgacaaacgaccaatcatggctaattatcacagc----aagagcatagagcctc
@@ -933,7 +862,6 @@ BEGIN DATA;
     Catharus              taatttgccagggactcactcgcttcaaacgaacgcataatcatcancgattgacatagc----aagaccatagcgtctc
     Cepphus               taatttgccggggacccacttgcctctgacgaacgactaatcatggctaattaacatagc----aagatcatagagtctc
     Cercomacra            taatttgccagggatccatttacttctagcgaacgaatagtcatggctgattaacatggc----aagagcatagagtctc
-    Ceryle                tattttgccacggacccacctgcttcttacgaaagactaatcatggctaattaacgtaaa----aagaccaaaaagtctc
     Charadrius            taatttgccggggacccacttgcctctgacgaacgactaatcatgactaattaacatagc----aagaccatagagtctc
     Chionis               taatttgccggggacccacttgcctatgacgaacgactgatcatggctatttaacatagc----aagaccatagagtctc
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -970,15 +898,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            taatttgccggggacccacttgcctctgacgaacgactaatcatgactaactaacatagc----aagaccatagagtctc
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          taatttgccggtgacccacttgcctttgacgaacgactaatcatgaccaattaacatagc----aagaccatagagtctc
     Eudyptes              taatttgccggtgacccacttgcctctgacgaactactaatcatggctaattaagatagc----aagaccatagagtctc
     Eudyptula             taatttgccggtgacccacttgcctctgacgaactactaatcatggctaattaagatagc----aagaccatagagtctc
     Euplectes             --------------------------------------------------------------------------------
     Falco                 taactagccagtgaccgacttgcctcgtacgaatgaccagtcatgggtaattaacatagc----aagaccatagagtctc
-    Falcunculus           tagtttgccagggagccacttgcttcaaacgaacgcataatcatcactgattgacatagc----aagaccatagagtctc
     Ficedula              taatttaccagggactcacttgcttcaaacgaacgcataatcatcaccgattgacatagc----aagaccgtagagtccc
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            taatttgccggggacccacttgcctctgacgaaggactaatcatgactaattaacatagc----aagaccatagagtctc
@@ -1001,9 +926,7 @@ BEGIN DATA;
     Jacana                tagtttgccggggactcacttgcctctgacgaatgactaatcatggctaattaagatagc----gagaccatagagtctc
     Lanius                taatttgccagggagccacttgcttcaaacgaaggcataatcatcactgattgatatagc----aagaccatagggtctc
     Larus                 --------------------------------------------------------------------------------
-    Lathamus              taatttgccggggacctacttgcctctgacggacgactaatcgtgattaattaacatagc----aaga-catagagtctc
     Legatus               tgatttacccgggatccacttacttctagcgaacgaacaaacatgact-attracatagc----gagaccatagagtctc
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         tagtttgccagggacccagttgcttcgaacgaacacataatcatcactgattgacatagc----aaggccatagagtctc
     Limnodromus           taatttgccgggggcccgcttgcctctgacgaacgactgaccatggctaagtgacatagc----aaggccacagagtgtc
     Limosa                taatttgccgggggcccgctcgcctctgacgaacgactaaccacggctaagtgacatagc----aagtccacagggtgtc
@@ -1016,7 +939,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            tattttgccaggggcccacctgcttctcacgaaagactaatcatggctaattaacatagt----aagaccataaagtctc
-    Megadyptes            taatttgccggtgacccacttgcctctgacgaactactaatcatggctaattaagatagc----aagaccatagagtctc
     Megapodius            taatttgccggggacttacttgcctctaacgaacgactaatcatgggtaattatcacagc----aagatcatagagtccc
     Melanodryas           tagtttgccagggacccactggcctcaaacgaacgcatcatcatcaccgattgacatagc----aagaccatagagtctc
     Meliphaga             tagtttgccagggacccagttgcttcgaacgaacacataatcatcactgattgacatagc----aaggccatagagtctc
@@ -1030,7 +952,6 @@ BEGIN DATA;
     Myiodynastes          tgatttgcccgggatccactcacctctagcgaacgaatagacatggcygattaacaaagc----gagaccatagagtctc
     Myiopagis             tggtttgcccgggatccacttacttctagcgaacgaataaccatggctgagtagcatagc----gagaccatagagtctc
     Neophema              taatttgccggggacctacttgcctctgacggacgactaatcgtaactagttaagatagc----aaga-caaagagtctc
-    Neopsephotus          taatttgccggggacctacttgcctctgacggatgactaatcgtnattaattaacatagt----aaga-caaagagtctc
     Notiomystis           taatttgccagggacccacttgcctcaaacgaacgcatggtcaccactgactgacatagc----aagaccatagagtctc
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -1041,13 +962,11 @@ BEGIN DATA;
     Orthonyx              tartttgccagggacccacttgcttccaacgaacgcataatcatcactgattgacatagc----aagaccatagagtctc
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               tattttaccggggacccagttgcctctgacgaacgactaatcatggctaattaacatagc----aagaccatagagcctc
     Paradisaea            taatttgccagggagccactcgcttcaaatgaacgcataatcatcactaattgacatagc----aaaaccatagggtctc
     Pardalotus            tagtttgccagggacccacttgcttcgaacgaacgcataatcatcactgactgacatagc----aagaccatagagtctc
     Parus                 taatttgccagggactcacttgcttcaaacgaacgcataattatcactaattgacatagc----aagaccatagactctc
     Passer                tagtttgccagggactcacttccttcaaacgaacgcatgatcatcactgattgacatagcaacaaagaccatagagtctc
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            taatttgccggggacccgcttgcctctgacgagcgactaaccatggctaattaagataam----gagaccatagagtctc
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         taatttgccagggactcacttgcttcaaacgaaagcatgatcatcactgattgacatagc----aagaccatatagtctc
     Petroica              --------------------------------------------------------------------------------
@@ -1071,9 +990,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             taatttgccggggacctacttgcctctgacggacgactaaccgtgattaattaacatagc----aaga-catagagtctc
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      taatttgccggggacctacttgcctctgacggacgactaaccgtgattaattaacatagc----aaga-catagagtctc
     Pycnonotus            taatttgccagggactcacttgcttcaaacgaacgcataatcatcactgattgccatagc----aagaccatatagtctc
-    Pycnoptilus           tagtttgcccgggacccactggctccgaacgaacgcaaaatcgtcactgattgacatagc----atgatcatagagtctc
     Pygoscelis            taatttgccggtgacccacttgccactgacgaactaccaatcatggctaattaacatagc----aagaccatagagtctc
     Pyrocephalus          tgatttgcccgggatccacttacttccagcgaacgaataaacatggctgattaacatagc----gagaccatagagtctc
     Pyrrholaemus          tagtttgcccgggacccacttgctccgaacgaacgcataatcgtcactgattgacatagc----atgatcacagagtctc
@@ -1089,12 +1006,10 @@ BEGIN DATA;
     Setophaga             tagtttgctagggactcacttccctcaaacgaacgtatgatcatcactgattgacatagcatcaaagaacatagagtctc
     Sialia                taatttgccagggactaactcgcttcaaacgaacgcataatcatcaccgattgacataga----aagaccattgagtctc
     Sitta                 tgacttgccagggacccacttgcttccaacgaacgcatattcatcactgattgacatagc----aagaccatagagtccc
-    Smicrornis            tagtttgcccgggacccacttgcttcgaacgaacgcataatcatcaccgattgacatagc----atggtcatagagtctc
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                tagtttgccggcggcccacttgcctctgacgaacgactaatcatggctaactaacatagc----aagaccatagagtctc
     Stiltia               taatttgccagggacccacttgcctctgacgaacgattaatcatggctaattaacatagc----aagaccgtagagtctc
     Strix                 taatttgccagggacccacttgcctctgacgaaggactaaccatggcgaattgacatagc----acgaccatagagtctc
-    Struthio              tactctgccggggacccacttgcctccgtcgaacaactagtcaaggctaattaacacagc----aagagcacagagtctc
     Sturnus               taatttgccagggactcacttgcttcaaacgaacgtataatcatcaccgattgacatagc----aagaccatagagtctc
     Surnia                --------------------------------------------------------------------------------
     Sylvia                -----------------------------------------cctcactgattgacatagc----aagaccatatagtctc
@@ -1121,13 +1036,10 @@ BEGIN DATA;
     Actophilornis         gtatcctggtatttaatctacctcgctgctgatagaagtacgtcatcctatcgtgcctccccgctcctttgacagactgc
     Aegolius              --------------------------------------------------------------------------------
     Alauda                gtatcccggtattcaatctacttcgtttttgatagaaacacgtcatcctatcgtgmccccccgttcttttgtyagaccgc
-    Alca                  gtatcctggtattcaatctacctcgctgttgatagaaacacgtcatcctatcgtgcctccccgttcctttgacagaccgc
     Alectoris             --------------------------------------------------------------------------------
     Alectura              --------------------------------------------------------------------------------
     Alisterus             gtatcccgttattccatctatctcgctgttgatagaaatgcgtcaccctatcgtgcctccccgttcctttgccagaccgc
-    Alle                  gtatcctggtattcaatctacctcgctgttgatagaaacacgtcatcctatcgtgcctccccgttccttttacagaccac
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           gcatcctggtactcaatctacctcgctgttgatagaaatatgtcaacctatcgtgcctccccgttcctttgacagaccac
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 gtatcccggtattcaatctacttcgttattgatagaaatacgtcatcctaccatgcctccccgttcctttgtcagagcgc
@@ -1155,7 +1067,6 @@ BEGIN DATA;
     Catharus              gtaccccggtattcagtctacgtcgttcttgatagaaacacgtcagcctatcgtgccttcccgttctctcgacaaaccgc
     Cepphus               gtatcctggtattcaatctacttcgctgttgatagaaacacgtcatcctatcgtgcctccccgttcctttgacagaccgc
     Cercomacra            gtatcccggtattcaatctaattcgtttttgatagaaacacatcgtcctattgtgcctctccgttcctttggaagaccgc
-    Ceryle                gtatcccggtattcaatccatctcgctattgataaaaacacgccatcctatcgtgcctccccgttcctttgacaggcccc
     Charadrius            gcatcctggtattcaatctacctcgctgttgatagaaatatgtcatcctatcgtgcctccccgttcctttgacagaccac
     Chionis               gcatgctggtattcaatctatctcgctgttgatagaaatacgtcatcttatcgtgcctccccgttccttcgacagaccgc
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -1192,15 +1103,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            gcatcctggtattcaatctacctcgctgttgatagaaatatgtcatcctatcgtgcctccccgttccttcgacagaccac
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          gcatcctggtattcaatctacctcgctgttgatagaaatatgtcagcctatcgtgcctccccgttcccttgacagaccac
     Eudyptes              gtatcccggtattcaatctacctcgctgttgatagaaatacgtcatcctatcatgcctccccgttcctttgacagaccgc
     Eudyptula             gtatcccggtattcaatctacctcgctgttgatagaaatacgtcatcctatcgtgcctccccgttcctttgacagatcgc
     Euplectes             --------------------------------------------------------------------------------
     Falco                 gtatcccggtattcaatctacttcgctgttgatagaaatacgtcatcctatcgtgcctcaccgttcctttgacagaccgc
-    Falcunculus           gtatcccggtattcaatctacttcgtctttgatagaaacacgtcatcctatcgtgcctccccgttcttttgacagaccgc
     Ficedula              gtatcccggtattcaatctacttcgtttttgatagaaacacgtcaccctatcgtgcctccccgttcttttgacagaccgc
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            gtatcctggtattcaatctacctcgctgttgatagaaacacgtcatcctgtcgtgcctccccgttcctttgacagaccgc
@@ -1223,9 +1131,7 @@ BEGIN DATA;
     Jacana                gtatcctgatattcaatctacctcgctgctgatagaagtacgtcatcctatcgtgcctccccgytcttttgacagatcgc
     Lanius                gtatcccggtattcaatctacttcgcctttgatagaaacacgtcatcctatcgtgcctccccgttcttttgacagaccgc
     Larus                 ----------------------------------------------------------------------------ccgc
-    Lathamus              gtatcccgttattccatctatctcgctgttgatagaaatgcgtcaccctatcgtgcctccccgttcctttgccagaccgc
     Legatus               gtatcccggttttcaatctaattcgttgttgatagaaacacgtcatcctatcgtgcctccccgttccgttgacagaccgc
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         gtatcccggtattcaatctacttcgttgctgatagaaacacgtcatcctatcgtgcctccctgttctcttgacagaccgc
     Limnodromus           gtattcgggtattccatctacctcgctgttgattgaaacacgtcatcctatcgtgcctccccgctcctttgacagaccgc
     Limosa                gcatcctggtattcaacctacctcgctgttgattgaagcacgtcatcctatcgtgcctccccgctccctcgacagaccgc
@@ -1238,7 +1144,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            gtatcctggtattcgatccacctcgctattgataaaaatacgccatcctatcgtgcctccccgttcctttgacagacccc
-    Megadyptes            gtatcccggtattcaatctacctcgctgttgatagaaatacgtcatcctatcatgcctccccgttcctttgacagaccgc
     Megapodius            gtatcccggtatttaatctacctcgctgttgatagaaatacgtcatcctaccacgcccccccgttcctttgagagaccgc
     Melanodryas           gcatcccggtatccaacctactttgtttttgatagaaacacgtcaccctatcgtgcctccccgttcttttgacagaccgc
     Meliphaga             gtatcccggtattcaatctacttcgttgytgatagaaacacgtcatcctatcgtgcctccctgttctcttgayagaccgc
@@ -1252,7 +1157,6 @@ BEGIN DATA;
     Myiodynastes          gtatcccggttttcaatctaattcgttgttgatagaaacacgtcatcctatcgtgcctccccgttccattgacagaccgc
     Myiopagis             gtatcccggttttcaatctaattcgttgttgatagaagcacrtcatcctatcgtgcctccccgttccgttgacagaccgc
     Neophema              gtatctcgttattccatctatctcgctgttgatagaaatgcgtcaccctatcgtgcctccccgttcctttgccagaccgc
-    Neopsephotus          gtatctcgctattccatctatctcgctgttgatagaaatacgtcaccctatcgtgcctccccgttcttttgccagactgc
     Notiomystis           gtatcccggtattcaatctacttcgtttttgatacaaacacgccatcctatcgtggctccccgttcttttgacagaccgc
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -1263,13 +1167,11 @@ BEGIN DATA;
     Orthonyx              gtatcccggtattcaatctacgtcgtttttaatagaaacacgtcatcctatcgtgcctccccgttcttttgacagaccgc
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               gtatcccggtattcaatctacctcgctgttgatagaaatacgtcatcctatcgtgcctccccgttcctttgatagaccgc
     Paradisaea            gtatcccggtattcaatctacttcgtctttgatagaaacacgtcatcctatcgtgcctccccgttcttttgacagaccgc
     Pardalotus            ttatcccggtattcaatctaattcgttgttgatagaaacacgtcatcctatcgtgcttccccgttcttttgacagaccgc
     Parus                 gtatcccggtattcaatctacttcgtttttgatagaagcacgtcatcctatcgtgcctccccgttcttctgacagaccgc
     Passer                atatcccggtattcaacctacttcgtttttgatagaaacacgtcatcctatcatgcctccccgttcttttgacagaccgc
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            gtatcctggtattcaatctaattcgctattgatgggagtacgtcatcctatcgtgcctcatcgctcctttgacagaccgc
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         ataccccggtattcaatctacttcgtttttgatagaaacacgtcatcctatcgtgcctccccgttcttttgtcagaccgc
     Petroica              --------------------------------------------------------------------------------
@@ -1293,9 +1195,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             gtatcccgttattccatctatctcgctgttgatagaaatgcgtcaccctatcgtgcctccccgttcctttgccagaccgc
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      gtatcccgttattccatctatctcgctgttgatagaaatgcgtcaccctatcgtgcctccccgttcctttgccagaccgc
     Pycnonotus            gtatcccggtattcaatctaccccgtttttgatagaaacacgtcgtcctatcgtgcctccccgttcttttgtcagaccgc
-    Pycnoptilus           ttatcccggtattcaatctaattcgttgttgatagaaacacgttattctatcgtgcctccccgtccttttgacagaccgc
     Pygoscelis            gtatcccggtattcaatctacttcgctgttgatagaaacacatcatcttatcgtgcctccctgttcctttgacagaccgc
     Pyrocephalus          gcatcccggttttcaatctaattcgttgttgatagaaayaygtcattctatcgtgcctccccgttccrttgacagaccgc
     Pyrrholaemus          ttatcccggtattcaatctacttcgttgttgatagaaacacgtcatcctatcgtgcctccccgtccttttgacagaccgc
@@ -1311,12 +1211,10 @@ BEGIN DATA;
     Setophaga             gtatcccggtattcaatctacttcgtttttgatagaagcgcgtcatcctatcgtgcctccccgttcttttgacagaccgc
     Sialia                gtatcccggtattcaatctacttcgtttttgatagatacacgtcatctaatcgtacttccccgttcttgtgcyaaaccgt
     Sitta                 gtatcccggtattcaatctacttcgtttttgatagaaacacgtcatcctatcgtgcctccccgttcttttgagagaccgc
-    Smicrornis            ttatcccggtattcaatctacttcgttgttgatagaaacatgtcatcctatcgtgcctccccgtccttttgtcagaccgc
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                gtatcctggtattcaatctacctcgctgttgatagaaacacgtcatcctatcgtgcctccccgttcctttgacagaccgc
     Stiltia               gtgtcctggtattcaatctacctcgccgttgatagaaatacgtcatcctatcgtgcctccccgttcctttgacagaccgc
     Strix                 gtatcccggtattcaatctacctcgctgttaatagaaatacgtcatcctatcgtgcctccccgtccctttgacagaccgc
-    Struthio              ggatcccactattcaatctacctcgttgctgatagaagtacgtcatcttatcatgcctccccgttcttttgacagaccgc
     Sturnus               gtatcccggggttcaatctacttcgtttttgatggaaacacgtcatcctatcgtgcctccccgttcttttgacagaccgc
     Surnia                --------------------------------------------------------------------------------
     Sylvia                gtcccccattattcaatctaccccgtttttgatggaaacacgtcatcctatcgtgcctccccgttcttttatcagaccgc
@@ -1343,13 +1241,10 @@ BEGIN DATA;
     Actophilornis         cttcgtaactagattagcgtaatcacccccggaacagtcctacgtcaagatcgtgcaaagattgaaaatacgtttgaagc
     Aegolius              ------aactagattggcgtaaccacccccgggacggccccatataagggtcgtgcgatgattgaagacacgtttggagt
     Alauda                cttcgtaactagattagcgtaatcacctccgggacagctccatatcacrgccgtgggatgattggagatacgtttgaagt
-    Alca                  cttcgtaactagattagcgtaatcacccccgagacagccccatatcagggtcgtgcgatgattgaagatacgtttgaagc
     Alectoris             --------------------------------------------------------------------------------
     Alectura              ------aactcgattagcgtaatcacctccgggagagctccataccagggttctgcgatgattgaagataggtttgaagt
     Alisterus             ctttgtaactagatgagcgtaattacccccgggatagccccatatcaaggccgtgcgatgattgaaggcacgttggaaga
-    Alle                  cttcgtaactagattagcgtaatcacccccgagacagccccatatcaaagtcgtgcgatgattgaagatacgtttgaagc
     Amytornis             ------aactagatcagcgtaatcgcccccgggatagccccacaycaaggccgtgggatgattggagatgcgtttgaagc
-    Anarhynchus           cttcgtaactagattagcgtaatcacccccgggacagccccatatcagggtcctgcgatgattgaagatacgtttgaagt
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 cttcgtaactagattagtgtaatcgcccccgggagagctccatatcagggttgtgcgatgattgaagatacgtttgaagt
@@ -1377,7 +1272,6 @@ BEGIN DATA;
     Catharus              cttcgtaactagattagcgtagtcacctccgggacagccccatatcagggccgcgggatgattggagacgcgtttgaagt
     Cepphus               tttcgtaactagattagcgtaatcacccccgagacagccccatatcaaggtcgtgcgatgattgaagatacgtttgaagc
     Cercomacra            cttcgtaactagattagcgtaatcacccccgggatagctccatatcaaggtcatgagatgattggagatacgtttgaagt
-    Ceryle                tttcgtaactagattagcgtaatcacgcccgggccaaccccatatcaaggtcgcgcratgatcgaagatacgtttggagt
     Charadrius            cttcgtaactagattagcgtaatcacccccgggacagccccatatgagggtcgtgcgatgattgaagatacgtttgaagy
     Chionis               cttcgtaactagattagcgtaatcgcccccgagacagccccatatcaaagtcgtgcgatgattgaagatacggttgaagt
     Chiroxiphia           ------aactagattagtgtaatcacccccgggatagctccatatcaaggtcatgagatgattagagatacrtttgaagt
@@ -1414,15 +1308,12 @@ BEGIN DATA;
     Elaenia               ------aactagattagtgtaatcacccccgggayagctccatatcaaggtcatgagatgattggagatacgtttgaagt
     Elseyornis            cttcgtaactagactagcgtaatcacccccgggacagccccatatcagggtcgtgcgatgattgaagatacgtttgaagc
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            ------aattagattagcgtaatcacccccgggacagcctcatatcaaggccgtgagatggtcggagatacgtttgaaat
     Epimachus             ------aaccagattagcgtaatcacccccgggatagctccatatcagggccgtgggatgattggggatacgtttgaagt
-    Erythrogonys          cttcgtaactagattaacgtaatcacccccgggacagccccatatcagggtcctgcgatgattgaagatacgtttgaagc
     Eudyptes              cttcttaactagattagcgtaatcacccccgggatagccccatatcagggtcgtgcgatgattgaagatacgtttgaagt
     Eudyptula             cttcctaactagattagcgtaatcacccccgggatagccccatatcagggtcgtgcgatgattgaagatacgtttgaagt
     Euplectes             --------------------------------------------------------------------------------
     Falco                 cttcgtaactagattagcgtaatcacccccgggacagccctatatccaggtcgtgcgatgattgaagatacgtttgaaac
-    Falcunculus           cttcgtaactagattagcgtaatcacctccgggatagctccatatcagggccgtgggatgattggagatacgtttgaagc
     Ficedula              cttcgtaactagattagcgtagtcacctccgggacagccccatatcagggcggcgcgatgattggagacacgtttgaagc
     Formicarius           ------aactagattagcgtaatcacccccgggatagctccatatcaaggtcgtgagatgattcgagatacgtttgaagt
     Fratercula            cttcgtaactagattagcgtaatcacccccgagacagccccatatcagggtcgtgtgatgattgaagacacgtttgaagc
@@ -1445,9 +1336,7 @@ BEGIN DATA;
     Jacana                cttcgtaactagattagcgtaatcacccccggaacagtcctacggcaagatcgtgcaatgattgaagatacatttgaagc
     Lanius                cttcgtaactagattagcgtaatcgcccccgggatagctccatatcaagaccgtgagatgattggaggtacgtttgaagn
     Larus                 cttcgtaactagattagcataatcacccccaagacagccccatatcaaggtcgtgcgatgattgaagatacgtttgaagc
-    Lathamus              ctttgtaactagatgagcgtaattacccccgggatagccccatatcarggtcgtgcgatnattgaagncacgtttgaana
     Legatus               cttcgtaactagattagtgtaatcacctccgggakagctctatatcaaggtcatgagatgattggagatatgttcgaagt
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         cttcgtaactagattagcgtaatcgtccccgggatagccccatatcagggccgtgagatgattggagattcggttgaagt
     Limnodromus           ctccgtaattagattaccgtaktcacccccgggacagccccacatcagggtcgtgcgatgattgaagatacgtttgaagc
     Limosa                ctccgtaactagattagcgtaatcacccccgggacagccccacatcggggccgtgcgatgattgaagatacgtttgaagc
@@ -1460,7 +1349,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           ------aactagattagcgtaatcacccccgggatagccccatatcaaggtcgtgagatgattggagatacgtttgaagt
     Megaceryle            tttcgtaactagattagcgtaatcacgtccgggttaaccccatatcaaggtcgcgcgatgatcgaagatacgtttggagt
-    Megadyptes            cttcttaactagattagcgtaatcacccccgggatagccccatatcagggtcgtgcgatgattgaagatacgtttgaagt
     Megapodius            cttcgtaactagattagcgtaatcacctccgggtgagctccatatcagagttctgcgatgattgaagatacgtttgaagt
     Melanodryas           cttcgtaattagattagcgtaatcacccccgggatagcctcatatcaaggccgtgagatggtcggagatacgtttgaagt
     Meliphaga             cttcgtaactagattagcgtaatcgtccccgggatagccccatatcaaggccgtgagatgattggagattcgattgaagt
@@ -1474,7 +1362,6 @@ BEGIN DATA;
     Myiodynastes          cttcgtaactagattagtgtaatcacccccgggatagctctatatcaagrtcatgagatgattggagatacgttcgaagt
     Myiopagis             cttcgtaactagattagtgtagtcgcccccgggayagctccatatcaaggtcatgagatgrttggagatacgtttgaagt
     Neophema              ctttgtaactggatgagcgtaattacccccgggatagccccatatcaaggtcgtgcgatgattgaaggtacgtttgaaga
-    Neopsephotus          ctttgtaactagatgagcgtaattacccccgggatagccgcatatcaaggtcgtgcgatgattgaaggtacgtttgaaga
     Notiomystis           cttcgtaactagattagcgtaatcacccccgggatggccccatatcagggccgtgagatgattggagatacgtttgaagt
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -1485,13 +1372,11 @@ BEGIN DATA;
     Orthonyx              cttcgtaactagattagcgtaatcactcccgggacagctccatatcagggccgtgggatgattggagatacgtttgaagt
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          ------aactagattagcgtaatcacccccgggatagctccatatcagggccgtgagatgattggagatacgtttgaagc
-    Pandion               cttcgtaactagattaacgtaatcacccccaggagagccccatatcagggtcgtgcgatgattgaagataggtttgaagc
     Paradisaea            cttcgtaactagattagcgtaatcacccccgggatagctccatatcagggccgtgggatgattggggatacgtttgaagt
     Pardalotus            cttcgtaactagattagcgtgatcacccccgggatagccccatatcagggccgtgagatgattggagatacgtttgaagt
     Parus                 cttcgtaactagattagcgcaatcaccttcgggacagctccctattaaggccgcggaatgattggagatacgtttgaaga
     Passer                ctttgtaactagattagcgtaatcacctcygggaaagctccctatcagggccgtgagatgattggagacacgtttgaagc
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            cttcgtaactagatcagcgtaatcactcccggaacagccccacgtcaagatcgtgagatgattgaagatacgtttgaagc
     Pelecanoides          ------cactagattagcgtaaccacccccgggatagccccatatcagggtcgtgcgatgattgaagatacgtttgaagc
     Petrochelidon         cttcgtaactaaattagcgtaatcgctcccgggatagctccataccagggccgtgggatgattggagatacgtttgaagt
     Petroica              ------aattggattagcgtaatcacccccggggcagccccctattggggccgtgcgatgattggagatacgtttgaagt
@@ -1515,9 +1400,7 @@ BEGIN DATA;
     Prunella              ------aactagattagcataatcacctctgggaaagctccctatcagggccgtgagatgattggagatacgtttgaagt
     Psephotus             ctttgtaactagatgagcgtaattacccccgggatagccccatatcaaggtcgtgcgatgattgaaggcacgttggaaga
     Psophodes             ------aactagattaacgtaatcacccccgggatagctccatatcagggccgtgagatgattggagatacgtttgaagc
-    Purpureicephalus      ctttgtaactagatgagcgtaattacccccgggatagccccatatcaaggtcgtgcgatgattgaaggcacgttggaaga
     Pycnonotus            cttcgtaactagattagcgtaaccacctccgggacagctccatatcaggaccgtgggatgattggagatacgtttgaagt
-    Pycnoptilus           ctccgtaattagattagcgtgatcacccccaggatagccccatatcagggccgtgggatggttggagatacgtttgaagt
     Pygoscelis            ctttgtaactagattagcgtaatcacccccgggacagccccatatcaaggtcgtgcgatgattgaagatacgtttgaagc
     Pyrocephalus          cttcgtaactagatyagtgtaatcacccccgggatagctctatatcaaggtcrtgagatgattggacatacgttcgaagt
     Pyrrholaemus          ctccgtaattagattagtgtgatcacccccaggatagccccgtatcaaggccgtgggatgattggagatacgtttgaagt
@@ -1533,12 +1416,10 @@ BEGIN DATA;
     Setophaga             ctttgtaactagattagcgtaatcacttccgggaaagcttcctatcagggccgtgggatgattggggatacgtttgaagc
     Sialia                cttcgtaactagattagcgtagtcacctccgggacagctccatatcagggctgcgagatgattggagacgcgtttgaagc
     Sitta                 cttcgtcactagattagtgtgatcacccccgggatagctccatatcggggcggtgagatgactggagacacgtttgaagt
-    Smicrornis            ctccgtaattagattagcgtgatcgcccccaggatakccycatatcarggccgtgggatgattggagatacgtttgaagt
     Stercorarius          ------aactagactagcgcaattacccccgagacagccccatatcagagtcgtgcgatgattgaagatacgtttgaaga
     Sterna                cttcgtaactagattagcgcaatcacccccgagacagccccatatcaaggtcgtgcgatgattgaagatacgtttgaart
     Stiltia               cttcataactagattagcgtaatcacccccgggacagccccatatcagggtcgtgcgatgattgaagatacgtttgaagc
     Strix                 cttcgcaactaaattagcgtaatcacccccgggacggscccatatcagggtcgtgcgatgattgaagatacgtttgaart
-    Struthio              cttcgaaactagattagtgataccacccccgggagagtctcataccacggtcgtgcgatgattgaagatacgtttgaaga
     Sturnus               cytcgtaactagattagcgtagtcacctccgggagagccccatatcaaggccgtgggatgattggagatacgtttggagc
     Surnia                ------aactagattggcgtaaccacccccgggacggccccatatcagggtcgtgcgatgattgaagacacgtttggagt
     Sylvia                cttcgtaactaaattagtgtaatcacctccgggatagctccatatcagggccctgagacgattggagatacgtttgaagt
@@ -1565,13 +1446,10 @@ BEGIN DATA;
     Actophilornis         ttagtacgtgtgataaaatacaaatagggagagaatatcttccgacaccatcctcattagtaaaatctgggccgtgtttc
     Aegolius              ctagtacgtgcgataaaatataaataggtagaggaaatcttccgacaccatcctcattagtagaatctgggccgtgtttc
     Alauda                ttagtacgtgcgatgaaatacgaatagatagaggatattttctgccaccgtcctcgttagtaaaatctgggccgtgtttc
-    Alca                  ttagtacgtgcgataaaatacaaatagggagaggatatyttccgacaccatcctcattagtaaaatctgggccgtgttgc
     Alectoris             --------------------------------------------------------------------------------
     Alectura              ttaatacgtgcgataaaatacgaataggtagataatatttttcggcaccatcctcatcagcataagccgggtcgacttct
     Alisterus             ttgatacgtgtgataaaatacaaataggtagaggatatctgccgacaccgtcctcgttagtaaaatctaggctgtgtttc
-    Alle                  ttagtacgtgcgataaaatacaaatagggagaggatatcttccgacaccatcctcattagtaaaatctgggccgtgtttc
     Amytornis             ttagtgcgtgcgatgaaatacaaatagatagaggatcttttttgacaccatccttgtcagtaaaatctgggccgtgcctc
-    Anarhynchus           ctagtacgtgcgataaaatacaaataggtcgaggatatcttccgacaccgtcctcattagtagaatctgggccgtgtttc
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 ttagtacgtgcgataaaatacaaacaggtagaggatatcttccggcaccgtcctcatcagtataatctgggtcgagtttc
@@ -1599,7 +1477,6 @@ BEGIN DATA;
     Catharus              tcagtacgtgcgatgaaatgcaaataggtcgaggatattttctgccaccgtccctgtcagcaaaatctgggccgtgtttc
     Cepphus               ttagtacgtacgataaaatacaaataggaagaggatatcttccgacaccatcctcattagtaaaatctgggccgtgtttc
     Cercomacra            ttagtacgtgctataagatacaaataggtagacaatattttctgacaccatcctcgttagcataatctgggccgcgtttc
-    Ceryle                ccartgcgtgcgataaaatacaaataggtagaggatatcttccgacaccatccttgttagtagaatccgagccgtgcttc
     Charadrius            ctagtacgtgcgataaaatacaaataggtcgaggatatcttccgacaccatcctcattagtagaatctgggccgtgtttc
     Chionis               ctagtacgtgcgataacatacaaatgggtagaggatatcttccgatatcatccttattagtagaatctgggccgtgtttt
     Chiroxiphia           ttagtacgtgctataaaatacaaataggtagaggatattttctgacaccgtcctcgctagtataatctgggmcgcgyttc
@@ -1636,15 +1513,12 @@ BEGIN DATA;
     Elaenia               ttagtacgtgctataaaacacaaataggtagaggatattttctgacatcgtcctcgctagtataatcggggccgcgtttc
     Elseyornis            ctagtacgtgcgataaaatacaaataggtcgagggtatcttccgacaccttcctcattagtagaatctgggccgtgtttc
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            ttagtacgtacgatgaaatacaaataggtagaggatattttctgccaccgtcctcgttagtaaaatctgggccgtgtttc
     Epimachus             ttagtacgtgcgatgaaatacaaataggtagaggatattttctgccaccttccttgttagtaaagtctgggccgtgtttc
-    Erythrogonys          ctagtacgtgcgataaaatacaaataggttgaggatatcttccgacaccatcctcattagtagaatctgggccgtgtttc
     Eudyptes              ctagtacgtgcgataaaatacaaataggtagaggatatcttccgacaccgtcctcgttagtagaatctgggccgtgtttc
     Eudyptula             ctagtacgtgcgataaaatacaaataggtagaggatatcttccgacaccgtcctcgttagtagaatctgggccgtgtttc
     Euplectes             --------------------------------------------------------------------------------
     Falco                 ttagtacgagcgataaaatacaaacaggtagaggatatcttccgacaccgtcctcattagcaaaatctgggccgtgcttc
-    Falcunculus           ttagtgcgtgcgatgaaatgcaaatagatagaggatattttctgccaccgtccttgttagtaaaatctgggccgtgtttc
     Ficedula              ttagtacgtgcgatgaaatacaaataggtagaggatattctctgccaccgtccttgttagcaaaatctgggccgtgcttc
     Formicarius           ttaatacgtgctakaaaatacaaataggtagaggagattttctgacaccgtcctcgctagcacaatctcggccgcgtttc
     Fratercula            ttagtacgtgcgataaaatacaaatagggagaggatatcttccgacaccatcctcattagtaaaatctgggccgtgcttc
@@ -1667,9 +1541,7 @@ BEGIN DATA;
     Jacana                ttagtacgtgcgataaaatacaaatagggagagaatatcttccgacaccatcctcgttagtaaaatctgggccgtgttta
     Lanius                ttagtacgtgtgatgaaatacaaataggtagaggatattttctgccaccttccttgttagtaaaatctgggccgtgtttc
     Larus                 ttagtacgtgcgataaaatacaaatagggagaggatatcttccgacaccatcctcattagtaaaatctgggccgtgtttc
-    Lathamus              ttaatacgtgtgataaaatacaaataggtagaaaatatctgccgacagcgtcctngttagtgaagtctaggctgtgtttc
     Legatus               ttagtacgtgctataaaacacaaataggtagaggatattttctgacatcatcctcgctagtataatctgggccgcgtttc
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         ttagtacgtgcgatgaaatacaaataggtaggggatattttctgacaccatccttgttagcaagatctgggccgtgtttc
     Limnodromus           gtagcacgtgcgataaaatacaaataggaagaggatatcttccgacaccttccccattagtagaatctgggccgtgcttc
     Limosa                ttagcacgtgcgataagatacaaataggaagaggatatcttccgacaccatcctcattagtagaatccgggccgtgtttc
@@ -1682,7 +1554,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           ttagtacgtgctataaaacacaaataggtagaggatattttctgacaccgtcctcgctagcataatctcggccgcgtttc
     Megaceryle            tcagtgcgtgcgataaaatacaaataggtagaggatatcttccgacaccatccttattagtagaatccgagccgtgcttc
-    Megadyptes            ctagtacgtgcgataaaatacaaataggtagaggatatcttccgacaccgtcctcgttagtagaatctgggccgtgtttc
     Megapodius            ctaatacgtgcgataaaatacaaataggtagataatatttttcggcaccatcctcatcagcataatccgggtcgacttct
     Melanodryas           ttagtacgtgcgatgaagtacaaataggtagaggatattttctgccaccgtcctcgttagtaaaatctgggccgtgtttc
     Meliphaga             ttagtacgtgcgatgaaatacaaataggtagaggatattttctgacaccatccttgttagcaagatctgggccgtgtttc
@@ -1696,7 +1567,6 @@ BEGIN DATA;
     Myiodynastes          ttagtacgtgctataaaacacaaataggtagaagatattttctgacatcgtcctcgctagtataatctgggccgcgtttc
     Myiopagis             ytagtacgtgctataaaatacaaataggtagaggatattttctgacatcatcctcgctagtaaaatcygggmcgcgtttc
     Neophema              ttaatacgtgtgataaaatacgaataggtagaggatatctgccgataccgtcctcgttagtaaaatctaggctgtgtttc
-    Neopsephotus          ttaatacgtgtgataaaatacaaataggtagaggatatctgccgataccgtcctcgttagcaaaatctaggctgtgtttc
     Notiomystis           ttagtacgtgcgatgaaatacaaataggtagaggatattttctgccaccgtccttgctagtaaaatctgggccgtgtttc
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -1707,13 +1577,11 @@ BEGIN DATA;
     Orthonyx              ttagtacgtgcgatgaaatacaaataggtagaggatatcttctgccgccgtccttatcagcaaaatctgggccgtgtttc
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          ttagtacgtgcgatgaaatacaaataggtcgaggatattttctgccaccgtccttgttagcaaaatctgggccgtgtttc
-    Pandion               ttagtacgtgcgataaaatacaaataggtagaggatattttccgccaccgtcctcactagtaaaatctgggccgtgtttc
     Paradisaea            ytagtacgtgcgatgaaatacaaataggtagaggatattttctgccaccttccttgttagtaaaatctgggccgtgtttc
     Pardalotus            ttagtacgtgcggtgaaatacaaataggtagaggatattttctgacaccatccttgtcagcaaaatctgggccgtgtttc
     Parus                 ttagtacgtgcgatgaaatacaaataggtagaggatattctctgccaccgtccttgttagtaaaatccgggccgtgtttc
     Passer                ttagtacgtgtgatgaaatacaaataggtagaggatattttctgccaccatccctgttagcagaatctcggccgtgtttc
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            ttagtacgtgcgataaaatacaaataggaagagaatattttccgacaccgtcctcattagtaaaatctgggccgtgtttg
     Pelecanoides          tcagtacgagcgataaaatacaaataggtmgaggatctcttccgacaccgtcctcattagtagaatctgggccgtgtttc
     Petrochelidon         ttagtacgtgcgatgaaatacaaatagatagaggatattttatgccaccgtctttgttagyaaaatctgggccgcgttcc
     Petroica              ttagtacgtgcgatgaaatacaaataggtagaggatattttctgccaccgtccttgttagtaaaatctgggccgtgtttt
@@ -1737,9 +1605,7 @@ BEGIN DATA;
     Prunella              ttagtacgtgcggtgaaatacaaataggtagaggatattttctgccatcgtccttgttagcaaaatctgggccgtgtttc
     Psephotus             ttaatacgtgtgataaaatacaaataggtagaaaatatctgccgacaccgtcctcgttagtgaagtctaggctgtgtttc
     Psophodes             ttagtacgtgcgatggaatacaaataggtaggggatattttctgccaccgtccttgttagtaaaatctgggccgtgtttc
-    Purpureicephalus      ttaatacgtgtgataaaatacaaataggtagaaaatatctgccgacaccgtcctcgttagtgaagtctaggctgtgtttc
     Pycnonotus            ttagcacgtgcgatgaaatacaaataggtagaggatactttctgccaccgtccttgctagtaaaatctgggccgtgtttc
-    Pycnoptilus           ttagtacgcgcgatgaaatacaagtagatagaggatattgtctgacaccatccttgtcagcaaaatctaggccgtgcttc
     Pygoscelis            ctagtacgtgcgataaaatacaaataggtagaggatatcttccgacaccgtcctcattagtagaatctgggccgtgtttc
     Pyrocephalus          ttagtacgtgctataaaatacaaataggtagaggctattttctgacattgtcctcgctagtataatctgggccgcgtttg
     Pyrrholaemus          ttagtacgtgcgatgaaatacaaatagatagaggatattttctgatascatccttgtcagcaaaatctgggccgtgtttc
@@ -1755,12 +1621,10 @@ BEGIN DATA;
     Setophaga             ttaggacgtgcgatgaaatacaaataggtagagaatattttctgccaccgtccttgttagtaaaatctgggccgtgtttc
     Sialia                tcagtacgtgcggtgaaatacaaataggtagaggatattctctgccaccgtccttgccagcaaaatctgggccgtgtttc
     Sitta                 tcagtacgtgcgatgacatgcaaataggtagaggatatcttccgccaccgcccttgctagcaagatctgggccgtgtccc
-    Smicrornis            ttagtacgtgcgatgaaatacaaataggtagaggatgttttctgacaccatccttgtcagcaaaatctgrgccgtgtttc
     Stercorarius          ttagtacgtgcgataaaatacaaatagggagaggatatcttccgacaccatcctcattagtaaaatctgggccgtgtttc
     Sterna                ttagtacgtgcgataacatacaaatagggagaggatatcttccgacaccatcctcattagtaaaatctgggccgtgtttc
     Stiltia               ttagtatgtgcgataaaatacaaatagggagaggatatcttccgacaccatcttcattagtaaaatctgggccgtgtttc
     Strix                 ctagtacgtgcgataaaatacaaataggtagagggaatcttcccacaccatcctcattagtagaatctgggccgtgtttc
-    Struthio              atagtacgtgccataagatacaaataggtcgaaaatatcttccgacactattctcattagcataatctgggacgagtttc
     Sturnus               ttagtacgtgcggtgaaatacaaataggtagaggatattctctgccaccgtccctgttagcaaaatctcggccgtgtctc
     Surnia                ctagtacgtgcgataaaatataaataggtagaggaaatcttccgacaccattctcattagtagaatctgggccgtgtttc
     Sylvia                ctagtatgtgcgatgacatacaaataggtagaggatattttctgccaccatctccgctagtaaaatctgggccgtgtttc
@@ -1787,13 +1651,10 @@ BEGIN DATA;
     Actophilornis         ttgaccaatttacggatcgatactcaagatatagaggacatcccaacatagatattacgttcagcggggcgacgagatgt
     Aegolius              ttgaccagtttttggatcgatactcaagatataaaagacctcccaacatagatattacgttcagcggggcgacgaaactt
     Alauda                ttgaccaatccatggatcgatactcwagatataaragacatttcaacatagacrttacgttcaacggggcgamgaaccgt
-    Alca                  ttgaccaatttatggatcgatactcaagatataaaagacatcccaacatagatattacgtttagcggggcgacgaaacgt
     Alectoris             --------------------------------------------------------------------------------
     Alectura              ttgaccaatttacggatcgatactcaagatatagaagacattccaacatagatgctatgttcagcggagcggcggaacgt
     Alisterus             ttgaccaatttacggatcgatactcaagatataaaagacattccaacataggtgttacgttcagcggggcgacgagacgt
-    Alle                  ttgaccaatttatagatcgatactcaagatataaaagacattccaacatagatactacgttcagcggggcgacgaaacgt
     Amytornis             ttgaccaatccacggatcgatactcaagatatagatgacattccaacatagatattacgttcagcggggcgacgaaatgt
-    Anarhynchus           ttgagcaatttatagatcaattctcaagatataaaaggcattccaacatagatattacgttcagcggggcgatgaaacgt
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 ttgatcaatttacggatcgatcctcaagatacaaaagacattccgacatggatattacgttcagcgaagcggcgaaacgt
@@ -1821,7 +1682,6 @@ BEGIN DATA;
     Catharus              ttgaccaattcatggttcgacactcaagatataaaagacatctcaacatagacattacgttcagcggggcgacgaaacgt
     Cepphus               ttgaccaatttatggatcgatactcaagatataaaagacatcccaacatagatattacgttcagcggggcgacgaaacgt
     Cercomacra            ttgactaactcatggatcgatacttacgatataaaagacactccaacatagatattacgtttagcggggcgacgaaatgt
-    Ceryle                ttgaccattttatggatcgatatgcgagatatagaagacattccagcatagatattacgttcagcgggtcggcgaaacgt
     Charadrius            ttgaccaatttatagatcgatactcaagatattgaagacattgcaacatagatattacgttcagcggggcgacgaaacgg
     Chionis               ttgaccaatttacaggtcgatactcaagatatataagccattccaacatagatattacgctcagcggggcgacgaaacgt
     Chiroxiphia           ttgactaattcatggatcgatacttagaatattaaagacattccaacatggatattacgttcagcggggcgacgaaatgc
@@ -1858,15 +1718,12 @@ BEGIN DATA;
     Elaenia               ttgaccagttcatggatcgatacttaaaatattaaagatattccaacatagatattacgttcagcggggcgacgaaatgt
     Elseyornis            ttgaccaatttatagatcgatactcaagatataaaagacattgcaacgtagatattacgttcagcggggcgacgaaacgg
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            ttgaccaattcatggatcgacactcaagatataaaagacattccaacatagatgttacgttcagtgaggcgacgaaacgt
     Epimachus             ttgaccaattcatggatcgatacccaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaacgt
-    Erythrogonys          ttgaccaatttatagatcgatactcaagatataacagacattccaacatagatattacgttcagcggggcgacgaaacgt
     Eudyptes              ttgaccaacttatggatcgatactcaagatataaaagatattccaacatagatattacgttcagcggggcgacgaaacgt
     Eudyptula             ttgaccaacttatggatcgatactcaagatataaaagatattccaacatagatattacgttcagcggggcgacgaaacgt
     Euplectes             --------------------------------------------------------------------------------
     Falco                 ttgactaatttatggatcgatactcaagatataaaagacattccaacatagatattacgttcagcggggtgacgaaatgt
-    Falcunculus           ttgaccagttcacggattgacactcaggatataaaagacattccaacatagatattacgttcagcggggcgacgaaacgc
     Ficedula              ttgacccagtcatggttcgacactcaagatatagaatacatttcagcatagacattacgttcagcgaggcgacgaaacgt
     Formicarius           ttgactaactcatggatcgatacttaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaatgt
     Fratercula            ttgaccaatttatggatcgatactcaagatataaaagacatcccracatagatattacgttcagcggggcgacgaaacgt
@@ -1889,9 +1746,7 @@ BEGIN DATA;
     Jacana                ttgaccgatttatggatcgatactcaagatatagaagacattccaacatagatattacgttcagcgaggcgacgaaatgt
     Lanius                ttgatcaattcatagatcgatactcaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaatgt
     Larus                 ttgaccaatttctggatcgatactcaaagtataaaagacattccaacatagatattacgttcagcggggcgacgaaacgt
-    Lathamus              ttgatcaatttacggatcgatactcangatataaaagacattccaacat-------------------------------
     Legatus               ttgaccaattcatggatcgacacttaaaatattaaagatattccaacatagatattacgtccagcggggcgacgaaatgc
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         ttgaccaattcatg------------------------------------------------------------------
     Limnodromus           ttgaccaatttacggatcgatactcaagatataaaaatcctcccaacatagatatyacgttcagtggggcgacgaaatgt
     Limosa                ttgaccaatttacggatcgatactcaagctataaaagtcctcccaacatagatattacgctcagcggggcgacgaaatgt
@@ -1904,7 +1759,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           ttgaccaattcatggatcgatacttaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaatgc
     Megaceryle            ttgaccattttatggatcgatacgcaagatatagaaggcattccagcatagatattacgttcagcgggtcggcgaaacgt
-    Megadyptes            ttgaccaacttatggatcgatactcaagatataaaagatattccaacatagatattacgttcagcggggcgacgaaacgt
     Megapodius            ttgaccaatttacggatcgacactcaagatayaaaagacattccaacatagatgttatgttcagcggagcggcggaacgt
     Melanodryas           ttgaccaattcatggatcgacactcaagatataaaagacattccaacatagatattacgttcagtgaggcgacgaaacgt
     Meliphaga             ttgaccaattcatggatcgatactcaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaacgc
@@ -1918,7 +1772,6 @@ BEGIN DATA;
     Myiodynastes          ttgaccaattcatggatcgacacttaaaatattaaagatattccaacatagatattacgttcagcggggcgacgaaatgc
     Myiopagis             ttgactaattcatggattgatacttaaaatattaaagatattccaacatagatattacgttcagcggggcgacgaaacgc
     Neophema              ttgaccaatttatggatcgatactcaagatataaaagacattccaacataggtgttacgttcagcggggcgacgagacgt
-    Neopsephotus          ttgacaaatttatggatcgatactcaagatataaaagacattccaacataggtgttacgttcagcggggcgacgagacgt
     Notiomystis           ttgactgactcatggatcgatactcaagatataaaagccattccaacattggtattgcgttcagcggggcgacgaaacgt
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -1929,13 +1782,11 @@ BEGIN DATA;
     Orthonyx              ttgaccaattcacggatcgatactcaagatatagaggacattccagcatagatattacgttcagcgaggcgacgaaacgt
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          ttgaccaattcatggatcgatacccaagatataaaagacattccaacatagatactgcgttcagcggggcgaagaaacgc
-    Pandion               ttgaccaatttatggatcgatcctcaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaacgt
     Paradisaea            ttgaccaattcatggatcgatacccaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaacgt
     Pardalotus            ttgaccaattcatggatcgatactcaagatataaaagacattccagcatagatattatgttcagcggggcgacgaaatgt
     Parus                 ttgaycaattcatggatcgatactcaagatataaaagagacttcaacatagacattacgttcagcggggcgacgaaacgc
     Passer                ttgaccaattcatggatcgatactcaagatacaaaagacatttcaacatagacactacgctcagcgaggcgacgaaacgc
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            ttgaccaatttatggaacgatactcaagatataaaagacattccaacatagatattacattcagcggggcgacgaaatgt
     Pelecanoides          ttgaccaatttacggatcgacactcaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaacgt
     Petrochelidon         ttgaccaattcatggatygatactcaagatataaaagacatytcaacataagcattacgttcaacggggcgaggaaacgt
     Petroica              ttgaccaattcctggatcgatactcaagatataaaagacattccaacatagatactacgttcagcggggcgacgaaacat
@@ -1959,9 +1810,7 @@ BEGIN DATA;
     Prunella              ttgaccaattcatggatcgatactcaagatataaaagacatttcaacatagacgctacgcccagcggggcgacgaaacgt
     Psephotus             ttgaccaatttacggatcgatactcaagatataaaagacattccaacataggtgttccgttcagcggggcgacgagacgt
     Psophodes             ttgaccaattcatggatcgatactcaagatataaaggacattccaacatagatattacgttcagcggggcgacgaaacgt
-    Purpureicephalus      ttgaccaatttacggatcgatactcaagatataaaagacattccaacataggtgttccgttcagcggggcgacgagacgt
     Pycnonotus            ttgacaaatccatggatcgatactcaagatatagaagacatttcgacatagacattacgttcaacggggcgacgaagcgt
-    Pycnoptilus           ttgaccaattcatg------------------------------------------------------------------
     Pygoscelis            ttgaccaatttatggatcgatactcaagatataaaagatattccaacatagatattacgttcagcggggcgacgaaacgt
     Pyrocephalus          ttgaccaattcatggatcgacacttaaaatattaaagatattccaacatagatattacgttcagcggggcgacgaaatgc
     Pyrrholaemus          ttaaccagttcatg------------------------------------------------------------------
@@ -1977,12 +1826,10 @@ BEGIN DATA;
     Setophaga             ttgaccaattcctggatcgatattcaagatataaaagacattttaacatagacactacgttcagcggggcgacgaaacgt
     Sialia                ttgacgaattcatggttcgacactctagatatagaagacatttcaacatagacattacgttcagcggggcgacgaaacgt
     Sitta                 ttgaccatttcacggaccgatactcaagatatagaggacatttcaacatagaccctacgttcagcggggcgacgaaacgg
-    Smicrornis            ttgaccaattcatg------------------------------------------------------------------
     Stercorarius          ttgaccaatttatggatcgatgctcaagatataaaaggcatcccaacatagatattgcgttcagcggggcgacgaaacgt
     Sterna                ttgaccaatttatggatcgatactcaagatataaaagacattccaacatagatattacgttcagcggggcgacgaaacgt
     Stiltia               ttgaccaatttatggatcgatactcaagctataaaagacatcccaacatagatattacgttcaacggggcgacgaaacgt
     Strix                 ttgaccaatttatggatcgattctcaagatataaaagacattccgacatagatattgcgttcagtggggcgacgaaactt
-    Struthio              ttgaccacttcgcggatcgacactcaagttacaaaggacattccagcatagatattacgttcagcggaccgatgaaatgt
     Sturnus               ttgaccaactcatggttcgacactcaagatataaaagccatttcaacatagacattacgttcagcggggcgatgaaacgc
     Surnia                ttgaccaatttatggatcgatactcaagatataaaagacctcctgacatagatattacgttcagcggggcgacgaaactt
     Sylvia                ttgaccaattcatggatcgatactcaagatatagaagacattttaacatagacattacgttcaacggggcgtcgaaacgt
@@ -2009,13 +1856,10 @@ BEGIN DATA;
     Actophilornis         ctgttccttaaagaccagatctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgctggttagc
     Aegolius              ctgctcctgaaagcttagatccggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgctggttagt
     Alauda                ctgtccctgaaagctcagatctggtatgttcaggttctccacgctcaatgtacggctgaagctaggctgcgctggttagt
-    Alca                  ctgttcctgaaagcttggatccggtatgttcaggttcttcacgcttaatgtatggctaaagctaggtcgcgctggtcagt
     Alectoris             --------------------------------------------------------------------------------
     Alectura              ctgttcctgaaagcttagatctggtatgttcaggtactatacgcttaccgtagagctaaagctaggtcgcgctggttaat
     Alisterus             ctgttcctgagagc------------------------------------------------------------------
-    Alle                  ctgttcctgaaagcttggatccggtatgttcaggttcttcacgcttaatgtatggctaaagctaggtcccgctggtcagt
     Amytornis             ctgtccctgagagcttagatctggtatgctcaggttcttcacgcttaatgtacggctgaagctaggct------------
-    Anarhynchus           ctgttcctgaaagcttagatccggtatgttcaggttcttcacgcttaatgtacagctaaagctaggtcgcgctggttagt
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 ccgttcctgaaagcttagatccggcatgttcaggctctttatgcttactgcagagctaaagctagatcgcactggtcagt
@@ -2043,7 +1887,6 @@ BEGIN DATA;
     Catharus              ctgtccctggaagcttagatctggtatgttcaggttcttcacgcttaatatacggctgaagctaggctgcgctggttaac
     Cepphus               ctgttcctgaaagcttggatctggtatgttcaggttcttcacgcttaatgtatggctaaagctaggtcgcgctggtcagt
     Cercomacra            ctgttcctgaaagcttagatctggtatgttcaggttctacatgccttatgtacgactgaagctaggtcacactggttaat
-    Ceryle                ctgctcctgaaagcttagatctggtatgatcaggttcctcacgcttaatgtacggccaaagctaggccgcgctggtyaat
     Charadrius            ctgctcctgaaagcttagatctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgctggttagt
     Chionis               ctgctcctgaaagcttagatctggcatgtttaagtttttcacgtttaatgtacggctaaaggtaggtcgcgctggttaat
     Chiroxiphia           ctgttcctgaaagcttagatctggtatgttcaggttcttcatgcttaatgtacggctgaagataggtcgcgctggt----
@@ -2080,15 +1923,12 @@ BEGIN DATA;
     Elaenia               ctgtccctgaaagcttagatctggtatgttcaggttcttcatgcttaatgtacggctgaagataggtcacgctggt----
     Elseyornis            ctgttcctgaaagcttagatctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgctggttagt
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            ctgtccctgaaagcttagatctggtatgtacaggttcttcacgcttaacgtacggctgaagctaggctgcgctggt----
     Epimachus             ccgcccctgagagcttggatctggtatgttcaggttcttcacgcttaaggtacggctgaagctaggccgcgctggt----
-    Erythrogonys          ctgctcctgaaagcttagatccggtatgttcaggttcttcacgcttaatgtacagctaaagctaggtcgcgctggttagt
     Eudyptes              ctattcctggaagcttagacctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgtgctggttagt
     Eudyptula             ctattcctggaagcttagacctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgtgctggttagt
     Euplectes             --------------------------------------------------------------------------------
     Falco                 ctgttcctgaaaacttagatccggcatgttcaggctcttcgcgcttaaagtatggctaaaactaggtcgcgctggttatt
-    Falcunculus           ctgtctctgagagcttagatctggtatgttcaggttcttcacgcttaatgtacggctgaagctaggccgcgctggtcaat
     Ficedula              ctgtcccggaaagcttagatctggtacgtttaggttcttcacgcytaatgcacggctgaagctaggctgcgctggttaat
     Formicarius           ctgttcctgaaagctcagatctggtatggtcaggttcttcatgctctatgtacgactgaagctaggtcgcgctgga----
     Fratercula            ctgttcctgaaagcttggatcyggtatgttcaggttcttcacgcttaatgtatggctaaarctaggtcgcgctggtcaat
@@ -2111,9 +1951,7 @@ BEGIN DATA;
     Jacana                ctgttccttaaagcttagatctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgttggtcaac
     Lanius                ccgtccctgatagcttagatctggtatgttcaggttcttcacgcttaatgtacggctgaagctaggccgcgctggttaat
     Larus                 ctgttcctgaaagcttagatccggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgctgct----
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               ctgtccctgaaagcttagatctggtatgttcaggttcttcatgcttaatgtacggctgaagatagrtcgcgctggttaat
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         --------------------------------------------------------------------------------
     Limnodromus           ctgttcctgaaagcttagatccggtatgttcaggttcttcacgcttaatgtacggctaaagttaggtcgcgctggtcaac
     Limosa                cygctcctgaaagcttagatctggtatgttcaggttcttcacgcttaatgcatggctaaagctaggtcgcgctggtcagc
@@ -2126,7 +1964,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           ctgcttccgaaagcttagatctggtatgttcaggttcttcatgctctacttacgactgaagctaggtcacgctgga----
     Megaceryle            ctgctcctgaaagcttagatctggtatgatcaggttcctcacgcttaatgtacggttaaagctaggccgcgctggttaat
-    Megadyptes            ctattcctggaagcttagacctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgtgctggttagt
     Megapodius            ctgttcctgaaagcttagatccggtatgttcaggtactatacgcttactgtagagctaaggctaggtcgcgctggttaat
     Melanodryas           ctgtccctgaaagcttagatctggtatgttcaggttcttcacgcttaatgtacggctgaagctaggctgcgctggttaat
     Meliphaga             ctgtccctgagagcttmgatctggyatgttcrggttcttcacgcttaatgtacagctgaagctaggctgcgctggttaat
@@ -2140,7 +1977,6 @@ BEGIN DATA;
     Myiodynastes          ctgtccctgaaagcttagatctggtatgttcaggttcttcatgcttaatgtacggctgaagataggtcgcgctggttaat
     Myiopagis             ctgtccctgaaagcttagatctggtatgttcaggttcttcatgcttaatgtacggctgaagataggtcacgctggctaat
     Neophema              ct------------------------------------------------------------------------------
-    Neopsephotus          ctgttcctgagagc------------------------------------------------------------------
     Notiomystis           ctgtccctgaaagtttagatctggtatgttcaggttcttcccgcttaatgtacggctaaagctgggctacgctggtcaat
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -2151,13 +1987,11 @@ BEGIN DATA;
     Orthonyx              ctgcccctgaaagcttagatctggtatgttcaggttcttcacgcttattgtacggccaaagctaggccgcgctggttaat
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          ctgtccctgaaagcttagatctggtatgttcaggttcttcacgtttaatgtacggctgaagctaggcc------------
-    Pandion               ctgctcctgaaagcttagatctggtgtgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgctggttagt
     Paradisaea            ccgcccctgagagcttagatctggtatgttcaggttcttcacgcttaaggtacggctgaagctaggccgcgctggtcaat
     Pardalotus            ctgtccctgagagcttaggtctggtgtgttcaggttcttcacgcttaatgtacrgctgaagcttggctgcgctggtcaat
     Parus                 ctgtccctgaaagcttagacctagtatgttccggttattcacgcttaatgtacggccgaagctaggctgcgctggttaat
     Passer                ccgtccctgaaagcttagatctggtatgttcaggttctccacgctcaatgtacggctgacgctaggctgcgctggttaat
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            ctgttcctgaaagtttagatctggtatgttcaggttcttcacgcttaatgcacggctaaagataggtcgcgctggwtagc
     Pelecanoides          ctgctcctgcaagcttagatccggtacattcaggttcttcacgcttaatgtacggctaaagctgagtcgcgctggt----
     Petrochelidon         ctgtccctgaaagcttagatctggtatgttcaggttctccacgcttaaagtacggctgaagctaggctgcgctggttaat
     Petroica              ctgtcccacaaagcttagatctggtatgttcaggttcttcacgtttaatgtacagctgaagctaggct------------
@@ -2181,9 +2015,7 @@ BEGIN DATA;
     Prunella              ctgtctctgaaaacttagatctggtatgttcaggttcttcacgctcaatgtacggctgaagtttggctgcgctggt----
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             ctgtccctgaaagcttagatctggtatgttcaggttcttcacgcttaatgtayggctgaagctaggct------------
-    Purpureicephalus      ctgttcctgagagc------------------------------------------------------------------
     Pycnonotus            ctgtctctgaaagcttagatctggtatgttcaggttccccacgcttaatgtacggctgaagctaggctgcgctggttaat
-    Pycnoptilus           --------------------------------------------------------------------------------
     Pygoscelis            ctactcctggaagcttagatctggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgtgctggttagt
     Pyrocephalus          ctgtccctgaaagcttagatctggtatgttcaggttcttcatgcttaatgtacggctgaagataggtcgcgctggttaat
     Pyrrholaemus          --------------------------------------------------------------------------------
@@ -2199,12 +2031,10 @@ BEGIN DATA;
     Setophaga             ctgtcaccgaaagcttagatctggcatgttcaggttctccacgcttaatgtacggctgaagctaggctgcgctggttaat
     Sialia                ctgtccctgaaagctcagatctggtatgttcaggttcttcacgcttaatgtacggctgaagctaggctgcgctggttaat
     Sitta                 ctgcccctgaaagcttggatctggtacgttcaggttcttcgcgcttaatctacggctgaagctaggctgcgctggttaat
-    Smicrornis            --------------------------------------------------------------------------------
     Stercorarius          ctgttcctgaaagcctagatctggtatgttcaggttcttcacgcttaatgtatggctaaagctaggtcgcgctggt----
     Sterna                ctgttcctgaaagcttagatccggtatgttccggttcttcacgcttaatgtacggctaaagctaggtcgcgctggtcart
     Stiltia               ctgttcctgaaagcttagatccggtatgttcaggttcttcacgcttaatgtacggctaaagctaggtcgcgctggtcagt
     Strix                 ctgctcctgaaagcttagatccggtatgttcaggttcttcacgcttaatggacggctaaagctaggtcgcgctggttagt
-    Struthio              ctgttcctggaagcttagatccggcatgatcaggtgcttcacgcttactgtacagctggagctaggtcgcgcaggttaat
     Sturnus               ctgtccctgaaagcttagatctggtatgttcaggttcttcacgcctaatgcacggctgaagctaggctgcgctggttaat
     Surnia                ctgctcctgaaagcttagatcnggtatgttcaggtggttcacgcttactgtacggctaaagctaagtcgcgctggttagt
     Sylvia                ctgtccctgaaagcttaggtctggtatgtttaggttctccacgcttaatgtacggctgaagctaggctgcactggttatt
@@ -2231,13 +2061,10 @@ BEGIN DATA;
     Actophilornis         trtgggcgcccaaaggtaacctgagagaccgaacacctgtaatcgaggaagagggcatctcttcgttaccggacgtgccc
     Aegolius              t-------------------------------------------------------------------------------
     Alauda                tatgaacgcccaaaagtgactaggtagaccgaatatctgtaattgacggagagggcatctcttcgttaccggacgtgccc
-    Alca                  tatgaacgcccaaaagtgaccagatagaccgagcacctgtaatcgatgaagagggcatccctccgttaccggacgtgccc
     Alectoris             --------------------------------------------------------------------------------
     Alectura              tatcggcgctcaaaagtggccaggtagaccgagcacctgtaattgatagagagggcatctcctccccaccggccgtgccc
     Alisterus             --------------------------------------------------------------------------------
-    Alle                  tatgagcgcccaaaagtgactagatagaccgagcacccgtaatcgacgaagagggcatccctccgttaccggacgtgccc
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           tatggacgctcaaaagtgactagatagaccgaacacctgtaattgacgaagagggcatctcttcgttaccggacgtgccc
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 catgggcgctcaaaagtggccagatagaccgaacacctgtaattgatagagagggcatctcctccttgccgggcgtgccc
@@ -2265,7 +2092,6 @@ BEGIN DATA;
     Catharus              tatgaacgcccaaaagtgactaagtggaccgaatacctgtaattgacggagagggcagctcttcgttcccggacgtgcgc
     Cepphus               tatgaacgcccaaaagtgactagatagaccgagcacctgtaatcgacgaagagggcatccctccgttaccggacgtgccc
     Cercomacra            tatgaacgcacaaaagtgactaagtagaccgaacatccgtaattaatagagagggcatttcttctttatcggacgtgccc
-    Ceryle                tatggacgcccaaaagtgactagatagaccgaacacttgtaattgatggagagggcatctcttcgttaccggacgtgccc
     Charadrius            tatggacgcccaaaaatgactagatagaccgaacacctgtaactgacgaagagggcacctcttcgttaccggacgtgccc
     Chionis               tgtgaatgcccaaaagtgactagatagaccgaacacctgtaattgatgaagagggcatctcttcgttaccggacgtaccc
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -2302,15 +2128,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            tatgaacgcccaaaagtgactagatagaccgaacacctgtaactgacgaagagggcatcttttcgttaccggacgtgccc
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          tatgracgcccaaaagtgactagatagaccgaacacctgtatttgacgaagagggcatctcttcgttaccggacgtgccc
     Eudyptes              taagaacgcccaaaagtgactagatagaccgaacacctgtaattgatggagagggcatcttttcgtcaccgggcgtgccc
     Eudyptula             taagaacgcccaaaagtgactagatagaccgaacacctgtaattgatggagagggcatcttttcgtcaccgggcgtgccc
     Euplectes             --------------------------------------------------------------------------------
     Falco                 tatgaacgtccaaaagtgactagatagaacgaacacctgtaattgacggagagggcatcgcttcgctaccgggcgtgccc
-    Falcunculus           cacggacgcccaaaagtgactaggtagaccgaatatctgtgattgacggagagggcacctcttcgttaccggacgtgccc
     Ficedula              tatgaacgccctaaagtgaccaggtagaccggatacctgtaatcgacggagagggcaccgcttcgttcccggacgtgccc
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            tatgaacgccsaaaagtgactagatagaccgarcacctgtaatcgatgaagagggcatccctccgtcaccggacgtgccc
@@ -2333,9 +2156,7 @@ BEGIN DATA;
     Jacana                tatgggcgcccaaaggtaacttgagagaccgaccacctgtaattgaggaagagggcatctcttcgttatcggacgtggcc
     Lanius                tatggacgcccaaaagtgactaggtaaaccgaatacctgtaattgacggagagggcatctcttggttaccgggcgtgccc
     Larus                 --------------------------------------------------------------------------------
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               tataaacacccaaaagtgactaggtagaccgaacatctgtagttgatggagagggcatctcttcgttatcggacgtgccc
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         --------------------------------------------------------------------------------
     Limnodromus           tatgggcgcccaaaggtgaccagrtagacccagcacctgtaattgaggaagagggcatctcttcgttsccggacgtgccc
     Limosa                tatgggcgcccaaaggtgaccagatagaccgaacacctgtaattgaggaagagggcatctcttcgttaccggacgtgccc
@@ -2348,7 +2169,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            tatgagcgcccaaaagtgactggatagaccgaacatctgtaattgatggagagggcatctcttcgttaccggacgtgccc
-    Megadyptes            taagaacgcccaaaagtgactagatagaccgaacacctgtaattgatggagagggcatcttttcgtcaccgggcgtgccc
     Megapodius            tatcagcgcttaaaagtggccaggtagaccgagcacctgtaattgatagagagggcatctcctccctaccggccgtgccc
     Melanodryas           tatgaacgcccaaaagtgactaggtagaccgagtacctgtaattgacggagagggcatctcttccttaccggacgtgccc
     Meliphaga             tatgaacgcccaaaagtgactaggtagaccgaatrcctgtaattgaccgaaagrgyatctcttcgttaccggacgtgccc
@@ -2362,7 +2182,6 @@ BEGIN DATA;
     Myiodynastes          tataaacgcccaaaagtgactaggtagaccgaacatctgtagttgatggagaggacatctcttcgttatcggacgtgccc
     Myiopagis             tataaacgcccgaaagtgactaggtagaccgaacatctgtagttgatggagagggcatctcttcgttatcggacgtgccc
     Neophema              --------------------------------------------------------------------------------
-    Neopsephotus          --------------------------------------------------------------------------------
     Notiomystis           tgtgaacgcccaaaagtgactaggtggaccggatacccgtaactgacggagagggcatctcttcgttaccggacgtgccc
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -2373,13 +2192,11 @@ BEGIN DATA;
     Orthonyx              tatgaacgcccaaaagtgaccaggtagaccgaatacctgtaattgacggagagggcacctctccgttaccgggcgtgctc
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               tatgaacgcctaaaagttactaaatagaccaaacacctgtaattgatagaaagggcatctctttgttacgagacgcgccc
     Paradisaea            tatggacgcccaaaagtgactaggtagaccgaatacctgtaattgacggagagggcatctcttcgctaccgggcgtgccc
     Pardalotus            tatggacgcccaaaagtgactaggtagaccgaatacctgtaattgacggagagggcatctcttcgttaccgggcgtgccc
     Parus                 tatgaatgcccaaaagtgactgggtagaccgaatgcctgtaattgacggagaaggcatctcttcgttaccggacgtgccc
     Passer                tatgaacgcccaaaagtgactaggtagaccgaatatctgtaattgacggagagggcatcttttcgttaccggacgtgccc
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            catggacgcccaaaggtaactggatagaccgaacacctgtaattgaggaagagggcatttcttcgttaccggacgtgcgc
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         tatgaacgcccaaaagtgactacgtagaccgaatatccgtaattgayggagagggcatctcttcgtcaccggacgtgccc
     Petroica              --------------------------------------------------------------------------------
@@ -2403,9 +2220,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      --------------------------------------------------------------------------------
     Pycnonotus            tatgaacgcccaaaagtgactaggtagaccgaatatccgtaattaacggagagggcatctcttcgttcctggacgtgccc
-    Pycnoptilus           --------------------------------------------------------------------------------
     Pygoscelis            tatgaacgcccaaaagtgactagatagaccgaacacctgtaattgatggagagggcatcttttcgtcaccggacgtgccc
     Pyrocephalus          tataaacgccyaaaagtgactaggtagaccgaacatctgtagttgatggagagggcatctcttcgtyatcggacgtgccc
     Pyrrholaemus          --------------------------------------------------------------------------------
@@ -2421,12 +2236,10 @@ BEGIN DATA;
     Setophaga             tatgaacgcccaaaagtgactaggtagaccgaatacctgtaattgacggagagggcatcttttcgttaccggacgtgccc
     Sialia                tatgaacgcccaaaagtgactaggtagactgaacatctgtaattggtggagagggcagctcttcgttcccggacgtgcgc
     Sitta                 cgcgaacgcccaagagggaccgggcagaccgaacacccggaattgagggagagggcatctcttcgttcccggacgcgccc
-    Smicrornis            --------------------------------------------------------------------------------
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                tatgaacgcccaaaagtgactagatagaccgagcacctgtaattgacgaagagggcatccctccgtcaccggacgtgccc
     Stiltia               tatgaacgcccaaaagtgactagatagaccgaacacctgtagtcgatgaagagggcatccctccgtcaccggacgtgccc
     Strix                 tatgaacgcccaaaagtgactagatagaccgaacacctgtaattgatggagagggcatctcttcgtcaccgggcgtgccc
-    Struthio              tatggacgctcaaaagtgactaggtagatcgaacacccgtaattgatcgagagggcttctccttcttcacgaacgtgtct
     Sturnus               catgaacgcccaaaagtgactaggtagaccgaatacctgtaattgacggagagggcatctcttcgttcccggacgcgccc
     Surnia                t-------------------------------------------------------------------------------
     Sylvia                tatgaacgcccaaaagtgactaggtaaaccgaatatctgtaatygacggagagggcatctcttcgttaccggacgtgccc
@@ -2453,13 +2266,10 @@ BEGIN DATA;
     Actophilornis         cacgcctatgggtaaggccattatttgctcaggttacatttgctccatggctctctgaaccgtcgggttatcgtctctag
     Aegolius              --------------------------------------------------------------------------------
     Alauda                cacgcttatggctaaggccatcgtttgctcaggttacatctgttccatagccctctgaaccgtcgggytatcgtttgtrg
-    Alca                  cacgcttatggctaaggccattatttgctcaggttacatttgttccatggttctctaaaccgccgggctatcgctcctag
     Alectoris             --------------------------------------------------------------------------------
     Alectura              cccgcctatggataaggccgttacttgctcaggttacattagttccacagctctctaaactgtcgggccaccgtttataa
     Alisterus             --------------------------------------------------------------------------------
-    Alle                  cacgcttatggctaaggccactatttgctcaggttacatttgttccatggtcctctaaaccgccgggctatcgttcctag
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           cacgcttatggttaaggccattatttgctcaggttacgtttgctccatagccctctaaaccgtcgggctatcgtttctag
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 cccgcctatggataaggccttcatttgctcaggttacatctgttccatggctctctaggccgtcgggctaccgtttatag
@@ -2487,7 +2297,6 @@ BEGIN DATA;
     Catharus              cacgcttacggataaggccatcgtctgctcaggttacatttgtcccatagctctctaaaccgccgggctatcgttcgtgg
     Cepphus               cacgcttatggctaaggccattatttgctcaggttacatttgttccatagtcctctaaaccgccgggctatcgttcctag
     Cercomacra            caggcttatgaataaggccatcatttgctcaggttacatttgttcgatagctctctaaaccgtcgggttatcgtttgtag
-    Ceryle                cacgcttatggataaggccatcatttgctcaggttacatttgttccatggctctatacaccgtcgggttatcgtttatag
     Charadrius            cacgcctatggataaggccatcatttgctcaggttacatttgctccacagccctctaaaccgtcaggctatcgtttctag
     Chionis               cacgcttatggataaggccatcatttgctcaggttacatttgctccatggccctctaaaccgtcgggttatcggttctag
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -2524,15 +2333,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            cacgcctatggataaggccatcatttgctcaggttacatttgctccatagctctctaaactgtcaggctatcatttctag
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          cacgcttatggttaaggccatcatttgctcaggttacgtttgttccatagccctctaaaccgtcgggctatcgtttctag
     Eudyptes              caaacttatggataaggccatcatttgctcaggttacatttgctccatggctctctaaaccgtcgggctatcgtctgtag
     Eudyptula             caaacttatggataaggccatcatttgctcaggttacatttgctccatagctctctaaaccgtcgggtcatcgtttgtag
     Euplectes             --------------------------------------------------------------------------------
     Falco                 cacgcttatggataaggccattatttgctcaggttacatctgytccatggctctctaaaccgacgggctatcgtttgtag
-    Falcunculus           cacgcttatggataaggccatcatttgctcaggttacatttgctccatggctctctaaaccgccgggttatcgttcgtag
     Ficedula              cacgcctacggataaggccgccgtttgcgcaggttacatttgttccatagctctctagaccgccgggttatcgttcgcgg
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            cacgcttatggctaaggtcattatttgctcaggttatatttgttccatggtcctctaaaccgccgggctatcgttcctag
@@ -2555,9 +2361,7 @@ BEGIN DATA;
     Jacana                cacgcttatgggtaaggccgttatttgctcaggttacatctgttccatagctctctaaaccgtcaggttagcgtttctag
     Lanius                cacgcttatggataaggccaccatttgctcaggttacatttgctccatagctctctaaaccgtcaggttatcgttcggag
     Larus                 --------------------------------------------------------------------------------
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               tacgcttatggataaggccactatttgctcaggttacatttgttccatagctctctaarccgtcgggttatcgcttgtar
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         --------------------------------------------------------------------------------
     Limnodromus           cacgcctatggataaggccgtcatttgctcaagttacatttgctccatagccctccgaaccgtcggattatcgtttctag
     Limosa                cacgcccatggataaggccatcatttgctcaggttacatttgctccatrgctctccgaaccgtcgggytatcgtttctag
@@ -2570,7 +2374,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            cacgcttatggataaggccatcatttgctcaggctacatttggtccatagctctccacaccgtcgggttatcgtttatag
-    Megadyptes            caaacttatggacaaggccatcatttgctcaggttacatttgctccattgctctctaaaccgtcgggctatcgtctgtag
     Megapodius            cccgcctatggataaggccgtcacttgcccaggttacattagctccacggctctctaaaccgtcgggctaccgtttttaa
     Melanodryas           cacgcttatggataaggccatcatttgctcaggttacatctgctccatagccctctaaaccgccgggttatcgtttgtag
     Meliphaga             cacgcttatggctaaggccatyatttrctcaggttacattygctccatagccctctaaaccgtcgggttatcgtttgtag
@@ -2584,7 +2387,6 @@ BEGIN DATA;
     Myiodynastes          cacgcttatggataaggccactatttgctcaggttacatttgttccatagctctctaaaccgtcgggttatcgcttgtag
     Myiopagis             cacgcttatggataaggccactattagctcaggttacatttgttccatagctctctaagccgtcgggttatcgtttgtag
     Neophema              --------------------------------------------------------------------------------
-    Neopsephotus          --------------------------------------------------------------------------------
     Notiomystis           cacgcctatggataaggccatcatttgctcaggttacattcgttccatagctctctaaaccgacgggttgccgttcgtag
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -2595,13 +2397,11 @@ BEGIN DATA;
     Orthonyx              cacgctaatggataaggccattatatgctcaggttacgtttgctccatagctctctaaaccgtcgggttatcgttcgtag
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               cacgcttatgggtaaggccatcatttgctcagattacatttgttccatagctctctaaactgccgggctatcgtttgtag
     Paradisaea            cacgcttatggataaggcyatcatttgctcaggttacatttgctccatagccctctaaaccgtcgggttatcgttcgtag
     Pardalotus            cacacttatggctaaggccattaattgctcaggttacatttgctccatagccctccaaaccgtcgggttatcgtttgtag
     Parus                 cacgcttatggataaggccatcgtttgctcagattacatttgttccatagccctctaaaccgtcgggttatcgtctgtag
     Passer                cacgcytatggataaggccgtcgtttgctcaggttacatttgttccatagccctctaaaccgtcaggttatcgtttgtag
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            cacgcctatgaataaggccattatttgcttaggttacatttgttccatagctctctaaaccgtcaggttatcgcgtctag
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         cacgcttatggayaaggccattgtttgctcaggttacatttgttccatagtcctataaaccgtcgggttatcatttgtag
     Petroica              --------------------------------------------------------------------------------
@@ -2625,9 +2425,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      --------------------------------------------------------------------------------
     Pycnonotus            cacgcttatggataaggccgtcatttgctcaggttacatttgttccatagctctctaaaccgtcgggttatcgtttgtag
-    Pycnoptilus           --------------------------------------------------------------------------------
     Pygoscelis            cacacttatggataaggccattatttgctcaggttacatttgttccatagccctctaaaccgtcgggctatcgtttgtag
     Pyrocephalus          cacacttatggataaggccactatttgctcaggttacatttgttccatagctctctaaaccgtcgggttatcgcttgtag
     Pyrrholaemus          --------------------------------------------------------------------------------
@@ -2643,12 +2441,10 @@ BEGIN DATA;
     Setophaga             cacgcttatggataaggccatcgtttgctcaggttacatttgttccatagccctctaaaccgccgggttatcgtttgtag
     Sialia                cacgcctacggacaaggccatcgtttgctcagrttacattcggcccatagctctctaaaccgccgggttgtcgtttgcgg
     Sitta                 cccgcttgtgaacgagggcaccgtttgcgcaggttacgtctgtcccatagccctccgagccgccgggtgatcgtccgtag
-    Smicrornis            --------------------------------------------------------------------------------
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                cacgcttatggctaaggccattatttgctcaggttacatttgttccatggtcctccaaaccgccgggctatcgttcctag
     Stiltia               cacacttatggctaaggccatcatttgctcaggttacatttgttccatggtcctctaaaccgtcgggctatcgtttctag
     Strix                 cacgctgatggataaggccatcatttgctcaggttacatttgctccatagccctccaaaccgtcgggttatcgtttgtag
-    Struthio              caagcttatgggtaaggccgctgtttgctcaggttacatttggttcatggtcctctataccgtcgggatattgtctgtag
     Sturnus               cacgcctatgggtaaggcccccgtgtgctcaggttacatttgttccatagctctctaaaccgtcgggtgatcgttcgtgg
     Surnia                --------------------------------------------------------------------------------
     Sylvia                cacgcttatggataaggccattgtttgctcaggatac-------------------------------------------
@@ -2675,13 +2471,10 @@ BEGIN DATA;
     Actophilornis         ggggggattcaccggggcggtgaggtatttggtgcagaagaataaagcgagtacaaaagcttggggaggatactcggtaa
     Aegolius              --------------------------------------------------------------------------------
     Alauda                gggggggttcaccggggcggcggggtatttagcgcagtagaatagagtgagtacaaaagcttggggaggacactcggcaa
-    Alca                  ggggggattcaccagggcggtggggtatttagcgcagaagaataaagtgggtacaaaagcttggggaggatactcggtaa
     Alectoris             --------------------------------------------------------------------------------
     Alectura              gggggggcccatcagggaagtggggcttttagcgcagaagaataaagtgagcacaaaagcttaagaaggatactcagtaa
     Alisterus             --------------------------------------------------------------------------------
-    Alle                  ggggggattcaccagggcggtggggtatttagcgcagaagaataaagtgagtacaaaagcttggggaggatactcggtaa
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           ggggggattcaccggggcggtggggtatttagcgcagaaggataaagtgagtacaaaagcttagggaggatactgggtaa
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 gggagggttcaccggggcaatgaggtaccgagcgcgggagaataaagtgagtacgaaagcttgagaaggatattcggcaa
@@ -2709,7 +2502,6 @@ BEGIN DATA;
     Catharus              gggggggtgcatcggggcggtggggtatttagcgcagtagaataaagtgagtacaaaagcttggggaggacactcggcaa
     Cepphus               ggggggattcaccagggcggtggggtatttagcgcagaagaataaagtgagtacaaaagcttggggaggatactcggtaa
     Cercomacra            gggggggttcaccggggcggtggggtatttagtgcagaagaataaagtgagtacaaaagcttggggaggacactcggcaa
-    Ceryle                gggggggttcatcgaggcggtggggtatttagcgcagaagaataacgtgagtacaaaggcctggggaggccattcggtaa
     Charadrius            ggggggattcaccggggcggtggggtatttagcgcagaagaataaagtgagtacaaaagcttggggaggatactgggtaa
     Chionis               ggggggattcaccggggcggtggggtatttagcgcagaagaataacgtgagtacaaaagcttggggaggatactcggtag
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -2746,15 +2538,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            ggggggattcatcggggcggtggggtatttagcgcacaagaataaagtgagtacaaaagcttggggaggatactgggtaa
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          ggggggattcaccggggcggtggggtatttagcgcagaagaataaagtgagtacaaaagcttagggaggataccgggtaa
     Eudyptes              gggggggttcaccggggcggtggggtatttggcgcagaagaataaagtgagtacaaaagtttggggaggatactcggtaa
     Eudyptula             gggggggttcaccggggcggtggggtatttggcgcagaagaataaagtgagtacaaaagtttggggaggatactcggtaa
     Euplectes             --------------------------------------------------------------------------------
     Falco                 ggggggggtcaccggggcggtggggtatttagcgcagaagaataaagtgagtacaagagcttggggaggacacttggtaa
-    Falcunculus           gggggggttcaccggggcggtggggtatttagcgcagcagaataaagtgagtacaaaagcttggggaggacactcggcaa
     Ficedula              gggggggttcaccggggcggtggggtattaagcgcagtagaataaagtgagcacaaaagctcgggggggacacccggcaa
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            ggggggattcaccagggcggtggggtatttagcgcagaagaataaagtgagtacaaaagcttggggaggatactcggtaa
@@ -2777,9 +2566,7 @@ BEGIN DATA;
     Jacana                ggggggattcaccggggcggtggggtatttggtgcagaagaataaagtgagtacaaaagcttggggaggatactcggtaa
     Lanius                gggggggttcaccggggcggtggggtatttagcgcagcagaatagagtgagtacaaaagcttcgggtggacactcgacaa
     Larus                 --------------------------------------------------------------------------------
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               gggggggttcaccggggcggtggggtatttagcgcagaagaataaagtgagtacaaaagcttggggaggacactcggcga
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         --------------------------------------------------------------------------------
     Limnodromus           ggggggattcaccggggcggtggggtwtttggcgcagaagaacaaagtgagtacaaaagctcggggaggatactcggtaa
     Limosa                ggggggattcaccggggcggtggggtatttggcgcagaagaacaaagtgagtacaaaagctcggggaggatactcggtaa
@@ -2792,7 +2579,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            gggggggttcatcggggcggtggggtatttagcgcagaagtataacatgagtacaaaagcttggggaggccattcggtaa
-    Megadyptes            gggggggttcaccggggcggtggggtatttggtgcagaagaataaagtgagtacaaaagtttggggaggatactcggtaa
     Megapodius            gggagggtccatcagagaagtggggcttttagcgcagaagaataaagtgagcacaaaagcttaaggaggatactcagtaa
     Melanodryas           gggggggttcaccggggcggtggggtatttagcgcagtagaataaagtgaatacaaaagcttggggaggacactcggcaa
     Meliphaga             gggggggttcgccggggcggtggggtatttaacgcagtagaataaagtgagtacaaaggcttggggaggacacccggcaa
@@ -2806,7 +2592,6 @@ BEGIN DATA;
     Myiodynastes          gggggggttcaccggggcggtggggtatttagcgcagaagaataaagtgagcacaaaagcttggggaggacattcggcga
     Myiopagis             gggggggttcaccggggcggtggggtatttagcgcagaagaataaagtgagtacaaaagcctggggaggacactcggcaa
     Neophema              --------------------------------------------------------------------------------
-    Neopsephotus          --------------------------------------------------------------------------------
     Notiomystis           gggggggttcaccggggcggtggggtatttagcgcagtggaataaagtgagtacaaaagcttggggaggacactcggcaa
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -2817,13 +2602,11 @@ BEGIN DATA;
     Orthonyx              gggggggttcaccggggcggtggggtatttagcgcagtagaataaagtgagtacaaaagcttggggaggacactcggcaa
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               gggggggtgcatcggggcggtggggcatttagcgcagaaggatgaagtgagtacgaaagcttggggaggacactcagtag
     Paradisaea            gggggggttcaccggggcggtggggtatttagcgcagcagaataaagtgagtacaaaagcttggggaggacactcggcaa
     Pardalotus            gggggggttcaccggggcggtggggtatttagcgcagtaaaataaagtgagtacaagagctcggggaggacactcggcga
     Parus                 gggggggttcactggggcggtggggtatttagtgcagtagaataaagtgagtacaaaagcttggggagggcactcggcaa
     Passer                gggggagttcaccggggcggtggggtatttagcgcagtagaataatgtgagtataaaagcttggggaggacacgcrgcaa
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            ggggsgattcaccggggcggtggggtattaggtgcagaagaataaagtgagtacaaaagtttggggaggatactcggtaa
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         gggggggttcaccggggcggtggggtatttaacgcagtagagtaaaatgggtacaaaagtttggggaggacactcggcaa
     Petroica              --------------------------------------------------------------------------------
@@ -2847,9 +2630,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      --------------------------------------------------------------------------------
     Pycnonotus            gggggggttcaccggggcggtggggtatttagcgcagtagaataaaatgagtacgaaagcttggggaggagactcggcaa
-    Pycnoptilus           --------------------------------------------------------------------------------
     Pygoscelis            gggggggttcaccgggggggtggggtatttggcgcagaagaataaagtgagtacaaaagtttggggaggatactcggtaa
     Pyrocephalus          gggggggttcaccggggcggtggggtatttagcgcagaagaataaagtgagtataaaagcttggggaggatactcggcra
     Pyrrholaemus          --------------------------------------------------------------------------------
@@ -2865,12 +2646,10 @@ BEGIN DATA;
     Setophaga             gggggggttcaccggggcggtggggtatttagcgcagtagaataatgtaagtacaaaagcttggggaggacactcggcaa
     Sialia                gggggggtgcaccggggcggtggggtatttagcgcagtaaaataaagtgagtacaaaagcttggggagggcactcggcaa
     Sitta                 gggggggttcaccggggtggtggggtattcagcgcagtagaataaagtgagtacaaaagcttggggaggccgctcggcaa
-    Smicrornis            --------------------------------------------------------------------------------
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                ggggggattcaccagggcggtggggtatttagcgcagaagaataaagtgagtadaaaagcttggggaggatattcggtaa
     Stiltia               ggggggattcgccagggcggtggggtatttggcgcagaagaataaagtgagtacaaaagcttggggaggatactcggtaa
     Strix                 gggggggttcaccagggcggtggggtatttagcgcagaagaataaagtgagtacgaaagcttggggaggacactcggtag
-    Struthio              gggagagttcaccggggcagtggggtatttagcgcagaagaataaagtsagtacaagggcttgagggggatactcagtaa
     Sturnus               gggggggttcaccggggcggtggggyatttagcgcagtagaataaaatgagtataaaagcttggggaggacrctcggcaa
     Surnia                --------------------------------------------------------------------------------
     Sylvia                --------------------------------------------------------------------------------
@@ -2897,13 +2676,10 @@ BEGIN DATA;
     Actophilornis         ggcgtcctagtttgggtagcgcatacgtattccattttttactgatgcagcgataatgtacagcggcaagtcagcactgg
     Aegolius              --------------------------------------------------------------------------------
     Alauda                ggcgtcctagtyaacatagcgcatgcgtattccaatttttactaatgcygcgataatgtmcagcggcaagtcggcactgg
-    Alca                  ggcgtcctagtttgcatagcgcatacgtattccactttttactaactctgcgataatgtacagtggcaagtcggcactgg
     Alectoris             --------------------------------------------------------------------------------
     Alectura              ggcgccctagtttgcgtagcgcgtacgtcttccactttttactaatgccttgataatgtacagcggcaagtcggcactag
     Alisterus             --------------------------------------------------------------------------------
-    Alle                  ggcgtcctagtttgcatagcgcatacgtattccactttttactaattctgcgataatgtacagcggcaagtcggcactgg
     Amytornis             --------------------------------------------------------------------------------
-    Anarhynchus           ggcgtcctagtttgcataacacatacgtattccacttttaactaatgctgcgataatgtacagtggcaagtcagcactgg
     Anas                  --------------------------------------------------------------------------------
     Anous                 --------------------------------------------------------------------------------
     Anser                 ggcgccctagtttgcatagcgcatacgtattccactttttactaatgctacgataacgtacggtgg--------------
@@ -2931,7 +2707,6 @@ BEGIN DATA;
     Catharus              ggcgtcctagctagcatagcgcatgcgtattccaatttttactaatgctgcgataatgtacagtggcaagtcggca----
     Cepphus               ggcgtcctagtttgcatagcgcatacgtattccactttttactaactttgcgataatgtacagtggcaagtc--------
     Cercomacra            agcgtcctagtttgcatagcgcatacgtattctaatttttactaatgctgcgataatgtacagtggcaagtaggcactgg
-    Ceryle                ggcgtcctagcttgcctagtgcatacgtattccactttttactaatgctgcgataatgtacagtggcaagtcggcgctgg
     Charadrius            ggcgtcctagtttgcataacacatacgcattccacttttaactaatgctgcgataatgtacagtggcaagtcagcactgg
     Chionis               ggcgtcctagtttgcgtagcgcatacgtattccactttttactaacgccgcgataatgtacagtggcaagtcagcactgg
     Chiroxiphia           --------------------------------------------------------------------------------
@@ -2968,15 +2743,12 @@ BEGIN DATA;
     Elaenia               --------------------------------------------------------------------------------
     Elseyornis            ggcgtcctagtttgcataacacatacgcattccacttttaactaatgctgcgataatgtacagtgg--------------
     Empidonax             --------------------------------------------------------------------------------
-    Entomyzon             --------------------------------------------------------------------------------
     Eopsaltria            --------------------------------------------------------------------------------
     Epimachus             --------------------------------------------------------------------------------
-    Erythrogonys          ggcgtcctagtttgcataacacatacgtattccacttttaactaacgctgcgataatgtacagtggcaagtcagcactgg
     Eudyptes              ggcgtcctagtttgcatagcgcatacgtattccactttttactaatgatgcgataatgtacagtgg--------------
     Eudyptula             ggcgtcctagtttgcatagcgcatacgtattccactttttactaatgatgcgataatgtacagtgg--------------
     Euplectes             --------------------------------------------------------------------------------
     Falco                 ggcgtcctagtttgtgtagcgcatgcgtattccactttttactaatgctgcgataatgtacagtggcaagtc--------
-    Falcunculus           gacgtcctagttggcatagcgcatacgtattccaatttttactaatcctgcgatagtgtacagtggcaagtcggcactgg
     Ficedula              ggcgccctagttagcgtagcgcatgcgtattccaatttttactaatgctgcgacagtgyacggtggcaagtcggcactgg
     Formicarius           --------------------------------------------------------------------------------
     Fratercula            gccgtcctagtttgcatagcgcatgcgtattccactttttactaactctgcgataatgtacagtggcaagtcggcactgg
@@ -2999,9 +2771,7 @@ BEGIN DATA;
     Jacana                ggcgtcctagtttgggtagcgcatacgtattccattttttactgatgcagcgataatgtacagcggcaagtcagcactgg
     Lanius                gatgtcctagttggcatagcgcatgcgtattccaatttttactaatgctgcgataatgtacagtggcaagtcggcactgg
     Larus                 --------------------------------------------------------------------------------
-    Lathamus              --------------------------------------------------------------------------------
     Legatus               ggcgtcctagtttgcatagcgcatacgtattccaatttttactaatgcagggataatgtwcagtgacaagtcggcactgg
-    Leipoa                --------------------------------------------------------------------------------
     Lichenostomus         --------------------------------------------------------------------------------
     Limnodromus           ggcgtcctaattcgcgtagcgcatacgtaytccactttttactgatgcagcgataatgtacagcgacaagtcagcaccag
     Limosa                ggcgtcctagttcgcgtagcgcatacgtattccactttttactgatgcagcggtaatgtacagcggcaagtcagcaccgg
@@ -3014,7 +2784,6 @@ BEGIN DATA;
     Manucodia             --------------------------------------------------------------------------------
     Margarornis           --------------------------------------------------------------------------------
     Megaceryle            ggcgtcctagtttgcctagtgcatacgtattccactttttactaatgctgtgataatgtacagtggcaagtcggcgctgg
-    Megadyptes            ggcgtcctagtttgcatagcgcatacgtattccactttttactaatgatgcgataatgtacagtgg--------------
     Megapodius            ggcgccctagtttgcgtagcgcatacgtcttccactttttactaatgccttgataacgtacagcggcaagtcg-------
     Melanodryas           ggcgtcctagttagcatagcgcatgcgtattccagtttttactaatgctgcgataatgtacagcggcaagtcggcactgg
     Meliphaga             ggcgtcctagttagcatagcgcatacgcattccagtttttactagtgctgcgacaatgtacagtggcaagtcggcactgg
@@ -3028,7 +2797,6 @@ BEGIN DATA;
     Myiodynastes          ggcgtcctagtttgcatagcgcatacgtattccaatttttactaatgtagcgataatgtacagtgacaagtcggcactgg
     Myiopagis             ggtgtcctagtttgcataacgcatacgtattccamtttttactaatgcagcgataatgtacagtgacaagtcggcactgg
     Neophema              --------------------------------------------------------------------------------
-    Neopsephotus          --------------------------------------------------------------------------------
     Notiomystis           ggcgtcctcgttagcatagcgcatacgtactccaacttttactaatgctgcgataatgttcagtggcaagtcggcactgg
     Numida                --------------------------------------------------------------------------------
     Nycticorax            --------------------------------------------------------------------------------
@@ -3039,13 +2807,11 @@ BEGIN DATA;
     Orthonyx              ggcgtcctagttggcatagcgcaygcgtattccaatttttactaatgctgcgataatgtacactagcaagtcggcactgg
     Oxyura                --------------------------------------------------------------------------------
     Pachycephala          --------------------------------------------------------------------------------
-    Pandion               ggcgtcctagtttgcatagcgcacacgtattccactttttactaattctgcgataatgtacagtggcaagtcggcactgg
     Paradisaea            ggcgtcctagttrgcatagcacatgcgtattccaattttaactaatgctgcgataatgtacagcggcaagccggcactgg
     Pardalotus            ggcgtcctagatagcatagcgcatacgtattccagtttttactactgctgcgataatgtacagtggcaagtcggcactgg
     Parus                 gccgccctagttaacatagcgcgtgcgtattccaatttttactaatactgcgataatgcacagtggcaagtcggcactgg
     Passer                ggcgtcctagttagcatagcgcatrcgtattccaatttttactaatgctgcgataatgtacagtggcaagtcggcgctgg
     Passerina             --------------------------------------------------------------------------------
-    Pedionomus            ggcgtcctagtttgggtagcgcatacgtattccactttttactgatgcagcgataacatacagcggcaagtcagcactgg
     Pelecanoides          --------------------------------------------------------------------------------
     Petrochelidon         ggcgtcctagttaacatagcacatgcgtattccaatttttactaatgctgcgacaatgtacagtggcaagtcgacactgg
     Petroica              --------------------------------------------------------------------------------
@@ -3069,9 +2835,7 @@ BEGIN DATA;
     Prunella              --------------------------------------------------------------------------------
     Psephotus             --------------------------------------------------------------------------------
     Psophodes             --------------------------------------------------------------------------------
-    Purpureicephalus      --------------------------------------------------------------------------------
     Pycnonotus            ggcgtcctagctaacatagcgcatgcgtattccaatttttaataatgctgcgataatgtacagtggcaagtcggcactgg
-    Pycnoptilus           --------------------------------------------------------------------------------
     Pygoscelis            ggcgtcctagtttgcatagcgcatacgtattccactttttactaatgatgcgataatgtacagtgg--------------
     Pyrocephalus          ggcgtcctagtttgcatagcgcatacgtattccaatttttactaatgcagcgataatgtacagtgacaagtcggcactgg
     Pyrrholaemus          --------------------------------------------------------------------------------
@@ -3087,12 +2851,10 @@ BEGIN DATA;
     Setophaga             ggcgtcctagttagcatagcgcatgcgtattccagtttttactaatgctgcgacaatgtacagtggcaagtcggcgctgg
     Sialia                ggcgtcctagttagcatagcgcatgcgtcttccaagttttactaatgctgcgacaatgtacagtggcaagtcggcacygg
     Sitta                 ggcgccctcgttagcatagcacatgcgcatcctactttttactaatcctgcgacaatgtacagcagcaagtcggcactgg
-    Smicrornis            --------------------------------------------------------------------------------
     Stercorarius          --------------------------------------------------------------------------------
     Sterna                ggcgttctagtttgtatagcgcgtaggtatttcaattcttattaacta--------------------------------
     Stiltia               ggcgtcctagtttgcatagcgcatacgtattccactttttactaattctgcgataatgtacagtggcaagtcagcactgg
     Strix                 ggcatcctagtttgcatagcgtgtacgtattccactttttactaacactgcgataatgtatagcggtaagtcggcactgg
-    Struthio              ggcgtcctggtttgcgtagcgtatacgtattccactttttactaatacttcgataatgtacaatggcaagtcggcactag
     Sturnus               ggcgtcctagttagcatagcgcatgcgtattccaatttccactaatgctgcgacaacgtacagcggcaagtcggcactgg
     Surnia                --------------------------------------------------------------------------------
     Sylvia                --------------------------------------------------------------------------------
@@ -3119,13 +2881,10 @@ BEGIN DATA;
     Actophilornis         gtcg
     Aegolius              ----
     Alauda                gtcg
-    Alca                  gtcg
     Alectoris             ----
     Alectura              gtcg
     Alisterus             ----
-    Alle                  gtcg
     Amytornis             ----
-    Anarhynchus           gtcg
     Anas                  ----
     Anous                 ----
     Anser                 ----
@@ -3153,7 +2912,6 @@ BEGIN DATA;
     Catharus              ----
     Cepphus               ----
     Cercomacra            gtcg
-    Ceryle                gtcg
     Charadrius            gtcg
     Chionis               gtcg
     Chiroxiphia           ----
@@ -3190,15 +2948,12 @@ BEGIN DATA;
     Elaenia               ----
     Elseyornis            ----
     Empidonax             ----
-    Entomyzon             ----
     Eopsaltria            ----
     Epimachus             ----
-    Erythrogonys          g---
     Eudyptes              ----
     Eudyptula             ----
     Euplectes             ----
     Falco                 ----
-    Falcunculus           gtcg
     Ficedula              gtcg
     Formicarius           ----
     Fratercula            gtcg
@@ -3221,9 +2976,7 @@ BEGIN DATA;
     Jacana                gtcg
     Lanius                gtcg
     Larus                 ----
-    Lathamus              ----
     Legatus               gtcg
-    Leipoa                ----
     Lichenostomus         ----
     Limnodromus           gtcg
     Limosa                gtcg
@@ -3236,7 +2989,6 @@ BEGIN DATA;
     Manucodia             ----
     Margarornis           ----
     Megaceryle            gtcg
-    Megadyptes            ----
     Megapodius            ----
     Melanodryas           gtcg
     Meliphaga             gtcg
@@ -3250,7 +3002,6 @@ BEGIN DATA;
     Myiodynastes          gtcg
     Myiopagis             gtcg
     Neophema              ----
-    Neopsephotus          ----
     Notiomystis           gtcg
     Numida                ----
     Nycticorax            ----
@@ -3261,13 +3012,11 @@ BEGIN DATA;
     Orthonyx              gtcg
     Oxyura                ----
     Pachycephala          ----
-    Pandion               gtcg
     Paradisaea            gtcg
     Pardalotus            gtcg
     Parus                 gtcg
     Passer                gtcg
     Passerina             ----
-    Pedionomus            gtcg
     Pelecanoides          ----
     Petrochelidon         gtcg
     Petroica              ----
@@ -3291,9 +3040,7 @@ BEGIN DATA;
     Prunella              ----
     Psephotus             ----
     Psophodes             ----
-    Purpureicephalus      ----
     Pycnonotus            gtcg
-    Pycnoptilus           ----
     Pygoscelis            ----
     Pyrocephalus          gtcg
     Pyrrholaemus          ----
@@ -3309,12 +3056,10 @@ BEGIN DATA;
     Setophaga             gtcg
     Sialia                gtcg
     Sitta                 gtcg
-    Smicrornis            ----
     Stercorarius          ----
     Sterna                ----
     Stiltia               gtcg
     Strix                 gtcg
-    Struthio              gtcg
     Sturnus               gtcg
     Surnia                ----
     Sylvia                ----
