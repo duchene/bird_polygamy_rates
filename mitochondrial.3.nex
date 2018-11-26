@@ -1,7 +1,7 @@
 #NEXUS
-[Data written by write.nexus.data.R, Wed May 16 16:17:15 2018]
+[Data written by write.nexus.data.R, Mon Nov 26 13:37:29 2018]
 BEGIN DATA;
-  DIMENSIONS NTAX=362 NCHAR=1268;
+  DIMENSIONS NTAX=354 NCHAR=1268;
   FORMAT DATATYPE=DNA MISSING=? GAP=- INTERLEAVE=YES;
   MATRIX
     Acanthiza             --------------------------------------------------------------------------------
@@ -149,7 +149,6 @@ BEGIN DATA;
     Fulmarus              -------------------catatccaatcacatcccatttaattgaaccaatcacttacttctccaatccagaacataa
     Galerida              -------------------accacccaacggatccaccccaaaacacctgaaccacccaccactccaatctacaatgcac
     Gallinula             -------------------cccatccggcaatcccccatcaaaaagccccaatcacttacccccccaacctaaaacatac
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                atgccccaaacacccactcttcatccaggcaccaatctaccaaaagcatcaaccatctaccacttccacctataccgctc
     Gavia                 -------aaacatccatccagctccgagccacatctcacccagcaaaaccaaccactcatttctccaacccgcattacga
     Geococcyx             atgtcttaaacacccaccccacacttcatcacaccactcccaaacaaaccatctacctatccatctaacccacaacgcaa
@@ -189,7 +188,6 @@ BEGIN DATA;
     Limosa                -------------------cacacccaattacatcttacctaaacaaactgaccacctacccctccaacccaagacgttc
     Lophura               --------------------------------------------------------------------------------
     Loxia                 --------------------tcgtctaacaaacccactccaaaaaacactacccactcaccgcttcaacccatactacag
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                --------------------------------------------------------------------------------
     Luscinia              -------------------ctcacccaacgagtccaccccaaaacaaccagaccgtccaccacttcaatccacaacgcaa
     Macronectes           -------------------------------catcccatttaattaaaccaatcacttacnncttcaatccagaacatag
@@ -227,7 +225,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 atgacccagatacccactcaccttctaaaaaccccaccataaataaagacaaccacttatacccttaacccgtaacgcag
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           --------------------acacttaaacgcacctccttctaaaacgtaatctactttcaccttccacccatacaacaa
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              -------------------cccacttaatcacaccctaccctaatgagttacccacttacctctccaacccaagatattc
     Numida                atgccccaaacactcactcttcactcaaacaccaaccgaccaaaaaagctagccatttaccactcccatccataacgccc
@@ -277,7 +274,6 @@ BEGIN DATA;
     Platycercus           --------------------------------------------------------------------------------
     Plectrophenax         ----------------------------cagatacaccataaaacatactgaccacccaagacttcaacccataatacgg
     Ploceus               --------------------------------------------------------------------------------
-    Pluvialis             -------------------cacacccaactactcctcacctaatcaattagaccacttatttctccaacccataacgtgt
     Podargus              ---------------------cacccaatcatacaccatttaaacacatcaaccacttaccactccaacctaaaatgcwa
     Podiceps              -------------------cacacttaaccacctcacacccaaacaaactaaccacctacccctctaacccataacacga
     Poecilodryas          --------------------------------------------------------------------------------
@@ -298,12 +294,10 @@ BEGIN DATA;
     Ptilinopus            ----------------------------------------------------------------------------atat
     Pycnonotus            --------------------acacctaacaagtccaccccaagacaaatcaaccacccaccacttcaacttacaccacca
     Pygoscelis            atgcctcaaacacccatcccccactcagacacactccaaccaatcacaccagtcacccacctccccaacccaaaccgtag
-    Pyrocephalus          -------------------aacactctatcattccacctcaaaaaaagtcagtcacttacctttctaacctaagctacaa
     Pyrrholaemus          atgccccaaacacccacctcacaccccacagctccaccacaaaacatcctaatcgcccactttccctacccacgacacaa
     Pyrrhula              -------------------cacgccaaataaatccaccccaaaacacatcaaccacccaccacttcaacccataccataa
     Quelea                --------------------------------------------------------------------------------
     Quiscalus             -------------------cacacctaacgaatccaccataaaacatactaaccacccatcgcttcaacccacaacacaa
-    Rallus                -------------------tccactgaacaatctcacaccaaaaagtccaaaccatctacccttccaatctatgacatag
     Ramphocelus           ---------------------tatgtaacaattaagtcccggtctgaaagagggacctctgaggttggtttggttagtag
     Regulus               ---------------------cantnnacaanncctcccctaaatnnaaaaancanccacttccctnacttacaacacta
     Rhipidura             --------------------------------------------------------------------------------
@@ -314,7 +308,6 @@ BEGIN DATA;
     Saxicola              -------------------cccatccaacaagtccaccccaaagcaaccaaaccacccaccacttcagtccacgatatgg
     Sayornis              -------------------tacacttcactgtttcaccttaaataaaatcaattatccacttctccaacctaagttatag
     Scolopax              -------------------cacacctaactataccatacccaaacaaaccaatcgcttacttattcaatccataacatac
-    Selasphorus           -------------------cacactaagtaataccacgacaaaccaaccgaactatctacctctccaacccacgacacac
     Sericornis            --------------------------------------------------------------------------------
     Serinus               --------------------------------------------------------------------------------
     Setophaga             -------------------cac-tccaacaagtccaccataaaacacactggtcacccatcgcttcaatctatggtacaa
@@ -353,7 +346,6 @@ BEGIN DATA;
     Turdus                -------------------cccatctaacaaactcattctaaagaaaccaactcgcctccttcttcaacccacaacacaa
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           -------------------ttnatncaaggnncaaacgactaaaaanaacaatcactcacaacccccacctataccgcac
-    Tyrannus              -------------------aatattccactattccactttaaaaaaaaccaaccgcttactttctcaactcaaattataa
     Tyto                  atgccccaaacaaccactccgcacccaaccaaaaccccacgaaaaaaaccgaccacctatctccctaatccaaactgcca
     Uria                  ------------------ackcayycaagtattccacgcctaaacaagccaatcactcacccccctaacccaaaacgttt
     Uropsalis             --------------------------------------------------------------------------------
@@ -512,7 +504,6 @@ BEGIN DATA;
     Fulmarus              cacaactcactgccgacatatcaccaagcacctcaacacaaaaaaaaaatccacacctactcacaccatcccccattact
     Galerida              cacaaaagatcaacaacaaaccaccatacacctcaacccataataaataaaccaacccacctagaccgccccgcaactaa
     Gallinula             cccaaatcacacacaattcactaccactccccgccaaccaagaaatataactcaacccaacattaacatcccccaaacat
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                cacaacgtactcacaacccatcaccacctccctcaacatcaatgccaagatcctacccacctcaaacacctaacaattcc
     Gavia                 tacaacctacttccaacacactaccactcaccacaacccaaagaatacacatcaatctccttacaacactccccaacact
     Geococcyx             tacaacataccctcaactcaccaccacttacctaaacacaaaacagagaaatccacacaccccacatacctcccaaacaa
@@ -552,7 +543,6 @@ BEGIN DATA;
     Limosa                tacgacacacccctgatacattgccaatcaacaatacataaatgataaaatcctcgtcttttgcaatacctatcaattct
     Lophura               --------------------------------------------------------------------------------
     Loxia                 cacaaccaacacacaataaaccaccaattaactcaaatccaaatttacaaaccaatccgcccacatcaacccacacttca
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                --------------------------------------------------------------------------------
     Luscinia              tacaatcaacacgcaaccaaccaccacccttccctacctacaacagaaatgctcaatcgcctataacatcccttaatcca
     Macronectes           cacaacccaccgccgacttaccaccaagcacctcaacacgaaaaaaaaatccctattcatttacaccatcccccattacc
@@ -590,7 +580,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 tacaaaagacacacaccataccaccaaaacacacaaaccaaatcagaaacccaaacccccccaacacgtccctcatatcc
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           cataacctatatccaatcaatcactatcaacttcttattcaaaaactaacactaacattttacttacaatcttctatcct
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              tataacaaaccctcaacacaccaccaacttacacaacatatatgtcaaacacctctccacccgcaacattccccaatccc
     Numida                cacaaaaaactcgcaacaaaccaccaccacccctaaacttaatatcaaatccacaccctcttcccacatcccccaatcac
@@ -640,7 +629,6 @@ BEGIN DATA;
     Platycercus           --------------------------------------------------------------------------------
     Plectrophenax         tacaaccaatacacaacaaaccaccaaacaccaccaattataacttataaacaaatccacccacaccgacctacactcca
     Ploceus               --------------------------------------------------------------------------------
-    Pluvialis             cacaaaacattcccaatccaccaccaatcaacacctcccaaacaacaaacacctactcatccacaacgtttcccgatata
     Podargus              tmcaacatattaccaacamaccatcaaagcacatcgcctaaaaaacaaatacaatcccccttacaccgctcatcaatcac
     Podiceps              cgcaaccaacacccaacccaccgccacccaccaacataaaaacaacaaacacaaatctacttccaacaccccctaatgct
     Poecilodryas          --------------------------------------------------------------------------------
@@ -661,12 +649,10 @@ BEGIN DATA;
     Ptilinopus            tacaacccatccccaacagaccactactcactcacactcgcacaatgaatccacacccacccactacactcctccatccc
     Pycnonotus            tataatcaatacacacccaaccaccaaccatctaattctaaaaataatacacaagtccacctacatcaccccccaaacca
     Pygoscelis            cacaatgcactcccaatctatcaccaaacaccagaacacaaaagttaagtacaacatcgctcccaacaccccccaaacct
-    Pyrocephalus          cctaatcaatccccaacccgctatcaagcaactttacacacacacagaatcttaatacaattatcacactcctctattta
     Pyrrholaemus          tccaacacgcacacaactaaccaccaactgccctcaccagaacaccaaatccctaaccacccataccaccccataatcct
     Pyrrhula              cataacaaacgcacaacaaaccaccaatcaccctaaactacaaaaaaaaagtcaatttacttagacctatcaacatttca
     Quelea                --------------------------------------------------------------------------------
     Quiscalus             cgcaaccaacgcacaacaaaccgccaatcacccctaatcataatgtaaaaaccaaatcacccatacctacccatactcta
-    Rallus                cctaactcatacatactccaccaccatctcccactacccaaaagaaaaaacccaacccaccaacgacactcatcaaaaac
     Ramphocelus           gaagatagg----------cccgctagccgcacg--tgtaatcggaacacattacgag--tcgcagaactcaccaa----
     Regulus               cccagccagcacataacnaatcgccaataactganacaaaaaaaacaaaaattcattcacttcctacgtcccacgatcca
     Rhipidura             --------------------------------------------------------------------------------
@@ -677,7 +663,6 @@ BEGIN DATA;
     Saxicola              tacaaccaatacacaaccaaccaccaacctccaccacttccaaaaactacatcccctcagtatcaacatcccccaatcta
     Sayornis              ctcaaccaattttcaacttaccaccacataaccccacacacataatcagtactaatttaattataacatttcttaattca
     Scolopax              cacaacatatccacaatccaccaccaacaaacaacaaacaaacacttaaaatccctccactcataacatcccccaatccc
-    Selasphorus           tacaatccatgcctaacatatcaccacaagaccactcctcagacataaacacttgcctaccaaaaacaccccacgatcaa
     Sericornis            --------------------------------------------------------------------------------
     Serinus               --------------------------------------------------------------------------------
     Setophaga             tacaaccaacacacaacaaaccaccaacaaactccaaacataacatacaaaccaatccactcacacccacccacgcttca
@@ -716,7 +701,6 @@ BEGIN DATA;
     Turdus                cacaaccaacacacaactaaccaccgcccaccctcacccaaagaaagcatttccccccaacaataacgccccccgaacca
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           cgtaatctactcgcaacacaccaccactactctcaacaccaacattcaatcttcaccctccctaaacatctcccaataac
-    Tyrannus              tccaaccaatccacaacacgctatcaaacaactctatataaacacgcaatccaaatctaatcataacatccatctattca
     Tyto                  tacaactcacacgcaatctattatcaatccccaagaaccatacaacgagtccaagcccacccgcattgcttgccgatcac
     Uria                  cacaacacactactaatctactaccaaacaacaccactcaaatattaaatattcgtttactcatagtaaccctcaataat
     Uropsalis             --------------------------------------------------------------------------------
@@ -875,7 +859,6 @@ BEGIN DATA;
     Fulmarus              cagtccccaacccaacataaacactacaacctctccacatatatgtaaccaaaacacaccacccaccaacacacatccac
     Galerida              cagccccccacccaaatctcacagcatgaacacccacacaccccattcccgatccccccccccttgcgacagacacacac
     Gallinula             catcctccatcccaaaacacatacaacaacccttctaaaacccctctctcgactcacaccactcaaaaattcgcgctcac
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                taaccctctccccaaccagaacaacacaacccttccaacccaccaatgtcaatcccctccacccataaacacacacacac
     Gavia                 cagatcccacctcaataccaataccacaaacctatcgcacacaccttttcaaaacacattacccacaaacgtacatacac
     Geococcyx             tagtctccaccccaaaatcaacaccgtcaacccaccaacacacattcctcaaatctcaccccccccatacttacatccac
@@ -915,7 +898,6 @@ BEGIN DATA;
     Limosa                tattttctaactcaacactcacaccacaaaacctccaaacctacctccccgaaacacaccaccttcagatatatactcat
     Lophura               --------------------------------------------------------------------------------
     Loxia                 cagacctcaaaccaacccaaatactaccaccactaacatctaactcaatagtcactccccactccaaactacatgctcac
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                --------------------------------------------------------------------------------
     Luscinia              caccccctagaccaactccagcaccacaaccactacaagcccttcttcccggatcccacacctcaacacccaccacacac
     Macronectes           cagcccccaacccaacaccaacactacagcctctccacatatatataaccgaaacacaccacctaccaacacacatccat
@@ -953,7 +935,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 cagacttctttccaacataaacacaatcaccatctcaaacaaatatatccaaacctcaccacttcttacctctcatccac
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           ctaattttcaatcaaatcaaatacaataaaaattctacttccccataattactttacccaattttttaatttctattcat
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              caaccctcacatcaacacctacaacgcaaaaccctcactaccattttttaaaaacacactacccttagtcatatantcac
     Numida                cattccctcccccaactaaaacaacacaaacccccctccacagccctctaaccttaccccacccatacacaaacgcacac
@@ -1003,7 +984,6 @@ BEGIN DATA;
     Platycercus           --------------------------------------------------------------------------------
     Plectrophenax         ctgaccccgaaacaactataacaccacaaccaccacgacaccatacactagtagcacaccacccccaaacttatattcat
     Ploceus               --------------------------------------------------------------------------------
-    Pluvialis             cacatcccaccccaattcaaacattataacccccccgactacattttcctgaaacacgccaccctcacacacatacccac
     Podargus              caaaccttatcttaaacctaacaacaccaacaccccagacaaacttccccagaacacaccacccataaacycwyac----
     Podiceps              cagatcccatcccaaaaccagcaccacaacacctccaaacatactcccccaaaacacaccactcccacacacacgcccac
     Poecilodryas          --------------------------------------------------------------------------------
@@ -1024,12 +1004,10 @@ BEGIN DATA;
     Ptilinopus            tagctcttaccccaaaacaaacacaacaaccccccccctatcacccttttaacccacgccacttcccaccaaacacccac
     Pycnonotus            caaacctcaaaccaatacaaacaccacaactattagaccaccattacattaaccccttcctctccaaaacaaacatcc--
     Pygoscelis            cagacctcatcccgacaccaacaccataatcctacccagcactactctttacgccacactccccctaagcacacacccac
-    Pyrocephalus          catccttttcattaaaccaaacatcctgactaccactccttaactcatccgaaatcctctatcccagaacacacattcac
     Pyrrholaemus          cgacccctaaaccaaactcaacaccacgaacaccaagatactacacatctgaaacccaccaccccaaaacgcacacacac
     Pyrrhula              ccgaccccaaaccaacttaaacatcaccaacaccagcatccaacccagcaaccaccccccatcccaaaattaacactcac
     Quelea                --------------------------------------------------------------------------------
     Quiscalus             caaaccctaaaccgactcaaacaccactacaaccaaaacattatacaccagtcaccctccactctcaaacaggcaca---
-    Rallus                cataccctacctcaacacctataccacaatcccccccgaaccccccacccgtatcacaccacccttgaacccacactcac
     Ramphocelus           ---accatgggttgaa---------------------------------------gcggcgg------acgcccggccg-
     Regulus               cagtccccaaatcaaactcaacaccacaaaaattaccataccaaacccccgttacccattcccccanaccnaacgctcat
     Rhipidura             --------------------------------------------------------------------------------
@@ -1040,7 +1018,6 @@ BEGIN DATA;
     Saxicola              taccccccaaatcaactccagcaccataaccatcacaccactcccctctcactccccacccccccaaaacaaccattcac
     Sayornis              caattcctttattaacccacatatcattaccatcatcctccaacctctccgaaactccctactctagtacacacatccac
     Scolopax              catttttcaccccaaaactcacaacacaaaacccccgaatccacttcctcaaaacacactacccctaaacacacatccat
-    Selasphorus           cgaatcctccgctaaaccaaacaccactacctttccattcacaatctaccaacacacaccatccctaaaccctcacatac
     Sericornis            --------------------------------------------------------------------------------
     Serinus               --------------------------------------------------------------------------------
     Setophaga             ccaaccctaaattgattctagcacaactaacactactactctatataacagctaccccctacccttaaacccacacccac
@@ -1079,7 +1056,6 @@ BEGIN DATA;
     Turdus                cggtccccaaatcaaacccaacaccatcaacatcagaccatttcctttttactccccaccccccagaaacaagcacccat
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           cagttccttttttaaccaaaataacacaacccctcttaactgccattataaacttcttctaccctaaaacacg-------
-    Tyrannus              tataccttctaccaaaacaagtaatataatcactatttcctcacctccccaagactttctaccccaacatacacacacac
     Tyto                  ctaaccctacctcaacacgaacaaagtggaccccacataaacaaactctcgcaccacaccactctcagcctcgcactcac
     Uria                  tactcctcaacccagtaccaacaccacaaaatcttcaaacacaattttctaaaatacacaacttatattcaatcacccac
     Uropsalis             --------------------------------------------------------------------------------
@@ -1238,7 +1214,6 @@ BEGIN DATA;
     Fulmarus              tcc-----------------------------------------------------------------------------
     Galerida              ctcaacccact---------------------------------------------------------------------
     Gallinula             cacaacccaca---------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                ctccatcccccatcaatccaaactaaaaaacacaaacacagacactcctaacctacacagcaccacctaacaaccccatt
     Gavia                 tccaaaccgtaaccatcataaactatgaaacccaaaaacagctatacccaacccgtacaacaccaatccattaccccaac
     Geococcyx             cacaacccataaatatcccacattaaaaaccctaaacacaaccacaatcaacccacataacaccaactactcactcccta
@@ -1278,7 +1253,6 @@ BEGIN DATA;
     Limosa                tacaattcacg---------------------------------------------------------------------
     Lophura               --------------------------------------------------------------------------------
     Loxia                 cctaaatccct---------------------------------------------------------------------
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                --------------------------------------------------------------------------------
     Luscinia              tcc-----------------------------------------------------------------------------
     Macronectes           cccnactcaca---------------------------------------------------------------------
@@ -1316,7 +1290,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 cccaaaccctactcaccccaaactatagaacctacgcacaaacaccactagaccacaaaatactacttacctactcctaa
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           cccaatctatt---------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              tttaactcaca---------------------------------------------------------------------
     Numida                ccctaccccccaacatcacaaaccagaaaacccaaacacgaccacacccaacccacacggcaccatccatccaccccacc
@@ -1366,7 +1339,6 @@ BEGIN DATA;
     Platycercus           --------------------------------------------------------------------------------
     Plectrophenax         cctaacccata---------------------------------------------------------------------
     Ploceus               --------------------------------------------------------------------------------
-    Pluvialis             cccaacccact---------------------------------------------------------------------
     Podargus              --------------------------------------------------------------------------------
     Podiceps              tcc-----------------------------------------------------------------------------
     Poecilodryas          --------------------------------------------------------------------------------
@@ -1387,12 +1359,10 @@ BEGIN DATA;
     Ptilinopus            ccccatctacaaccacctcaatctacaaactgcaaacacaactacactctactcataacgtaccaaccaattaccccaac
     Pycnonotus            --------------------------------------------------------------------------------
     Pygoscelis            cccaacccaccaccatcccaaactataggacctaaaaacaaccactctcagcccacacaacatcaaccacccactccatc
-    Pyrocephalus          tcc-----------------------------------------------------------------------------
     Pyrrholaemus          cccaacccctaaacttcctaacccacaaaacccaagaatggctacaaccaacccacaaaacatcaaccacccactccccg
     Pyrrhula              cacaaaccata---------------------------------------------------------------------
     Quelea                --------------------------------------------------------------------------------
     Quiscalus             --------------------------------------------------------------------------------
-    Rallus                cataacccctc---------------------------------------------------------------------
     Ramphocelus           -------catgcaa------------------------------------------------------------------
     Regulus               cccaacccata---------------------------------------------------------------------
     Rhipidura             --------------------------------------------------------------------------------
@@ -1403,7 +1373,6 @@ BEGIN DATA;
     Saxicola              cccaaactacc---------------------------------------------------------------------
     Sayornis              tccaac--------------------------------------------------------------------------
     Scolopax              cctaacccaca---------------------------------------------------------------------
-    Selasphorus           ccctagctacc---------------------------------------------------------------------
     Sericornis            --------------------------------------------------------------------------------
     Serinus               --------------------------------------------------------------------------------
     Setophaga             gccaacccacc---------------------------------------------------------------------
@@ -1442,7 +1411,6 @@ BEGIN DATA;
     Turdus                ccctacctctt---------------------------------------------------------------------
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           --------------------------------------------------------------------------------
-    Tyrannus              tcc-----------------------------------------------------------------------------
     Tyto                  tttaggccaccgatatcccaagcttcaaaacccaaacaaacttacaattcacttaccaaattcaaatctcctactcctca
     Uria                  tttaaaccacacccatcctcacctaaaaaacccaaaaacagccccatccaatccaccaaacatcgcctacccactttctc
     Uropsalis             --------------------------------------------------------------------------------
@@ -1601,7 +1569,6 @@ BEGIN DATA;
     Fulmarus              --------------------------------------------------------------------------------
     Galerida              --------------------------------------------------------------------------------
     Gallinula             --------------------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                tacccaaacgcaaataacctgaacaaccccctcacagaccttcaaattcttccctaccccctccaggattctaaatccat
     Gavia                 cactcagcagcagccaaacaaaacactccccttctgaactaaccaacccgccaccatccccccctaatttccaaacccac
     Geococcyx             caaccaacactaatcaacccaaacaacccattcgataatccatccatccatttccatctcctccaaaaacacaaactcac
@@ -1641,7 +1608,6 @@ BEGIN DATA;
     Limosa                --------------------------------------------------------------------------------
     Lophura               --------------------------------------------------------------------------------
     Loxia                 --------------------------------------------------------------------------------
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                --------------------------------------------------------------------------------
     Luscinia              --------------------------------------------------------------------------------
     Macronectes           --------------------------------------------------------------------------------
@@ -1679,7 +1645,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 taatcagcagcagacaacgaaaacgacccacatataactcaccaaacttgccaccattccctccaagcatccaaatccac
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              --------------------------------------------------------------------------------
     Numida                cacccaaccgcaaacaactctaacgacccactcacaaaccttcacactccctcctttcccctccaggattttaaatccac
@@ -1729,7 +1694,6 @@ BEGIN DATA;
     Platycercus           --------------------------------------------------------------------------------
     Plectrophenax         --------------------------------------------------------------------------------
     Ploceus               --------------------------------------------------------------------------------
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              --------------------------------------------------------------------------------
     Podiceps              --------------------------------------------------------------------------------
     Poecilodryas          --------------------------------------------------------------------------------
@@ -1750,12 +1714,10 @@ BEGIN DATA;
     Ptilinopus            cactcagcaccagccaaccaaaacacttcacttaaaaaccaactcactcatcaccatcccctccaaattctcagatccac
     Pycnonotus            --------------------------------------------------------------------------------
     Pygoscelis            tactcaaaaacagccaattagaacgcccccctcaaaacccaaccagctcgctaccatcccctccaggccctcaaacccac
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          tactcaacaccacttaactaaaacaatccactcaaaaatcgacccacccccctccgtcccccaaagacacacacccacac
     Pyrrhula              --------------------------------------------------------------------------------
     Quelea                --------------------------------------------------------------------------------
     Quiscalus             --------------------------------------------------------------------------------
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           --------------------------------------------------------------------------------
     Regulus               --------------------------------------------------------------------------------
     Rhipidura             --------------------------------------------------------------------------------
@@ -1766,7 +1728,6 @@ BEGIN DATA;
     Saxicola              --------------------------------------------------------------------------------
     Sayornis              --------------------------------------------------------------------------------
     Scolopax              --------------------------------------------------------------------------------
-    Selasphorus           --------------------------------------------------------------------------------
     Sericornis            --------------------------------------------------------------------------------
     Serinus               --------------------------------------------------------------------------------
     Setophaga             --------------------------------------------------------------------------------
@@ -1805,7 +1766,6 @@ BEGIN DATA;
     Turdus                --------------------------------------------------------------------------------
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           --------------------------------------------------------------------------------
-    Tyrannus              --------------------------------------------------------------------------------
     Tyto                  tacccaatgtcagataacatgaatacttctctcacaaacaaactaattcgcccctaatccctaaaggcctttgcattcac
     Uria                  caacccataataatcaattaaaacaccccacccawaaaccgccsaattcgtcaccgtc----------------------
     Uropsalis             --------------------------------------------------------------------------------
@@ -1964,7 +1924,6 @@ BEGIN DATA;
     Fulmarus              -----------------------gcactaacccaaaatcccatcgcccaccttaaccaccatccaacacaccaaacacct
     Galerida              -------------------------------------------------------------cccacaaccaccgacacca
     Gallinula             -----------------------gcaccaacccaaaatcccatcaataaccaaaactcctaaatacaacccaacacacct
-    Gallirallus           ------------------------------------------------------------------aactacaaacgttc
     Gallus                cccactcacaaacgatcaaatcagacctaacccaaaatcccacccacacccttaatcccaaacccgcaccccaaacgcca
     Gavia                 caccatcactaacacccacacacgccccaacccgaaaccccaccacctaccccagctaccacccaaaacatcaaacgcca
     Geococcyx             caccacaaccaatacccaaatttgccccaacccaaaatccaacctacaaccacaaccaccactcatcatcacaaaacccc
@@ -2004,7 +1963,6 @@ BEGIN DATA;
     Limosa                ---------------------------------------------------------accaccccaaacaaacaccaccc
     Lophura               -----------------------gactcaaaccaaaactccatcaccacccttaaccccgaaactctaccctcaacatct
     Loxia                 -----------------------gcatttaccaccacccccatcacaaaccaaaaccgtagcccactactacggacccca
-    Loxioides             ---------------------------------------------------------ctaactcactattcttgacacca
     Loxops                -------------------------------------------------------ccgtcactcattactcttgacacca
     Luscinia              ----------------------------------------------------aaaccataacccccaaccctgaacccca
     Macronectes           -----------------------gcaccaacccaaaatcctatcgcccacctcaaccaccacccaacacaccaaacgcct
@@ -2042,7 +2000,6 @@ BEGIN DATA;
     Nettapus              -------------------------------------------------------ccacaacccacaacaacctacgccc
     Ninox                 cataaccatcagcacctaaacaagcccccgcctaaaacccaactaccctccccaactacaaaccaacacttacaacacca
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              -----------------------gcactaatccaaaactccaccctccaccacaactgccaactcgtacacatatcacct
     Numida                cacatcctccaacaactatacaagccctaatccagaatcccaccttcaacctcagccaccaacccgcatcccaaatacct
@@ -2092,7 +2049,6 @@ BEGIN DATA;
     Platycercus           --------------------------------------------------------taccaaccaaaacaccacacaccc
     Plectrophenax         -----------------------gcccttaccacaacccccacccagaatcaaaaccgcaacgcactaccatagatacca
     Ploceus               ---------------------------------------------------------------ccctattatgtctacca
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              -----------------------gctccaaactataatcccattaaactcctcaacccaatcccaaaacaccaaaccctt
     Podiceps              -----------------------gctctaacccaaaatcccaccaaccacctcaaccaacacccaaagcacaaaatactt
     Poecilodryas          -----------------------------------------------------------------agactaaagacgcca
@@ -2113,12 +2069,10 @@ BEGIN DATA;
     Ptilinopus            aacaacctccaatgtccaa-------------------------------------------------------------
     Pycnonotus            -----------------------gcctttaccaaaaccctcacctccaaccataaccacaacccctaaccaagaatacta
     Pygoscelis            gacaaccaccaatatccacacctgccccaacctcaaatcccatcaccaacctcaaccaccactcgtaacgcccaacgcct
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          cacccccaccaataccccagcaa---------------------------------------------------------
     Pyrrhula              -----------------------gcccttaccgcaaccgccatcccaaaccaaaaccgtagttcattactctcgacacca
     Quelea                -------------------------------------------------------------------------cacacta
     Quiscalus             -----------------------gcccttaccaccacctccacctaaaaccaaaaccgttactcattaccatcgacacca
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           -------------------------------------------------------ctacaacacattaccaccaatgcca
     Regulus               --------------------------------------------------------ccacaaccaaaaccaaaagaacca
     Rhipidura             -----------------------------------------------------------------------cagacatca
@@ -2129,7 +2083,6 @@ BEGIN DATA;
     Saxicola              -------------------------------------------------------------------------aacccca
     Sayornis              -----------------------gatcaaaccacaataccccttctaaaccacaactctaaaccaaaaccctccatactt
     Scolopax              -----------------------g-----------gta---------------aacaattagatgagatcat--------
-    Selasphorus           -----------------------gcccacacccccaatccaactcccacccacaaccaccatacaaaacaaccgacacct
     Sericornis            -----------------------gcctttacctcaaccccaacctataaccataatcaaaatccaataccactagcacca
     Serinus               --------------------------------------------------------cgtagcccaccactaccgactcca
     Setophaga             -----------------------gcctttatcaccacccccatccaaaacttcaactataacccatcactattaatacca
@@ -2168,7 +2121,6 @@ BEGIN DATA;
     Turdus                -----------------------gcccttaccaacacccccacctcgaatcataattaaaaaccacaacctcaaacacca
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           -----------------------gactcaaaccaaaacctaatccccacccctaacccctaaactccacttccagtacct
-    Tyrannus              -------------------------------------------------------ctaaaaacccaaatcttctaaactc
     Tyto                  aacaatcaccaaagcctgtactcgccccaaactcaaaccccatcctcccttccaactctagctcgtcacgaccaacccca
     Uria                  -----------------------gcaccaactgctacccccacctccaacttcaaccacaatccaaaaccaaacatgcct
     Uropsalis             -----------------------gcaccaaatcaaaaccccactaaccacctcaaccacgatccaaaacttaacacacct
@@ -2327,7 +2279,6 @@ BEGIN DATA;
     Fulmarus              tcaca--ccactccacacagccactatatacacactccctcattgaacctccctcaacacaatctacccaacccagtcac
     Galerida              acccg--ctcccactcaccaccaacacacacaccctcccccccccaaccccacacaacaccatcccaccgacccaacccc
     Gallinula             acaca--ccaacccacccagccaacacgcttacacccccccacccactctaccccaacacaaccaacccacttcactcca
-    Gallirallus           acacg--cccttccacccagccagtccccccacacccccccacccaactccactcaacacagttaaccca----------
     Gallus                acaca--ccccacctcgcaaccaccgtccacccacccctcctccaacacccccccgacacaaaccccacaccctgcttca
     Gavia                 atacg--ccacttcacacagccaacccacacacacccccccaccaaacctcacacagcacaatccatccaatccactcaa
     Geococcyx             acacg--ccacaccctaccacaaacctctacacaacccccccctaactcccccccaaaacaactccccaaatccaatcca
@@ -2367,7 +2318,6 @@ BEGIN DATA;
     Limosa                acaca--ccactctatacaaccaattcatacacatccctcccccaaatctcacgcaaaacctccttacaaaaccaatcaa
     Lophura               atcca--tcccaccatccaaccaccatttacccaccccccccccaccccccccacaaaaccaccaccacaacccgaccta
     Loxia                 accca--ccccatcactccaccaactcccacacccccccccacccaaccccatacaacaccacccaaccatctcaaccaa
-    Loxioides             atcca--tcctaccactcaaccaacctccacacaccccccctcccaaccccacataatactagcccaccaacccaccaga
     Loxops                accca--tcccaccacccaaccaacccctacacccccccccacccaaccccacacaacatcaacccaccaatccaccaga
     Luscinia              acaca--cccacccacacaaccaatacctacacaccccctcccccaaccttccacaacaccaatccaaaaactcactcac
     Macronectes           ccaca--tcactctacataatcaccatatatacattccctcactaaacctccctcaatacaacacacccaattcaatcaa
@@ -2405,7 +2355,6 @@ BEGIN DATA;
     Nettapus              accac--tcccaccacaccacagtcctacacccacccccccgccaattctcacccagcataaactacctaaaccatccaa
     Ninox                 ataca--ccgcaacccataacaaacctacatataaccctcctcccacacttccctagcacaccccatcaaattcaaccga
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              accca--ccaattcacacagccaactcatatacaccccccttctaaatcctgcacaaaatactttcacaaattcaatcaa
     Numida                atcca--ccacaccatatcacaaacacatacacaccccccccctcacacccccataacacaaatcccaaaactcacctta
@@ -2455,7 +2404,6 @@ BEGIN DATA;
     Platycercus           accca--ctacaacacacaacaaacccacccacacccccccccctatccccacacagcaccaccaaaccaaaccgctcaa
     Plectrophenax         acctt--tcccaccacacaaccaacacctacatctccccccatccaaccccacacaacaccaactcaccaactcaatcaa
     Ploceus               atcca--ccccaatacacagccacctcctacgcccccccccacccaacccaacataacaccacccaacgaacccgaccac
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              acaat--tctattcacataactaatctatacatacccctcccctaaaacctacacaacacaacttcccaaaaacaacgaa
     Podiceps              acaca--ccaccccacacagtcaacacatacatacccctcccccaaccccccctcaacacatcccaccagcgccacccaa
     Poecilodryas          acccc--ttctaccacaccaccaactccttcgtctctactctcccaaccccccataacatcaaccagtaaattcagc---
@@ -2476,12 +2424,10 @@ BEGIN DATA;
     Ptilinopus            -----------------------------------------------------acaacacaactccacaaatcccattac
     Pycnonotus            gcacg--acctatctcaccatcaactcacacaccaccacccactcaatcctacacaacacagacacgcaaattccccgcc
     Pygoscelis            acata--cccccccacataatcaacccctacacaccccccccttccaccccacacaatacaccccatccaatttacttaa
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          --------------------------------------------------------------------------------
     Pyrrhula              accca--tcctaccaccccaccaactttcacacccccccccatccaaccccacacaacactaccacaccaacccagtcga
     Quelea                acccg--tcctaccacaccatcaccccctacacccccccccacttaaacccacgcaatataacctcgcaaaccccgctgc
     Quiscalus             atcca--ccccatcacacaaccatcccccacactcccccccacccacctccacacaacattactccacgaaccccatcaa
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           cctcg--cccccccacgcaaccacctcctagaccccccccctcccaaccccacacaacaccactccaccaacctagctga
     Regulus               accca--cccctacgcatcaccacctcttacaaatcccccccttcaatcccccataatacaaacccaaaaactcacccaa
     Rhipidura             atcca--tcttactacataacaaactcccacaccctcccccatccaactccccacaacactaataaacgaattcactcga
@@ -2492,7 +2438,6 @@ BEGIN DATA;
     Saxicola              accca--tccacctacacaatcaacacccacacccccccccccccaacccctcacaacatcatcccacaaacccactccc
     Sayornis              accta--ctaattcacaccattatcactcataaacctccctaccacacccaccttaacacactcccgcaaattttcttca
     Scolopax              -tgttgggtaatat----agataagacgtgtaggttagacccgc--accgtgcatgaggaa-------gagccaaatgca
-    Selasphorus           actta--ccaactcccattacaagcacctatctacccccccaccaaaccccccacaacacaaacaatcaacatcaccaga
     Sericornis            accca--tccctccacaccatcatccctcacacacttcccccccggcccccccacaacactaacctactaatccacttcc
     Serinus               accca--ctccatcaccccaccaacccccacaccccctcccactcaaccccacataacaccaccaaaccaacccacccaa
     Setophaga             gctct--ctcccccacacaaccaccccacacacccccccccacccaaacccacgcaacatcattccatcaattcaacaga
@@ -2531,7 +2476,6 @@ BEGIN DATA;
     Turdus                accaa--tccatctgcaccatcaccccccacacacccccccccctacccccacttaacactatcgcacaaatccactacc
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           accac--actaaccgtaccactaccttctacctaccccccccccatcctccccacaacacaaacgctacaatccagttca
-    Tyrannus              actca--cctctccacacaaccacaactcacaatctccctcactgaacccaccctaacaccctcaagtaaactcctccca
     Tyto                  ccact--ctacactacaccatcaacacccccaaattcccccaccaagcctcacacaacatacagcaccaaaaccactcgg
     Uria                  acaaa--ctactccatacaatcaatacctacaacccccctccccaaaccccacgcaacacatcccaacagacccaatcca
     Uropsalis             acaca--tttcgccccacaactaatccccccgcacccccactttaacactcacgcaacacaatccactaaatccggttaa
@@ -2690,7 +2634,6 @@ BEGIN DATA;
     Fulmarus              acaaacagcaacttacgctcttcaccaaatagatgatccaacactcaccctctatagtcatctcctcaacacccaccaac
     Galerida              aaagccaacaacacgcaacacccacaaaaaacacactcacacaccccccccacccaacaacccccccaaaacccaccaac
     Gallinula             aaaaacaccatcacatatccccaaacaaaaacctctccaaacatctcccccacccacacacccccatatcacccaacaac
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                gcaaacagcctcacacaatcctaccaagacagatacccactcacctaccccctacatttccccccacaacacccaccacc
     Gavia                 acaaacagtacctcacacccttcactagacacataacccaacactcaccccctacacccacctccccaacgtccaacacc
     Geococcyx             aaaaacacccccccataccaccaaccaaacacccaacccaaaacccacccaacacacccaccactacaacacccaccacc
@@ -2730,7 +2673,6 @@ BEGIN DATA;
     Limosa                aaaaccaccaccccacaacactcattaaatatacaaccacacaccccccccccacactcactcccatatcaccatctaac
     Lophura               aaaaataatcccacacaaccccaacaaaatacacatccactcacccaccccccataatcccccacgcaacaccaaccatc
     Loxia                 acaaacaccaacatacgatcctaaaaaaacagaccacccaaccccttccaaactcaccgatccccacaaaaccaaaccac
-    Loxioides             aagaacaataacacacaaccccgaaaaaacaagcccccaactacctcccccccacaccaaccccctcaaacccaaaccac
     Loxops                aaaagcaataatacacaaccctaaaaaaacaaactcccgaccaccccccccctacaccaaccccctcaaacccaaaacac
     Luscinia              aaaaacactaatccacaacccttaaaaaacaccccaccacgcacccaccaaacccaccaatccacgcgaagccaactcac
     Macronectes           aaaaacagcaccctacgctcttcgccaagcagataatccaacactcaccccctataatcatcccctcaacacccaccaac
@@ -2768,7 +2710,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 acaaacacccccccacatcctttactaaacatacaaccctaccctccccatacccataaaccgcctcacccccctaccac
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              aaaaccagcaccccacgatgctcactaaaaattcaaccaaacaccccccccacataccaacccccacaccactcaccaac
     Numida                acaaacagttctttacatccctaataaggggagtacccccctatccacctcccccaacatcccactcagcacccactacc
@@ -2818,7 +2759,6 @@ BEGIN DATA;
     Platycercus           ataaacagtactacaccccaccaacaaaacatgccaccccacactctccttatatccacctccctgtaaaacccatcaac
     Plectrophenax         aaaaacaatcacacatatcccccaaaaagcaccccaccaaacacccacctcacccacagcccgccacaaaactaactcac
     Ploceus               aaaaacaccgatacacacccccaacaaaacaaacaacccaccaccctccccacctactcaccaccgctaattcgaacagt
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              aaaaccagtaccctacatcacccacaaaaaaccccaccaaactcccaccccatacccctatccacttacaaccaaccaac
     Podiceps              aaaaacaacacttcacaccattcaccagacatacaactcactattcaccccccacaccccctaccccataaccaaccaac
     Poecilodryas          --------------------------------------------------------------------------------
@@ -2839,12 +2779,10 @@ BEGIN DATA;
     Ptilinopus            aagaacagtaattcacttatctcacccaacaactaactcaaaaccccccccccatatccaccaacgcagcacccaccctt
     Pycnonotus            aagaacagtcacacacgccatccaagaaaaacactacctaacactttccaaacctaacaaccccgataaatcccaatcac
     Pygoscelis            aaagccaactccccacgtcattcaccaagcacccagcccaacaccaaccccccacacccccctccccaacaccaaccacc
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          --------------------------------------------------------------------------------
     Pyrrhula              acaaacactaatacacaactctcaaaaaacaaacacttaaacaccccccacctctaccaaaccctcccacaccaaccaac
     Quelea                aaaaacactaacacacaaccccaaaaaaacagacaaccaaccactccccctacccacccactccctccaatccaaccaac
     Quiscalus             aaaaacactcacacacaccaccagaaaaataaacctctaaacactcccccctcccaatcatcaccctagcactaactaac
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           acaaccactcacacacacgcccaaaacaacagactacccctcgccctccccacccaccacatcccccaacattaaaccgc
     Regulus               aagaacacaaactcataccactaaagaaacatactcccatctacctacccaacccacctaccaccacaaatctcannnnn
     Rhipidura             aaagacaaaaattcacaacactaaaaaaacaaataacctaacacccgctccacataagaaccgtcacaaaactcaatcac
@@ -2855,7 +2793,6 @@ BEGIN DATA;
     Saxicola              aaaaacagaaatccgcaccactcaaaaaacaaccaacccaacatccctcacacccaccaacctatacaacaccaacccac
     Sayornis              aaagacagtaacccacaacacccaacaaataaacatctaatcaccccccttacacaccaatcacttcaaaactcaactac
     Scolopax              ggcacca----------------ggaagaaa-----tccttatct-----------------------------------
-    Selasphorus           --------------------------------------------------------------------------------
     Sericornis            acaaacattaacccacaacacccgtaaaacataccactcaccacctccccgacacccgcacccacccaaacccaaactgc
     Serinus               acaaacagtaatacacaaccctaaaaaaacaaaccacctaaccctccccacacccacaaatctcctcaaaaccaaaccat
     Setophaga             acaancattcatacacaaccccaaaaaaacaaacctctcagcaccccccccacccaaccctcaccccaaaaccaacnaac
@@ -2894,7 +2831,6 @@ BEGIN DATA;
     Turdus                aaaagcagcacccctcaaccttcaaaaaacagacaattcaaaactcctcacatccagtaaatctctcacaaccaaactac
     Turnix                --------------------------------------------ccacnncacacagctacccacccacaacctagcaac
     Tympanuchus           aaaaatagccctacataatcccagcaaaacgaacattcactcacccaccccccacaacttcctattcaacactgaccatc
-    Tyrannus              agaactagtaatccatagcccccaataagcatacttcccaccatccccccaacatatcacttaccatgaaatcccaccac
     Tyto                  acaagcggaactccgtacagtgcactaagcatataaccccccattccctcgccataacacccgccatatacccaaataat
     Uria                  aaaaacagtacttcacaacccccaccgaatattcaacccaacacccctcccacatacccctttccctacagcccaacacc
     Uropsalis             aaaaacagtactccacaccacccaccaaaaataccactcaatatccaccatacacatccgccaccccaaaacccagcaat
@@ -3053,7 +2989,6 @@ BEGIN DATA;
     Fulmarus              tcacatcccccaaccattacaccaaacacaccctagacaactccacaacatctcaaagccacattcacacccaacaaata
     Galerida              ccaccccacccgaccaacccacccttcccccctcccacaaccagccaacacactaaaaccccatcccaccccagccagac
     Gallinula             tcacacctcccaaccaatcaattacacaaataacaaccaactcaacaatacatcaaaaccacacccccacacagaacaca
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                tcatatcaccccactgcatcaccacaaacacccccaacaacccaacaaaccatcaaaattacctccacccccatataaca
     Gavia                 ctgtcccccccagtcactccaccaaacccacactgaacagcccaacaccactccaagaccatactcacacccaggaaaca
     Geococcyx             ccataccacccattcacccaaaacaacacacccaaaccaactccaccacgcaccaaagctatacccacatccaaatcaca
@@ -3093,7 +3028,6 @@ BEGIN DATA;
     Limosa                ttacacccctaaatctacccacaaaacccacgccacaccaccaaaccatatcccacaaccacattcacatccaaaaaaca
     Lophura               tcacaccccctcaccacaatatcacaaacacaactattaacccaattaactcctaaagccattcccacacttaattcgcg
     Loxia                 ccatacctcccaactatcaaaccatccacaccaccaacaaccaactcaatccccaaaaccacccccaaccacaaacaaca
-    Loxioides             ccacaccacccaaccaccaaaccacccacaccccaaacaacca-------------------------------------
     Loxops                ccacaccacccaactacaaaaccacccacacctcaaacaaccaacccaaactccacaaccacccccaatctcacaccaca
     Luscinia              ccataccacccaaccactacaccatccacaccccaaacaaccaatcaaaaccctacagccatatctacctacaaaaaaca
     Macronectes           tcacactccccaaccaccacaccaaacatacctcaaacaactccacgatacttcaaggccacacccacacctaataaata
@@ -3131,7 +3065,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 ccacaccccccaaccacaaaatacaacacacaccgaccaactcaaccaccctttacaaccacctccacactcagaaagca
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              tcacacttcccagccagcctacaaagcacacaactgacaactgaacaataactcgcaatcgtatccatactcaaagaaca
     Numida                acacacccccccaccacaataccacacacaccacaatccactcaccaaaacaccaaaaccatacccccatacatacaaaa
@@ -3181,7 +3114,6 @@ BEGIN DATA;
     Platycercus           tcacacttcccaaccaatataccacccccacaccaaatcacccaaccaaccactaaaactacattctcactcacatcaca
     Plectrophenax         tcaccccgtcccatcaaccaacaaccaacaccaccaacaaccaaccaactttccataaccacccctcaccacaaacagca
     Ploceus               ccacaccactcaactaacaaacccactgcacctcgaacaatcaacccacactctacgaccatccccaaccacaaaacaca
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              tcacaccaccaaatcattacaccctatacataaccggcaactatccaccacctcaagaccacccctactctcataaaaca
     Podiceps              ccacacccccaaatcaccacgtataacacacccccaacaaccagataacaacctataaccctactcacacccaaaaaaca
     Poecilodryas          --------------------------------------------------------------------------------
@@ -3202,12 +3134,10 @@ BEGIN DATA;
     Ptilinopus            ccatacctcccaacttccgaaccaaacgcacccccaacaactatacaacatcttaagaccacacccccccccaaataaaa
     Pycnonotus            ttacaccttccaactaacgaacccaccacgtcccgaacaatcaacccacacatcacaaccaccctccaccacataaaaat
     Pygoscelis            ccataccccccaatcagcacactaaacccataccaatcaacccaacaacacatcaaaaccacattcacgcccagatcaca
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          --------------------------------------------------------------------------------
     Pyrrhula              ccacaccctcaaatcactaaaccacacaaaccctaaacaaccaacccaattatcgtaaccgcccccaaccacaaaagatt
     Quelea                tcactccacccaaccaacaaacacactacaccccgagcaaccaacccgagcactacaaccatccccaaacataagaaaca
     Quiscalus             ctatcccacctcaccaatcaaacatcaacacccccaacaacccaccaactcaccacaatcatcctccactacaaanaaca
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           ccacccccccctaccagcaaaccaacaatacctcacacaaccaacccacactccacaaccaccctccgccccaaacaaaa
     Regulus               nnnnnnnnnnnnnnnnnnnnnnnnaccacataaccaacaacctatcaaaaaatcataaccatatccacacacaggacata
     Rhipidura             ctatacccccccaccaataaaactaccaaatcaccaataatcgccctaaacattataaccatacttcaccacaaaacaca
@@ -3218,7 +3148,6 @@ BEGIN DATA;
     Saxicola              ttacaccacccaaccaacacaccctccacaccccaaacaacttatttacctcccacaaccacacctacccacaaaaaacg
     Sayornis              ctatattccccagtcacccgatcacacatgcatccacccatcgcctcaatctttaaaacctcctccaaccacacaacatc
     Scolopax              -tgc-----------------------aaacgctggata--------------taaaacctcggtgtgcagctgatggtg
-    Selasphorus           --------------------------------------------------------------------------------
     Sericornis            ttacaccccccaactaccaaacatcccccgcacccagcaaccaacctacatcccaaaaccatcctcaacctcaaaacaca
     Serinus               ctataccacccaactatcaaaccacccacaccaccaacaactgacccaattcccacaaccactcccaaccacaaataaca
     Setophaga             tcactcctcctcaccaataaaccgccaacacctccaccaacccacccacttctcacaaccatatcccattacaaatgaca
@@ -3257,7 +3186,6 @@ BEGIN DATA;
     Turdus                ctatcccccccaatcagtaagtcgcccgcaccccgcgcaacccacttatacaccacaaccataccctaccataaaggaca
     Turnix                ccacaccaccccaccaccttaccctacccccccccgccaattaaacaacctgccacaaccacacctccccacaaataaaa
     Tympanuchus           ccacaccaccccaccaccatacccccaacatacccagcaattcaacgaactcctaaaattatctttacacacacaccaca
-    Tyrannus              ctacactacctaactaacctcccaaacacatacctatctaccgcccaaattctcaaaatcacatttaactccacaacacc
     Tyto                  tcacatcacccaacccacacaactaccacgcactcaccccccaaacacccacccaagatcatacttactcacagggtacc
     Uria                  ctacacctccaaaccaactcactaaacacaccccaaccagttccacaatatctcaaagccatacttaaacctatatacca
     Uropsalis             ccacaccctccaactattacaccataaacactttaaacaatccaacaacacaccacagccatactcacatacaaaacaat
@@ -3416,7 +3344,6 @@ BEGIN DATA;
     Fulmarus              tccaacacacacctacaaaaaccccccaaatacactcaccaaaaacaaaatacccccaacccccttccaccctccacaac
     Galerida              ccaaccacccgcacccaacaacctccaacacagaacccacacaagcgccacacccccgaccccccactgcactcaccaat
     Gallinula             ccaaacacacccctataacaaacacccaaatacaaccaccaaatccaaaacaccatcaaaaccccctcacacaccaaaac
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                acacccccacccccataaaaaccaaccacacataaccttcacacacaaaaccccctcaaacctccccatccccacaaaac
     Gavia                 accaacacacccccacagcaactctctacacacacccctcccactcacagcccccccaacccccccccacccctcacagt
     Geococcyx             caccacacaccaacaaaaaaaccccccaaatacatccatcaaaatcaaaacccctccaacaaccccccccctctctaaac
@@ -3456,7 +3383,6 @@ BEGIN DATA;
     Limosa                accaacgcaacgccacaacaactcctcacacaaaccccccaaagccacaacaccccaaacccgctaccacaccttaca--
     Lophura               acaacccccctctcataaacactcatcacacacactccccataaacaaaacaccctcaaaactccttaaccccacgcaac
     Loxia                 ccaccaacaacaccaaaaaaatccccaatacacacatccccaaaccaaaacacccccaacacgccactacacttacaaac
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                c-------------------------------------------------------------------------------
     Luscinia              tcccacacacaaatgtaacagtcctcaacacacacccatcacaaacaacacacctccaaccgaccactacacatgccagc
     Macronectes           gccaacacacacctacagaaacctcccacatacactcaccaaaggcaaagtacccccaaccccctcccaccccccacaac
@@ -3494,7 +3420,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 tcaaacccacccacatagcaaccatacaaacacatctcccaaaaccacaacccttccaaccactcaacccacccctcaac
     Notharchus            --------------------------------------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------------------
     Numenius              accaacacataactacaataaccacccaaacacatccctcgaaaccacaacactccaaacctccttccacttccaacaac
     Numida                accatcccacacccacaaacaaccaccatacacaacctctacagccataaccccccaaaaacccctccaccccatacaac
@@ -3544,7 +3469,6 @@ BEGIN DATA;
     Platycercus           tcaaacacccccccataaacacccgccacatacattcatcaaagac----------------------------------
     Plectrophenax         ccacacaccaaaccaaagaaatcctagacacacaccccccacaaccaaagcaccccaaacacaccaccatacctaccag-
     Ploceus               ctacacacacagctacaaaaaccctcggcacaaaaccccgaca-------------------------------------
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              ttacacccacacataaaaaaaccttccactcacatccttcaaaaataatacacctccaaaccactacaccccacaccaac
     Podiceps              accaacacacgcccaaagcaacctcccatacacactccctaaacccaacataccccaaacccccccccaccctccaccac
     Poecilodryas          --------------------------------------------------------------------------------
@@ -3565,12 +3489,10 @@ BEGIN DATA;
     Ptilinopus            cccagcatcctaccataataaccccgcacatacatccctcaaaaacacaacaccctcagcttccccccctccctcacaac
     Pycnonotus            ttccatacaccaacgcaacaaacccaaacacaaactccacacaaacaatacaccccaactaccccaccacacccaccagc
     Pygoscelis            aacaacacacccccgtagcaacctcccacacacaacctccaagatcaaaaccctcccaatccccccccgccccccgcaac
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          --------------------------------------------------------------------------------
     Pyrrhula              ccaccaacaacaccaaagaaaccctccacacacacacctcgaaagcgaaacactcccaacgctctactacacccgcaagc
     Quelea                ccatcaatcaacccgcaaaaaccctcaacgtacaactcccacagtcaaaaccccttcaataca-----------------
     Quiscalus             ccacaaacctaaacaaaaaagccccaaacacacacctctcataaccaaaacaccccaaacacaccaccacacccgccggt
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           ccacactccgtaccaaaaaaacctcaagcacacactccatataaccaaaacaccctaaacacaccaccatacccatcagc
     Regulus               taaaacaccgagacctagcagcctggaacgcacaacccacacacccaatataccctaaacacccccttatacagttcaac
     Rhipidura             ccacacacaaatccacaaaaaccataaacacacagccaccaaaaccaaaactccctaagcaccccactacgcccacgagc
@@ -3581,7 +3503,6 @@ BEGIN DATA;
     Saxicola              tccaacacacaaccacaacaaccatcaacacacaccccccacaaacgacatacccccaaccacccactacgcct------
     Sayornis              ccctatactcacccgaaacaaccccacaaacataatccctcaacacaaaacactctcaaaccccctcatcaccccgaagt
     Scolopax              tgtag--------------------------gtagttgatgttttg----------------------------------
-    Selasphorus           --------------------------------------------------------------------------------
     Sericornis            tctcaaaccacaccacaacagtcctacacacacaccccacagatccaacacacccccaacccaccctcccacaagccaac
     Serinus               ccacctactgcaccaaaaaaatcctcaacacacatacccccagaac----------------------------------
     Setophaga             ccacccgcctaagtaaagaaaccccaaacacgtactttccacaaccaaaacacccccaacacaccgccatacctaccagt
@@ -3620,7 +3541,6 @@ BEGIN DATA;
     Turdus                actcacacaccaccaaaaaaatcacaggcacacaacccacccaaacgacacaccctcaacaccccactacacccataaac
     Turnix                atcaacgccacatcataaccaacacaaacccacacccctcaaaactataacccccccaatttcccctaacccacaatagc
     Tympanuchus           aaattcacccccctacaaataaccaccacataccatcctcgcaaacaaaacaccttaaccacaccccctccccatacaac
-    Tyrannus              ccccaaatacacccaaaacaacccttcacatacaatcccccaattcaaaacacctccaacactcctccttacttccgaat
     Tyto                  atcccccaacccccataaaaaacccacacacacatactcctcacccggaacattcccaattccccaccactcccttaagc
     Uria                  atcaaaacgctaccatagccactcacaacacacaccccctaaaatcacaataccctaaacctcccctaccaccccacagt
     Uropsalis             tcccaccaacccccacaataaccccctacacatatccaccacaaccaaaacgctcttaacctcccctcacactccggcat
@@ -3779,7 +3699,6 @@ BEGIN DATA;
     Fulmarus              aatc----------------------------------------------------------------------------
     Galerida              agaa------------ccaaaccacccccacacacacactacttccacaatcccaccaatcacccagatcaccaacccga
     Gallinula             aaac----------------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                aaccgcctaaaccaacccgacccacccctacacaacagcccacccccccgacccagtactcatcccaataacacccgcac
     Gavia                 aatcgcctagacccatttaaaccacacctaaacataaacccaccccccaacttgattacacaccaaaacacaatccccac
     Geococcyx             aaacgctcagaccttccaataccctacccagacacaaatccaacccaccattcaaacaaacaccaaattcacatacacac
@@ -3819,7 +3738,6 @@ BEGIN DATA;
     Limosa                ------------------agatcatacccagatattaaccctcttgctagcccggccacacgtcaaaaccacgtacatat
     Lophura               aact----------------------------------------------------------------------------
     Loxia                 acaagttgaaactatcacaacccacatctatacatcaaccacccacacagcccaactaatcacctcaatcacagacccat
-    Loxioides             ---------------------------------------------------------------------------cccnc
     Loxops                --------------------------------------------------------------------------------
     Luscinia              -----ccaaatctctcgcaacctacacccacacacccacttgccccaccacctaaccatacactacatcctcacactcac
     Macronectes           aacc----------------------------------------------------------------------------
@@ -3857,7 +3775,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 gaccgcacaaatccaccgagatcttacccgaacacaaacccattcaaccaactcatcatacaccaaaacccaatacatac
     Notharchus            ----gcctacacccacacaaatcattcccaaacgccaacccaccccacaacccctttacccgccacaaccctccccacac
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           ----gccaagactcccaaaccctacgcccacgcgcctaccaagtgcgcaactcccttacacactacacctatacctacat
     Numenius              gact-cataaactcacaaaaaacacacttaaaagttaacctcccccccaatcctcccatacgttacaattgcacacatat
     Numida                aatcgcccaaacccacacagaccacccccacaaatcaacccatcccaccaccccaataaccacctcaataacactcacaa
@@ -3907,7 +3824,6 @@ BEGIN DATA;
     Platycercus           -------caaccatacacaacacacatctaaacaaaaacccaccccactatttaaccaaacaccgaaactaaaaccacaa
     Plectrophenax         ----gccaacacttccccaaactccacccacacgtctgccaactaaaccaccccatcatttaccataattttacattcgt
     Ploceus               ----gccgaaacccccccaatccacactcatgtactaaccatctcaacaatcccactacatgccaaaacatcaaacccat
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              aaccgcacaaacccacaaaagctacttctacacaaaaaccccccctttaaccctaccaaatactagaacccaacacacac
     Podiceps              aaccgcccaaaccaacagtaactatacccacacacaagccctctccctaaccccaccgaacatccaaaacaaactcacac
     Poecilodryas          -----------ctcacttagcccacgcccatacgcctaccacctacacgaccctaccacatgcctcggttagacacctac
@@ -3928,12 +3844,10 @@ BEGIN DATA;
     Ptilinopus            aatcgcacaaatatacacaaacctcccctaaatacaaacccaccccatcaccccattacataccaaaaacaaatacacat
     Pycnonotus            aacagccaaaactcccaaaaacaacacccacgcatttacctactcagccatccaactactcgctacaaacactcacccgt
     Pygoscelis            aaccgcgtaaactcacccaaactacacccaaatacaaacccctcccccaaccccatcgcacactacatctaagaccacat
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          ----gccgaaattctcacgaacctcacccacacacccattaactgcacaacccagctacataccacaatatcacacccac
     Pyrrhula              aaaagccgaaaccttcacaactcatacccacacatcaaccacccaaacgactcagctaactatcacgattacacactcac
     Quelea                ----gccgaaaactccccaactcgcgctcacacaccagccaactcaacaaccccactatacgccataataacagacccac
     Quiscalus             aaaagccaacgtcctcataaatcccatccatacatctaccactccagcaacccaactatctaccacgattctacacccac
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           aacagccaacatctccgaagactccacccacacatctaccacctcaacaatccaaccacttgccacaactccccccccac
     Regulus               aagagcagaacctcacatgtacaatacctaaatgtctactcactctgcaacccagtcacacaccacaaccccacacgtac
     Rhipidura             aaacgccagaatcagctctaaccttttttatgcgcctatcacctgcatcaccccgctatacgccctaatttcaaactcac
@@ -3944,7 +3858,6 @@ BEGIN DATA;
     Saxicola              ----gctgaaatccccacataccctacctacgtacgcacccaccatacaaccccactacataccacaaccctacacccac
     Sayornis              aaaagccgtactctacctaaatcatatccacaagtttattcgtcctataacttaactacatactacaatcactaccccga
     Scolopax              ----acacaaacttacgcataccacacccaagcactaacctcctcatcaacccggccatacaccaaaattacatacatac
-    Selasphorus           ----gccctaaactgctaagaccctatctaggcgcatacccacccactagccctactaagcatcccattcccagacacat
     Sericornis            aaaagccgaaacccccatgaatcccacccacacaactaccacctacacaaccccactacacatcaaaatcccatgcccac
     Serinus               ----gctgaaactatcgaaattcacacctatgcaccaaccacttacacaacccaactaattatcacaactataaactcac
     Setophaga             aacatctaatatccccgcaaactctacccacacacctaccgtccccacaatttaactatctacctaaattcctcacccac
@@ -3983,7 +3896,6 @@ BEGIN DATA;
     Turdus                aagagcaaaaatcctcgcaaatcccacccacgcgcgtacccaccccattactcaaccacataccaaatccccacacccat
     Turnix                aacc----------------------------------------------------------------------------
     Tympanuchus           gaccgctcaaacccataaagtctcttcccatacagtaactcatctccccatctcgacatacatcccaataacgtacgcat
-    Tyrannus              aaaagtcgtactccactgaaatcatacctaaaaacatattcaccttacaacccaactacataccagaattaaatccccat
     Tyto                  gaccgcatagactaataagacctacgcccacacacaaacccccttcacagccctgctaaataccacgaccaagcacccac
     Uria                  aatc---------------acttacacttaaatacaaacctcatcaacaacccaaccgcataccagaattacatccacac
     Uropsalis             aatc----------------------------------------------------------------------------
@@ -4142,7 +4054,6 @@ BEGIN DATA;
     Fulmarus              --------------------------------------------------------------------------------
     Galerida              ccataagatttaaccagacccaccctaaaaagcacctacaacgagcacccaaaacacaaaaacaattaacacacaaaacc
     Gallinula             --------------------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                ccaccaaactaaaccgaacaaaaaacacaaaacacccacaaacacccactcaacccaaaccacacccaaagtttccaccc
     Gavia                 ttaacaaatccaatcaactcaaaaataaaaagaacccacaactacacatccacaaaaaaccacccccaaccaccgacatc
     Geococcyx             tcaaacaacccaaccaacccaaatataaaacaaacctacaaaaacacaaccacacccaaaaactcctcccactcaaaacc
@@ -4182,7 +4093,6 @@ BEGIN DATA;
     Limosa                ccgcaaagcttgactaacctaaaagtaaacaaaacccacaactaaacagnctaagacaacgcctcacatccttaacaact
     Lophura               --------------------------------------------------------------------------------
     Loxia                 caaccaaacttaccccaatacacaatcaaacatacccacagtaactcctccccattaaaccaccctcatcaaaccacgtc
-    Loxioides             tagctagactcaatccactacataataaaacacacc--------------------------------------------
     Loxops                --------------------------------------------------------------------------------
     Luscinia              taaactgacccagtcaaacacatactaaaaaactcctaccaaaacctactcccacacgaccaaacccgtcaaacacaacc
     Macronectes           --------------------------------------------------------------------------------
@@ -4220,7 +4130,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 cagcaaagcccaaccaaacccaaaccaaaaaacactcacaaccaaacaaaccacaaaaatcccttccaagcaacccaaac
     Notharchus            tcacaaagtcaaactgaccaaaaactaaagcaaccccacaaataactctacacgaaaagccatcccggatccacatacct
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           cagtaaagcccaaccaaacacaaaccagataacatctacaaatacacacctccacaaaatcaaaaccacacaacaaaact
     Numenius              ttatcaaactcaaacacaccaaaaatatacaaaactcacaactatatgctacaaaaaaactgcccataaccttccccacc
     Numida                ccacacaaccaaaccaacctagtaatacaaagcacccacaaacaaacactcgacacgaaccactccagaaaattccaccc
@@ -4270,7 +4179,6 @@ BEGIN DATA;
     Platycercus           caattaaacccaccccaactaactacccaacgcttccacagctaaccccactccacgaataacccatcaccaaccaacca
     Plectrophenax         ccaccgaatctacccagccacccgacaaacaagacccactatcacctattcccgaccgactgcgagcacacaatacagtc
     Ploceus               caactaagctcaatcaaatacacaacacaaaatacccacaacaactttccaaaatacaaaaaaagatataaagcacaatt
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              ttactaaaccaattccacctccaattaaaaaaaacctacaacaacatactcaaaaaagatcactcccacatctctcgaaa
     Podiceps              tcacacaacccaaccaaaccaacaatagaaaagacccataaaaacacattccaaaacaaccacccccatacatcaaaaat
     Poecilodryas          caaccaaaccaaaactcacacgtactagataaaatctacaacaaaactttctcgcacaacaacatccaccaaaccaaaat
@@ -4291,12 +4199,10 @@ BEGIN DATA;
     Ptilinopus            tcaaccaacccatccaaacaaaacacaaaaaaaacctataactatacactatcaaaaaaccaccccctaccaataaaaca
     Pycnonotus            caattaaactcacccaaacatacgctagaaagtacctattaaaagcctctcttacaaaactatgaacaacaaacacaacc
     Pygoscelis            ccgcaagacccaaccgacccagaaataaagaacacccacaaacactcactcaaaaagaaccatccccaaccatccaaacc
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          caaccaagcccaaccagacgagtactgaaaagcacccataaaaatccatcacaaaacaacaatcaccgcaaacccactcc
     Pyrrhula              caactaaatctaatcctcaacataacaaaacacctctgcaaaaacctccccttaaccagccatccacgctcaaccctatc
     Quelea                caataagactcgaccaaacatctaatacagtaaacccataaatactatcccccacacaacatgaactacgaaattccatt
     Quiscalus             tagtcaaacccgtttaaccattcaccaaaaaaagcccactagcactcccccaccctcaatcacaaccgtttaaccacatt
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           caagcaagttcacccaaccgtcccctaaagaagacccacaaataccactccccgtttaaccacaactactcgacattacc
     Regulus               taattaaactcaaataaacaaaaactaaaaaacccccacaacaaaccactcagacacaactatcgccataaaacaaaact
     Rhipidura             taattcagtccgatcacacacacaacaaaaaatacttacaaatgtctatcctcaaataacaatcgccacacaacaatatt
@@ -4307,7 +4213,6 @@ BEGIN DATA;
     Saxicola              caaacaaaccaaatcaaacgcacactaaaagcccctcgtcaacactaatcctcacacgaccacgcccactcaacaccatt
     Sayornis              caattcaatttattcaaatagaatacaagacatacccacaattacccagatagacataaccattcccacccacttcaata
     Scolopax              ttatcaggtctgactacgccgaaaacaaaccccatccatcactacacgcacccaaaaaacaactcgtactccacacaata
-    Selasphorus           tcacaaaacctaacccaacgaacagtaaatcagctccaccacgacccaaatacaaaaaactagcctccactcacacactt
     Sericornis            caaccaagctcagtttaacgattaccagaaaatacccacaaacactcaactcaaaacaattaccgccgccaaacagcatt
     Serinus               taaccaagcttaccccgacacccaatcaaacatacccacaaaaattcccccccatccaattaccaacaccaaattgcacc
     Setophaga             cagccaaacccactcaaccatacaacaaaatagacccacaaacacccgtccccaactaaccataaccgtcaaacccaacc
@@ -4346,7 +4251,6 @@ BEGIN DATA;
     Turdus                cagccggattaggccatgctcacaccaaagagcattcaccatgacccattcacccacaacaatcaccaccaaacccaact
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           ttactcaattagttccacctagaaacacaaaacacttatcaccatcaacaccacactgaccccctctaaaatccccaacc
-    Tyrannus              ctatccagctcgttcaaacaaaatacaaaacgtatccacaaagactttaatgaccacaaccatccccacttacctccaca
     Tyto                  tagctgagcccagtccacctcgaaacaaactacccccacaaacaccccctccagcactaaaacctaaaaaccacacaatt
     Uria                  tagtaaaactcaactacacagaatataaaaaatatccacaaataaaaatccaaaaaaaattattcatgaacccctaaacc
     Uropsalis             --------------------------------------------------------------------------------
@@ -4505,7 +4409,6 @@ BEGIN DATA;
     Fulmarus              --------------------------------------------------------------------------------
     Galerida              gctccatagcaacccgaacaatttccccccacaattccccc---------------------------------------
     Gallinula             --------------------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                aaccccacacagcacaaaaaacaccaccctaaaatatcctcaacttccccccatgcatacacacacacaagaaaccaata
     Gavia                 acccaacaccaaagcaaacaacaccactccgcaaactcccctataaatccacaaacccatccccacacaaccaagcaaaa
     Geococcyx             acttagcaacaacccaaaaaacaccaccccacaaatcctcctatctacccactaattcttccccacataaacgaacaaaa
@@ -4545,7 +4448,6 @@ BEGIN DATA;
     Limosa                gttcaactccagcacgcataatacccccccacagctcctcccaccagctcgcaaaattacccacatataaaaagacaaag
     Lophura               --------------------------------------------------------------------------------
     Loxia                 attaaatccaagaacgaacaacatccccccaaagactcccccacccccccaccaatacctacacataaagatcaataata
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                ----------------aataacatccccatccaaaccctcctgtccccccgctgatatctccacataagaaccgacaaca
     Luscinia              actctttgaaaacataaataacactatcccgtagttctctctaataacccgccaatatacacacacccaaacacgtaaaa
     Macronectes           --------------------------------------------------------------------------------
@@ -4583,7 +4485,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 gtccaccaaaagcacagacagcaccatcccataactccatccaattaccccccaacccccacacactctcaaaaaaggaa
     Notharchus            acccatcaataacccagacaacatccccctaaaacaccccccgccgactccctccaaaccccccacgcaacaaaaccaaa
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           aacacacatgaaaacaaacaataccacctcaaagttttccgtaaacaccccccaacacacactttaaaaaatcgggaaaa
     Numenius              attcaactggagcacaaataacaccattccgcaaccccctctaccaattcactaatctactcacatacaaacaaatcaaa
     Numida                aaccactcatagcacaagaaacaccacttcacaacactccccaacctacccctaaaatccacacacacaaaaaaccaaaa
@@ -4633,7 +4534,6 @@ BEGIN DATA;
     Platycercus           actaatcaccaaatcaaacaacattacctcacaacatcttttaacatcccgccaaactccccacaccctaataaacaaca
     Plectrophenax         gtcaaacaaggatacaaacaacactcccctaaaagcctccccatcaccccgccaatacccacacacacaaactgaaagta
     Ploceus               gcccgacaaaagcccagacaacatcaccccacaatctcacccaacccccctccgatacacccatataaaaactaacaaaa
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              accccacataagcacatacaacactctcgtacaatctcccctactagctcgttattctccactcatacaaaaaaaccgaa
     Podiceps              gctcaacagcagcccaaacaacattcccccataacttcccccactaacccaccagaccacccctacacaccgcaaccaaa
     Poecilodryas          accttataaaaagataaataacactctcccaaaactcccccaaccaacccgtcaacatacacccatacaaaaaaacagaa
@@ -4654,12 +4554,10 @@ BEGIN DATA;
     Ptilinopus            acccaacaccaagtcacacaacaccctctcacaaactccccacacaaccctccaaccaacctccataaaaaaaaacaaaa
     Pycnonotus            actctccaaaagaacaaacaacacccccccaaagttccccccataagcctccaaacacacacacacacaaattagcaaaa
     Pygoscelis            acccaacagcaaaacaaacaacaccaccccacaaccccccccatcaacccacaaatcaatcaccacgcaaacaaagaaaa
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          accacactgaaa----nnnnnnnnnnnnnnnnnnnnnnncctacaaccccactatcacacctccaaaccaacaggaaata
     Pyrrhula              accaaattcaaactcagacaacaccctcccaagaacccccctacattcccactaacacccttacacaaaagtcaacaata
     Quelea                actaaacaaaagaccaaacaacaccatcccacaatttcccccaacttccctccaacacacatacacgcaaactaataaaa
     Quiscalus             accccatcatagcccgaacaacactcctccacaaacccccccacccccccgccaacactcccacataaaaactaacaata
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           acccaacaaaagctcagacaacgccctttcacaaacttctccatccctccatcaatcctcttatatagaaacgaacaata
     Regulus               gtcacaccaaaacacaaacaacaaccttctacaaacccgcccactagctcaccaatacactcacatgcaaaaagataata
     Rhipidura             aacctttatcaaaacaaataacattcctccatagttccctcaatcaacccattaagatgcttacagacaaaaaagcaaaa
@@ -4670,7 +4568,6 @@ BEGIN DATA;
     Saxicola              gcttcaaggaaaaacgagcaacgctacctcacaacttcccccaacgatctcctaacacacacacacccaaatacacaaaa
     Sayornis              aatttatagcaacccatactgcgtcatcacacaaccctcttcgtgaaccccttaaatctctctcccttaaaccaataaca
     Scolopax              atccaaccgtgatacaagtaacgtcctctcccaacctcctctatctacccccacgagtacccactcaaaaaaaagctaaa
-    Selasphorus           aattactagaaaaataaataacaccaacttagaacccccccaaaaagcccttccattcccatatcaaccacagaaccaaa
     Sericornis            gccacaccaaaagccaagttacgctcccccataacttactcaatcatccccccaatacacctccaaacaactaagaaaca
     Serinus               attaaacttaaaaacaaacaacacccccacaaaaaccctcttatccccctgctaacatctacacatagcaattaataata
     Setophaga             actcaacaaaaggttaaacaacatccccctacaaacccctctactctcccaccaatacccccgtacaaaaatccataaca
@@ -4709,7 +4606,6 @@ BEGIN DATA;
     Turdus                gttccacaagaaaacgaacaacgccaccccacaacccccccaaactgtccactaatacccacgcacatacctcagccaaa
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           aatcaagaacaacacgaaaaacaccatctcacaacccccccatcccctcttcataaacaccaatatactaaaaatcaaaa
-    Tyrannus              acttcatagcaatccgcatcataccaccttacaattcctttcataaccctctttaacccctcccacctaaaattacaaca
     Tyto                  aatcctcagcaaaacgaacaacgctaccccgcaacccggccaaccaaaccaccaacccacgaataaacacccgaatcacg
     Uria                  actcaacaaaaaaacaaacagcaccgccccgtaaaccccccaaccaatccatcaacttgttcacacatagaaatatagaa
     Uropsalis             --------------------------------------------------------------------------------
@@ -4868,7 +4764,6 @@ BEGIN DATA;
     Fulmarus              --------------------------------------------------------------------------------
     Galerida              --------------------------------------------------------------------------------
     Gallinula             --------------------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                caaatataaaccccatccaaacccgaaactcaaacaaaacaacaccaaaacacaccccataccaacaccccaaccaacaa
     Gavia                 ccaatacagacaccatactaaaccacaactcaaccagaataattcccacaaaaacccccagccaccacaaccaccaaagt
     Geococcyx             cacatacagacaactaatcaaaccaaaactccctaaaaaacaaatcctccaacattccctaccaacataacactcaaaac
@@ -4908,7 +4803,6 @@ BEGIN DATA;
     Limosa                atactactaacccaaactctcgccgaaacttaattaaaacaacacctgacggaatcccccaccaatacgaccaccaaaac
     Lophura               --------------------------------------------------------------------------------
     Loxia                 caaacaaacacgactacgccaaataagacttaaacgaaactatgctctccgacaccccttaccaacaccactaccaaaac
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                caaacaaacacatccagtccaagcgtaacccaaataaaaccgcacactcaaacaccccccaccaatacaaccgccaaaac
     Luscinia              caaatacgaactcctatcctaaccttaaaccaaaaaaaacaaatttctccaacacccccaactaacctcactaccaaaac
     Macronectes           --------------------------------------------------------------------------------
@@ -4946,7 +4840,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 caaacaccgatacctaagcaaaccaaaatccagcaaaacacacactcacacacaccccatcctaacaaaaccaccaaggc
     Notharchus            ccagcacaaacgccatctcatacttcaacctaatcaagacaacacctatcaccgcctcgaaccaacaacgcccccaacgc
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           aagactacataactaacgccgcccccaacccaaaaagcatatcacccagcaaagcccgcaaccaatctctccaccaaaat
     Numenius              acaacaccggctcaaattcaaaaccaagcccaaacgaagcgatacttaacaaaactttcgatcaacaaaaccaccaaggc
     Numida                cgatcacgactcccaacaaaacccgcaacctagctaaaaaaacacctgtcaacgctccctgccaatacctcccccaaaac
@@ -4996,7 +4889,6 @@ BEGIN DATA;
     Platycercus           ccaacaccaaccgagacccaacccataattcaaccaaaataacacttataccaccccacaaccgtccccccaatggaaac
     Plectrophenax         aacacaaaaacacccatatcaaacataacctaaacgaaataacaacccaatacacccctaaccaatggcaccatcaaagt
     Ploceus               acaacaaacgtccccaacctaaccctgacccaaatagcacaactcccacagaagccctcgaccaacaccacctccaaggt
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              caaatattacaaccggcattaactacaacccagctgaaacgaaactcacacaaaccccccatcaatattactaccaaaac
     Podiceps              ccagcacaaaaactaaaccaaaccaaaacccaaataaaacaacaccccaaaaaaccccccaccaatataaccaccaaagc
     Poecilodryas          aaaataacaccgacacccacagccctaattcaaataacgctaaatccaccaacacccacaaccaacaaaatcaccgaagt
@@ -5017,12 +4909,10 @@ BEGIN DATA;
     Ptilinopus            ccaatatcaacacaaaccaaaaacacaacccaattaaaataacacacaaaataccccaacatcaatcaaaccaccaagat
     Pycnonotus            caaacctataaaacaaccttagacacaacccaaacaacgtcaacatcctaaataccccccaccaacaccgcttccaaaat
     Pygoscelis            ccaacacaaaacctaaacaaaaccacaatccaattaaaatcacactcactaagaccctccaccaatccaaccaccaaagc
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          ccacttccccaactacctttgaccccaatccaaacagtacgaagcccccccacgcctactaccaatatcattatcaaagc
     Pyrrhula              acaccgagcatagcaaacttaagcacaacccaaataaaactacacaccataacaccccctactgatacaaccacctgaac
     Quelea                acaacagactcactcacgtcaacctgaacctaaacagtattatttacgcaaaaaccccaagccaatataactcccaaagt
     Quiscalus             cacacagacatattcaatccaaacgcaatccaaataaaacaacatatcccaacaccccaaactaccatcatcactaagac
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           ctcataaaaccgtctaactcgaacgcagctcaagtaataaaacatctctcaacacccctcaccaataccattactaaaat
     Regulus               taaacaaaaataccaattaaaaacgaaagctaaacaacgtaaaaccacataacacccactccttccatttccattaaagt
     Rhipidura             atatctccaacaataccgctaacccaaatttaaacaatacaaaactcgccaatgtccactaccactaactccaccaaagt
@@ -5033,7 +4923,6 @@ BEGIN DATA;
     Saxicola              caggcacagaaccctaccttaaccgcaaaccaaacaagacaaaacccctccactcccccaactgacaccactaccaagac
     Sayornis              ctcttattgaccaccattcaatatgaaaatcagataaacacaatttcacttactcttactcctaaccttactcctagaat
     Scolopax              atgatacaaactcaaaattataacaaaatttaattgaagcaataagtaccaaaacccccaaccaactcgactcctgagat
-    Selasphorus           tcatccaaaaaacaaaagcaaaacgcaacccaaccgaaaccctatcccacagcacctcaacccaacttgtccactaaaac
     Sericornis            ccactttcccggtcatccctacccctaaaccaaataacataatgcccctaaacaccctctactaacaactccaccgaagc
     Serinus               caaacaaaaacgactaaattaaacgcaacttaaataaaaccatactccctaacaccccttaccaacataactgccaagac
     Setophaga             tacacaaacacacctacataaatcacaactcaaataacacaacattcaccaattcctcacaccactacatttatcggaat
@@ -5072,7 +4961,6 @@ BEGIN DATA;
     Turdus                cagacgaagccatatagtttgaccgcaatttggataacgcaaaacaccctaataccccacaccaacgcctcccccaaaac
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           aaaatacgaaccacaaccaatactgaaatctaattagaaccataccctatcgcaccccctaccaacaccacaaccaacac
-    Tyrannus              cctatataacccactacttaatacccaaaccaaataaacttaattccacccaaaccccctcccatcccatcctccaagag
     Tyto                  ctaacttcgacacagaaccagcttccgagccaaacaaactaatacccgtagacatcccagaccacccgacttcccaaagc
     Uria                  ccacctccgacacaaagtcacaacgcagttctaacgaaacaacaaccgctagagctctccaccaatataaccaccaaagc
     Uropsalis             --------------------------------------------------------------------------------
@@ -5231,7 +5119,6 @@ BEGIN DATA;
     Fulmarus              --------------------------------------------------------------------------------
     Galerida              --------------------------------------------------------------------------------
     Gallinula             --------------------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------------------
     Gallus                tcacaccccctatgaaccagctccattcaaggcatatacaactaactaattactaacaacacaaagagcacatcaaaaca
     Gavia                 ttaaaccaccccccaccacaccccgcactcgccacacattccccacccacaaccatcaacacaaaaaacactttccatta
     Geococcyx             tcaacccatttttcgacccaacccacactcgacacacataaaacccccaccaccatcactacaaaccacacctccaacca
@@ -5271,7 +5158,6 @@ BEGIN DATA;
     Limosa                ttgaaccactcaatgacaggacccacccctg-------------------------------------------------
     Lophura               --------------------------------------------------------------------------------
     Loxia                 tcaaccagtccacgatctccctacacccccaacacacagcaaccaccaacaaccgacaacacaaaatccacaccacgccg
-    Loxioides             --------------------------------------------------------------------------------
     Loxops                ccaacctgttcacaactctctcacacccctg-------------------------------------------------
     Luscinia              tcgactcagccaccgccctaacaaaccctga-------------------------------------------------
     Macronectes           --------------------------------------------------------------------------------
@@ -5309,7 +5195,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------------------
     Ninox                 ccccacccctccctaccacaaccaacaaccgacacatacactacgtacacaaccaccaacacaagacacatacccaacca
     Notharchus            ccaaaacatctccccccctcacccatgcccg-------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------------------
     Notiomystis           tcggtccacccacagcccacctccacccct--------------------------------------------------
     Numenius              tcaaaccatttctcgaccagtcccacttttg-------------------------------------------------
     Numida                tcaaactcctcaccgaacacccttaaccacggcccacaaccctcacaaaccaccagtaatacaagaaacattttcatata
@@ -5359,7 +5244,6 @@ BEGIN DATA;
     Platycercus           taaacctaccacccaccctaacctaccnct--------------------------------------------------
     Plectrophenax         ccaatctacccactgcccccccctaccccg--------------------------------------------------
     Ploceus               tcgacccatccagcgcccctgcctgctctc--------------------------------------------------
-    Pluvialis             --------------------------------------------------------------------------------
     Podargus              atcagccaccacgccattcacctaacccctg-------------------------------------------------
     Podiceps              ctaacctttctccctacacatacgacctccgccacacatcgccaactcacaaccaccaactctaaccacacctcatataa
     Poecilodryas          ccaacccacctatcacagcacacta-------------------------------------------------------
@@ -5380,12 +5264,10 @@ BEGIN DATA;
     Ptilinopus            acgaatcatctaccaccactatctatccctg-------------------------------------------------
     Pycnonotus            ctaacctacacactaccgccccctaacccgagcacataacgcacacacacaaccgacaacccaaaatccgtgcccaacca
     Pygoscelis            ccaaaccatcctccaatacactccacaacc-nnnnnnnnnnnnnnnnnnnnnnnngaaccacaaaacatattcctcgacc
-    Pyrocephalus          --------------------------------------------------------------------------------
     Pyrrholaemus          tcaacccatccactccccctcacaagtccca-------------------------------------------------
     Pyrrhula              tcaacccgctcacagcccttttccacccccaacatacaatatccaccaacacctaacacctcaaagcccataccaaacca
     Quelea                ccgacccatacacagctcccaccttcttatagcacacatcacacacccatcaccaccaacacaggacacacaccagacta
     Quiscalus             tcaatccatccactgccacatcctgccctc--------------------------------------------------
-    Rallus                --------------------------------------------------------------------------------
     Ramphocelus           tcaatctactcatagccacatcctaccctc--------------------------------------------------
     Regulus               tcgatccacacattccaaacttccacccata-------------------------------------------------
     Rhipidura             ccactccacctaccaccatctcttaccctcatcacataccacccccccacaaccaaaatgacaaatcctacctccaccca
@@ -5396,7 +5278,6 @@ BEGIN DATA;
     Saxicola              tcaaacctttcgctaccttagcataccatca-------------------------------------------------
     Sayornis              ccatttactccccgaacacccaacatttcagtcacttattgcaaacccacaaccaacaccacaaaattcatgttaactca
     Scolopax              ttaaacccactaccaacacaatccaccctcgacacacaacgcccacctacaaccgccaatacaaaacacacatccaacta
-    Selasphorus           tcacaccactacccgaccacaacaaccccca-------------------------------------------------
     Sericornis            tcgattcactcactccatcaccccaacctc--------------------------------------------------
     Serinus               tcaatttatcctcagtttctccatatccccaacacacagcaactaccaataaccaacaacacaaaattcatatctactca
     Setophaga             ccaacccactcgacaccatcccctgttcttaacacacaacaaacacccacaactaacaacacaaaaaacacatccaattg
@@ -5435,7 +5316,6 @@ BEGIN DATA;
     Turdus                ttaacccagccattactctcacacaccctca-----catcacgcacccatcactatcaacacaaaccatacatccacccc
     Turnix                --------------------------------------------------------------------------------
     Tympanuchus           ccaaatccactatcaacccacaccaactatg-------------------------------------------------
-    Tyrannus              tcgtccaaccaccaaacacgcactaccacagccacttaccataaacccaaagtaagaaccacaaaacctataccaaatcc
     Tyto                  ccgaaccaacccccaaccccactcgcgaccgacacacaccatccacccacaatcaccaacccaaagtccgtcccctatta
     Uria                  tcaaacccccccccacaatacaccacgctcg-------------------------------------------------
     Uropsalis             --------------------------------------------------------------------------------
@@ -5594,7 +5474,6 @@ BEGIN DATA;
     Fulmarus              --------------------------------------------------------------------
     Galerida              --------------------------------------------------------------------
     Gallinula             --------------------------------------------------------------------
-    Gallirallus           --------------------------------------------------------------------
     Gallus                cacacaccaaccactaccaaccgtcctaaccatactaacttacctcccccattcccaatgccaaaaaa
     Gavia                 tacataccaatcatcaccaatccactcaatcacacactcacacctaccacaaaaccaaaaacaaacaa
     Geococcyx             cacttaccaactaccatcaacaaaaccaattacacttccacccccaccgcaaaactaaaaccaaaaa-
@@ -5634,7 +5513,6 @@ BEGIN DATA;
     Limosa                --------------------------------------------------------------------
     Lophura               --------------------------------------------------------------------
     Loxia                 gctacactagtcaccctcaatccggagaaccaaatcaccacacccttccaaaacccgacacaaaggga
-    Loxioides             --------------------------------------------------------------------
     Loxops                --------------------------------------------------------------------
     Luscinia              --------------------------------------------------------------------
     Macronectes           --------------------------------------------------------------------
@@ -5672,7 +5550,6 @@ BEGIN DATA;
     Nettapus              --------------------------------------------------------------------
     Ninox                 cacacaccaaacaccatcaacacaatccattaaacccccacacccacccccacaccaagataaaacaa
     Notharchus            --------------------------------------------------------------------
-    Nothoprocta           --------------------------------------------------------------------
     Notiomystis           --------------------------------------------------------------------
     Numenius              --------------------------------------------------------------------
     Numida                tacacaccaaccaccaccaaccaccccaactacgccaacccactccccgaattcccaatgccaaaaaa
@@ -5722,7 +5599,6 @@ BEGIN DATA;
     Platycercus           --------------------------------------------------------------------
     Plectrophenax         --------------------------------------------------------------------
     Ploceus               --------------------------------------------------------------------
-    Pluvialis             --------------------------------------------------------------------
     Podargus              --------------------------------------------------------------------
     Podiceps              cccacaccaaacaccaccaatacatctaaccacacacacacacccccaccaacatcaaa---------
     Poecilodryas          --------------------------------------------------------------------
@@ -5743,12 +5619,10 @@ BEGIN DATA;
     Ptilinopus            --------------------------------------------------------------------
     Pycnonotus            gatacatcaaacgttaccaacccagccaatcagacccccacacctccccacagaacaacaaaaagaaa
     Pygoscelis            cacacaccaaacaccaccaacccacattgtcacaaccccacaccccccccagccctgaaaacaggaga
-    Pyrocephalus          --------------------------------------------------------------------
     Pyrrholaemus          --------------------------------------------------------------------
     Pyrrhula              cccctaccaaccaccatcgatcaaccaaactaatcccccacaccatgcctaaggtcaacaacaagaaa
     Quelea                accacctcgatcccaaccaacaacacaaaccaaacccccacaccaccatcgaagataacaacagaaaa
     Quiscalus             --------------------------------------------------------------------
-    Rallus                --------------------------------------------------------------------
     Ramphocelus           --------------------------------------------------------------------
     Regulus               --------------------------------------------------------------------
     Rhipidura             catccaccaaccattatcaaccaaaataaccaactattcacatcaccccacaacctgataatagaaaa
@@ -5759,7 +5633,6 @@ BEGIN DATA;
     Saxicola              --------------------------------------------------------------------
     Sayornis              tccacaccacatatctccaatctcaccaaccatacctttaaatccgccctaaaactaacagcaaaaaa
     Scolopax              catacctc-gatacaatcaacataccccaacacacacacacacaccccacttcaccaac---------
-    Selasphorus           --------------------------------------------------------------------
     Sericornis            --------------------------------------------------------------------
     Serinus               aacacaccaatcgctttcaacccaaaaaatcaaaccaccacacccccccaaaacccaacacaaaaaaa
     Setophaga             cctgccccaaccaccaccaaccaccaaaatcagacccccacaccaccccccatagcaacaaaaagaaa
@@ -5798,7 +5671,6 @@ BEGIN DATA;
     Turdus                cccccaccagccacaactaacccactaaaccacactccaaaaaacaccccaagattaacgaaaaaaa-
     Turnix                --------------------------------------------------------------------
     Tympanuchus           --------------------------------------------------------------------
-    Tyrannus              tactcaccaatcactctcaactcaactaattatattcccaaaatagtcctaaatctaacaacaaaaaa
     Tyto                  cacccatcaaacactaccaacaaacccaaccaagcacccacgctcccagcaacgccaaaagcaaaaaa
     Uria                  --------------------------------------------------------------------
     Uropsalis             --------------------------------------------------------------------
